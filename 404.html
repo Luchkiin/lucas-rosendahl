@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -24,7 +24,9 @@
 
     <!-- Web App -->
     <link rel="manifest" href="assets/favicons/site.webmanifest" />
-
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -126,103 +128,109 @@
     </header>
 
     <!-- Main -->
-    <main id="main">
-      <section class="section not-found" aria-labelledby="not-found-title">
-        <div class="container inner-wrapper not-found__content">
-          <div class="not-found__left">
-            <div class="section-label">
-              <span class="section-label__dot" aria-hidden="true"></span>
-              <span class="section-label__text">404</span>
-            </div>
+    <div class="page-transition" data-page>
+      <main id="main">
+        <section class="section not-found" aria-labelledby="not-found-title">
+          <div class="container inner-wrapper not-found__content">
+            <div class="not-found__left">
+              <div class="section-label">
+                <span class="section-label__dot" aria-hidden="true"></span>
+                <span class="section-label__text">404</span>
+              </div>
 
-            <h1 id="not-found-title" class="page-title">Page not found</h1>
+              <h1 id="not-found-title" class="page-title">Page not found</h1>
 
-            <p class="section-lead">
-              The page you are looking for does not exist or has been removed.
-            </p>
-          </div>
-
-          <div class="not-found__right">
-            <a class="button button--secondary__small" href="/">Back to home</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="site-footer" id="contact" role="contentinfo">
-        <div class="container footer__grid inner-wrapper">
-          <div class="footer__brand__cols__wrapper">
-            <div class="footer__brand">
-              <a class="footer__logotype" href="/"
-                ><img
-                  src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
-                  alt="lucas rosendahl"
-              /></a>
-              <p class="footer__text">
-                Building a brand, designing a product, or exploring an idea —
-                I’d love to hear from you.
-              </p>
-              <p class="footer__email">
-                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
+              <p class="section-lead">
+                The page you are looking for does not exist or has been removed.
               </p>
             </div>
 
-            <div class="footer__cols">
-              <div class="footer__col">
-                <p class="footer__title">Sitemap</p>
-                <ul class="footer__list">
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/work">Work</a></li>
-                  <li><a href="/#services">Services</a></li>
-                  <li><a href="/#faq">FAQ</a></li>
-                  <li><a href="/contact">Contact</a></li>
-                </ul>
+            <div class="not-found__right">
+              <a class="button button--secondary__small" href="/"
+                >Back to home</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer" id="contact" role="contentinfo">
+          <div class="container footer__grid inner-wrapper">
+            <div class="footer__brand__cols__wrapper">
+              <div class="footer__brand">
+                <a class="footer__logotype" href="/"
+                  ><img
+                    src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    alt="lucas rosendahl"
+                /></a>
+                <p class="footer__text">
+                  Building a brand, designing a product, or exploring an idea —
+                  I’d love to hear from you.
+                </p>
+                <p class="footer__email">
+                  <a href="mailto:lr@lucasrosendahl.com"
+                    >lr@lucasrosendahl.com</a
+                  >
+                </p>
               </div>
 
-              <div class="footer__col">
-                <p class="footer__title">Social</p>
-                <ul class="footer__list">
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/lucas-rosendahl/"
-                      rel="me"
-                      target="_blank"
-                      >LinkedIn</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Luchkiin"
-                      rel="me"
-                      target="_blank"
-                      >GitHub</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.figma.com/@lucasrosendahl"
-                      rel="me"
-                      target="_blank"
-                      >Figma</a
-                    >
-                  </li>
-                </ul>
+              <div class="footer__cols">
+                <div class="footer__col">
+                  <p class="footer__title">Sitemap</p>
+                  <ul class="footer__list">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/work">Work</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer__col">
+                  <p class="footer__title">Social</p>
+                  <ul class="footer__list">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/lucas-rosendahl/"
+                        rel="me"
+                        target="_blank"
+                        >LinkedIn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Luchkiin"
+                        rel="me"
+                        target="_blank"
+                        >GitHub</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.figma.com/@lucasrosendahl"
+                        rel="me"
+                        target="_blank"
+                        >Figma</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer__meta">
+              <p class="footer___copyright">
+                © Lucas Rosendahl <span id="year"></span>
+              </p>
+              <div class="footer__policies">
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/cookie-policy">Cookie Policy</a>
               </div>
             </div>
           </div>
-
-          <div class="footer__meta">
-            <p class="footer___copyright">
-              © Lucas Rosendahl <span id="year"></span>
-            </p>
-            <div class="footer__policies">
-              <a href="/privacy-policy">Privacy Policy</a>
-              <a href="/cookie-policy">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </main>
+        </footer>
+      </main>
+    </div>
 
     <!-- Cookie consent -->
     <div
@@ -261,5 +269,6 @@
     </div>
 
     <script src="/js/main.js" defer></script>
+    <script src="/js/reveal.js" defer></script>
   </body>
 </html>

@@ -39,7 +39,8 @@
     align-items: center;
     background-color: $light-grey;
     border-radius: 35px;
-    padding: 2px;
+    padding: 3px;
+    gap: 4px;
     @include for-mobile() {
       position: fixed;
       left: 50%;

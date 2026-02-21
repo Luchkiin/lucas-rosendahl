@@ -1,40 +1,50 @@
 @use "../abstracts/" as *;
 
-/* =========================================================
-   Reveal / Scroll animations
-   - Works with: html.is-loaded + [data-reveal] + .is-revealed
-   - Optional variants: [data-reveal-card], [data-reveal-hero]
-   - Stagger via: --reveal-delay set from JS (data-stagger)
-   ========================================================= */
-
-/* Motion tokens (global defaults) */
 :root {
-  --reveal-duration-fade: 620ms;
-  --reveal-duration-move: 760ms;
-  --reveal-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-duration-fade: 1400ms;
+  --reveal-duration-move: 1800ms;
+  --reveal-ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --reveal-distance-base: 8px;
-  --reveal-distance-card: 12px;
-  --reveal-distance-hero: 5px;
-  --reveal-card-scale-start: 0.995;
+  --reveal-distance-base: 6px;
+  --reveal-distance-card: 25px;
+  --reveal-distance-hero: 4px;
+  --reveal-card-scale-start: 0.997;
 
-  --reveal-stagger-base: 120;
-  --reveal-stagger-step: 85;
+  --page-fade-duration: 3000ms;
+  --page-move-duration: 2000ms;
+  --page-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --page-enter-y: 60px;
+
+  --page-enter-delay: 120ms;
 }
 
-/* BEFORE JS sets html.is-loaded:
-   Keep things visible to avoid "flash of hidden" if JS is late */
-html:not(.is-loaded) [data-reveal] {
+:root {
+  @include for-mobile() {
+    --page-enter-y: 0px;
+    --page-fade-duration: 1000ms;
+  }
+}
+
+html:not(.js) [data-reveal],
+html:not(.js) [data-page] {
   opacity: 1;
   transform: none;
   transition: none;
 }
 
-/* AFTER html.is-loaded:
-   All reveal elements start hidden until .is-revealed */
-html.is-loaded [data-reveal] {
+html.js [data-reveal] {
   opacity: 0;
   transform: translate3d(0, var(--reveal-distance-base), 0);
+  transition: none;
+}
+
+html.js [data-page] {
+  opacity: 0;
+  transform: translate3d(0, var(--page-enter-y), 0);
+  transition: none;
+}
+
+html.js.is-loaded [data-reveal] {
   transition:
     opacity var(--reveal-duration-fade) var(--reveal-ease-standard),
     transform var(--reveal-duration-move) var(--reveal-ease-standard);
@@ -43,75 +53,76 @@ html.is-loaded [data-reveal] {
   backface-visibility: hidden;
 }
 
+html.is-loaded [data-page] {
+  opacity: 0;
+  transform: translate3d(0, var(--page-enter-y), 0);
+  transition:
+    opacity var(--page-fade-duration) var(--page-ease),
+    transform var(--page-move-duration) var(--page-ease);
+  transition-delay: var(--page-enter-delay, 0ms);
+  will-change: opacity, transform;
+}
+
 /* Revealed state */
-html.is-loaded [data-reveal].is-revealed {
+html.js.is-loaded [data-reveal].is-revealed {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
-/* Card variant: slightly heavier feel */
-html.is-loaded [data-reveal][data-reveal-card] {
+/* Page visible */
+html.js.is-loaded [data-page].is-page-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.site-header [data-header-reveal] {
+  transform: none !important;
+  --reveal-duration-fade: 720ms;
+  --reveal-duration-move: 0ms;
+  --reveal-ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Card variant */
+html.js [data-reveal][data-reveal-card] {
   transform: translate3d(0, var(--reveal-distance-card), 0)
     scale(var(--reveal-card-scale-start));
 }
-
-html.is-loaded [data-reveal][data-reveal-card].is-revealed {
+html.js.is-loaded [data-reveal][data-reveal-card].is-revealed {
   transform: translate3d(0, 0, 0) scale(1);
 }
 
-/* Hero variant: softer motion */
-html.is-loaded [data-reveal][data-reveal-hero] {
+/* Hero variant */
+html.js [data-reveal][data-reveal-hero] {
   transform: translate3d(0, var(--reveal-distance-hero), 0);
 }
 
-/* Header logo: micro fade only (no translate) */
-.site-header .header__logotype[data-reveal],
-.site-header .header__logotype__mobile[data-reveal] {
-  --reveal-distance-base: 0px;
-  --reveal-distance-hero: 0px;
+/* HEADER: fade only, no Y */
+.site-header [data-header-reveal],
+.site-header [data-header-reveal] *[data-reveal] {
+  transform: none !important;
 }
 
-/* Hero: longer tail + bigger stagger base */
 .hero {
-  --reveal-duration-fade: 760ms;
-  --reveal-duration-move: 980ms;
-  --reveal-distance-base: 6px;
-  --reveal-distance-hero: 4px;
-  --reveal-stagger-base: 220;
-  --reveal-stagger-step: 105;
+  --reveal-duration-fade: 980ms;
+  --reveal-duration-move: 1400ms;
+  --reveal-distance-hero: 3px;
 }
 
-.hero [data-reveal][data-reveal-hero] {
-  --reveal-duration-fade: 760ms;
-  --reveal-duration-move: 980ms;
-  --reveal-distance-hero: 4px;
+html.js .site-header [data-header-reveal][data-reveal] {
+  transform: none !important;
 }
 
-/* Header/nav: snappier and tighter */
-.site-header {
-  --reveal-duration-fade: 380ms;
-  --reveal-duration-move: 560ms;
-  --reveal-distance-base: 4px;
-  --reveal-stagger-base: 80;
-  --reveal-stagger-step: 70;
+html.js .site-header [data-header-reveal] [data-reveal] {
+  transform: none !important;
 }
 
-/* Optional: if you want smaller motion on very small screens */
-@include for-mobile() {
-  :root {
-    --reveal-distance-base: 7px;
-    --reveal-distance-card: 10px;
-    --reveal-distance-hero: 3px;
-  }
-}
-
-/* Reduced motion: disable animations */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  html [data-reveal] {
+  html.js [data-page],
+  html.js [data-reveal] {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
     transition-delay: 0ms !important;
-    animation: none !important;
   }
 }

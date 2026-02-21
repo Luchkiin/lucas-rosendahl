@@ -4,7 +4,7 @@
   if (!banner) return;
 
   const prefersReducedMotion = window.matchMedia?.(
-    "(prefers-reduced-motion: reduce)"
+    "(prefers-reduced-motion: reduce)",
   )?.matches;
 
   const getConsent = () => {
@@ -104,76 +104,64 @@
   const toggleBtn = document.querySelector(".menu-toggle");
   const closeBtn = document.querySelector(".menu-close");
   const menu = document.getElementById("mobile-menu");
+  const list = menu?.querySelector(".mobile-menu__list");
 
-  // --- MENU TOGGLE ---
+  if (!toggleBtn || !menu || !list) return;
+
+  const prefersReducedMotion = window.matchMedia?.(
+    "(prefers-reduced-motion: reduce)",
+  )?.matches;
+
+  const getItems = () =>
+    Array.from(list.querySelectorAll(".mobile-menu__item"));
+
+  const base = 180; // första item-delay
+  const step = 80; // spacing per item
+
+  const applyOpenStagger = () => {
+    const items = getItems();
+    items.forEach((item, i) => {
+      item.style.setProperty("--stagger-delay", `${base + i * step}ms`);
+    });
+  };
+
   const openMenu = () => {
+    applyOpenStagger();
     root.classList.add("is-menu-open");
-    toggleBtn?.setAttribute("aria-expanded", "true");
-    menu?.setAttribute("aria-hidden", "false");
+    toggleBtn.setAttribute("aria-expanded", "true");
+    menu.setAttribute("aria-hidden", "false");
   };
 
   const closeMenu = () => {
     root.classList.remove("is-menu-open");
-    toggleBtn?.setAttribute("aria-expanded", "false");
-    menu?.setAttribute("aria-hidden", "true");
+    toggleBtn.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-hidden", "true");
+
+    // Optional: nollställ inline delays om du vill
+    // getItems().forEach((item) => item.style.removeProperty("--stagger-delay"));
   };
 
-  if (toggleBtn && menu) {
-    toggleBtn.addEventListener("click", () => {
-      root.classList.contains("is-menu-open") ? closeMenu() : openMenu();
-    });
+  toggleBtn.addEventListener("click", () => {
+    root.classList.contains("is-menu-open") ? closeMenu() : openMenu();
+  });
 
-    closeBtn?.addEventListener("click", closeMenu);
+  closeBtn?.addEventListener("click", closeMenu);
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && root.classList.contains("is-menu-open")) {
-        closeMenu();
-      }
-    });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
 
-    menu.addEventListener("click", (e) => {
-      const link = e.target.closest("a");
-      if (link) closeMenu();
-    });
+  menu.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (link) closeMenu();
+  });
+
+  // Reduced motion: ta bort stagger känslan helt (valfritt)
+  if (prefersReducedMotion) {
+    getItems().forEach((item) =>
+      item.style.setProperty("--stagger-delay", "0ms"),
+    );
   }
-
-  // --- ACTIVE LINK (desktop + mobile) ---
-  const setActiveLinks = () => {
-    const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
-    const currentHash = window.location.hash;
-
-    const links = document.querySelectorAll(".site-nav a, .mobile-menu__link");
-
-    // reset
-    links.forEach((link) => link.classList.remove("is-active"));
-    document
-      .querySelectorAll(".mobile-menu__item")
-      .forEach((li) => li.classList.remove("is-active"));
-
-    links.forEach((link) => {
-      const url = new URL(link.href, window.location.origin);
-      const linkPath = url.pathname.replace(/\/$/, "");
-      const linkHash = url.hash;
-
-      // 1) Hash links (e.g. #services) should ONLY match when hash matches
-      if (linkHash) {
-        if (linkPath === currentPath && linkHash === currentHash) {
-          link.classList.add("is-active");
-          link.closest(".mobile-menu__item")?.classList.add("is-active"); // for index color
-        }
-        return;
-      }
-
-      // 2) Normal page links
-      if (linkPath === currentPath) {
-        link.classList.add("is-active");
-      }
-    });
-  };
-
-  // run once + update on hash changes
-  setActiveLinks();
-  window.addEventListener("hashchange", setActiveLinks);
 })();
 
 (() => {
