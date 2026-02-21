@@ -1,0 +1,120 @@
+@use "../abstracts/" as *;
+
+.legal-page {
+  @include for-tablet() {
+    padding: $spacing-xxl 0;
+  }
+  @include for-mobile() {
+    padding: $spacing-xl 0;
+  }
+  .legal-page__content {
+    max-width: 1016px;
+    @include for-tablet() {
+      max-width: 920px;
+      margin-left: 0;
+    }
+    .section-label {
+      margin-bottom: $spacing-xs;
+      @include for-tablet() {
+        margin-bottom: 12px;
+      }
+      @include for-mobile() {
+        margin-bottom: $spacing-xxs;
+      }
+    }
+    .page-title {
+      font-size: $fontSize-56;
+      font-weight: $semiBold-weight;
+      line-height: $lineHeight-72;
+      letter-spacing: $letterSpacing--0064;
+      margin-bottom: $spacing-s;
+      @include for-tablet() {
+        font-size: $fontSize-48;
+        line-height: normal;
+      }
+      @include for-mobile() {
+        font-size: $fontSize-32;
+        margin-bottom: $spacing-xs;
+      }
+    }
+    .legal-page__meta {
+      font-size: $fontSize-16;
+      font-weight: $regular-weight;
+      line-height: $lineHeight-21;
+      letter-spacing: $letterSpacing--005;
+      color: $dark-grey;
+      margin-bottom: $spacing-xs;
+      @include for-mobile() {
+        font-size: $fontSize-14;
+      }
+    }
+    .section-lead {
+      font-size: $fontSize-16;
+      font-weight: $regular-weight;
+      line-height: $lineHeight-21;
+      letter-spacing: $letterSpacing--005;
+      color: $dark-grey;
+      @include for-mobile() {
+        font-size: $fontSize-14;
+      }
+    }
+    .legal-page__sections {
+      section {
+        padding-top: $spacing-xl;
+        padding-bottom: 0;
+        @include for-tablet() {
+          padding-top: $spacing-l;
+        }
+        @include for-mobile() {
+          padding-top: $spacing-m;
+        }
+        h2 {
+          font-size: $fontSize-32;
+          font-weight: $semiBold-weight;
+          letter-spacing: $letterSpacing--0064;
+          line-height: normal;
+          margin-bottom: $spacing-s;
+          @include for-tablet() {
+            font-size: $fontSize-26;
+          }
+          @include for-mobile() {
+            font-size: $fontSize-20;
+            margin-bottom: $spacing-xs;
+          }
+        }
+        p {
+          font-size: $fontSize-16;
+          font-weight: $regular-weight;
+          line-height: $lineHeight-21;
+          letter-spacing: $letterSpacing--005;
+          color: $dark-grey;
+          margin-bottom: $spacing-xs;
+          @include for-mobile() {
+            font-size: $fontSize-14;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        ul {
+          font-size: $fontSize-16;
+          font-weight: $regular-weight;
+          line-height: $lineHeight-21;
+          letter-spacing: $letterSpacing--005;
+          color: $dark-grey;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          padding-left: $spacing-s;
+          @include for-mobile() {
+            font-size: $fontSize-14;
+            gap: 4px;
+          }
+        }
+        strong {
+          color: $black;
+        }
+      }
+    }
+  }
+}

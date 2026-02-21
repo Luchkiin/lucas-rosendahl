@@ -1,0 +1,276 @@
+@use "../abstracts/" as *;
+
+.about-page {
+  @include for-tablet() {
+    padding: $spacing-xxl 0;
+  }
+  @include for-mobile() {
+    padding: $spacing-xl 0;
+  }
+  .about-page__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-xxxl;
+    @include for-tablet() {
+      margin-bottom: 0;
+      gap: $spacing-xl;
+      align-items: flex-end;
+    }
+    @include for-mobile() {
+      margin-bottom: 0;
+    }
+    .section-label {
+      margin-bottom: $spacing-xs;
+      @include for-tablet() {
+        margin-bottom: 12px;
+      }
+      @include for-mobile() {
+        margin-bottom: $spacing-xxs;
+      }
+    }
+    .page-title {
+      font-size: $fontSize-56;
+      font-weight: $semiBold-weight;
+      line-height: $lineHeight-72;
+      letter-spacing: $letterSpacing--0064;
+      margin-bottom: $spacing-s;
+      @include for-tablet() {
+        font-size: $fontSize-48;
+        line-height: $lineHeight-60;
+        margin-bottom: $spacing-xs;
+      }
+      @include for-mobile() {
+        font-size: $fontSize-32;
+        line-height: normal;
+      }
+    }
+    .about-page__intro {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xs;
+      .section-lead {
+        max-width: 700px;
+        font-size: $fontSize-16;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        color: $dark-grey;
+        @include for-tablet() {
+          text-align: left;
+          max-width: 400px;
+        }
+        @include for-mobile() {
+          font-size: $fontSize-14;
+        }
+      }
+    }
+    .about-page__head-right {
+      background-color: $light-grey;
+      border-radius: $border-radius-xl;
+      padding: 4px;
+      @include for-mobile() {
+        display: none;
+      }
+      .about-page__portrait {
+        width: 200px;
+        height: 200px;
+        border-radius: $border-radius-l;
+      }
+    }
+  }
+
+  .about-experience {
+    padding-bottom: 0;
+    @include for-tablet() {
+      padding-top: $spacing-xxl;
+    }
+    @include for-mobile() {
+      padding-top: $spacing-xl;
+    }
+    .section-title {
+      font-size: $fontSize-32;
+      font-weight: $semiBold-weight;
+      letter-spacing: $letterSpacing--0064;
+      line-height: normal;
+      margin-bottom: $spacing-xl;
+      @include for-tablet() {
+        font-size: $fontSize-26;
+        line-height: normal;
+        margin-bottom: $spacing-s;
+      }
+      @include for-mobile() {
+        font-size: $fontSize-20;
+      }
+    }
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xl;
+      @include for-tablet() {
+        gap: $spacing-m;
+      }
+      .experience-row {
+        .experience-row__top-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 2fr 1fr;
+          align-items: center;
+          gap: $spacing-xl;
+          padding-bottom: 12px;
+          border-bottom: 0.5px solid $grey;
+          @include for-mobile() {
+            grid-template-columns: 1fr;
+            gap: 6px;
+          }
+          .experience-row__time {
+            font-size: $fontSize-16;
+            font-weight: $regular-weight;
+            line-height: $lineHeight-21;
+            letter-spacing: $letterSpacing--005;
+            color: $dark-grey;
+            @include for-mobile() {
+              font-size: $fontSize-14;
+            }
+          }
+          .experience-row__role {
+            font-size: $fontSize-20;
+            font-weight: $semiBold-weight;
+            letter-spacing: $letterSpacing--0064;
+            line-height: normal;
+            @include for-tablet() {
+              font-size: $fontSize-16;
+            }
+          }
+          .experience-row__org {
+            font-size: $fontSize-16;
+            font-weight: $regular-weight;
+            line-height: $lineHeight-21;
+            letter-spacing: $letterSpacing--005;
+            text-align: right;
+            @include for-mobile() {
+              text-align: left;
+              font-size: $fontSize-14;
+            }
+          }
+        }
+        .experience-row__bottom-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 2fr 1fr;
+          align-items: center;
+          gap: $spacing-xl;
+          padding-top: 12px;
+          @include for-tablet() {
+            gap: $spacing-m;
+          }
+          @include for-mobile() {
+            grid-template-columns: 1fr;
+          }
+          .experience-row__desc {
+            font-size: $fontSize-16;
+            font-weight: $regular-weight;
+            line-height: $lineHeight-21;
+            letter-spacing: $letterSpacing--005;
+            @include for-tablet() {
+              font-size: $fontSize-14;
+              font-weight: $regular-weight;
+              line-height: $lineHeight-21;
+              letter-spacing: $letterSpacing--005;
+            }
+          }
+          .experience-row__empty {
+            @include for-mobile() {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about-tools {
+    padding-bottom: 0;
+    @include for-tablet() {
+      padding-top: $spacing-xxl;
+    }
+    @include for-mobile() {
+      padding-top: $spacing-xl;
+    }
+    .section-title {
+      font-size: $fontSize-32;
+      font-weight: $semiBold-weight;
+      letter-spacing: $letterSpacing--0064;
+      line-height: normal;
+      margin-bottom: $spacing-xl;
+      @include for-tablet() {
+        margin-bottom: $spacing-s;
+        font-size: $fontSize-26;
+      }
+      @include for-mobile() {
+        font-size: $fontSize-20;
+      }
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+      gap: 6px;
+      background-color: $light-grey;
+      border-radius: $border-radius-xl;
+      padding: 6px;
+      @include for-mobile() {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .tool-card {
+        background-color: $white;
+        padding: $spacing-s;
+        border-radius: 11px;
+        display: flex;
+        gap: $spacing-xs;
+        height: 100%;
+        align-items: flex-start;
+        @include for-tablet() {
+          padding: $spacing-xs;
+          gap: 12px;
+        }
+        .tool-card__icon {
+          svg {
+            width: 56px;
+            height: 56px;
+            @include for-tablet() {
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+        .tool-card__body {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-xxs;
+          @include for-mobile() {
+            gap: 6px;
+          }
+          .tool-card__title {
+            font-size: $fontSize-20;
+            font-weight: $semiBold-weight;
+            letter-spacing: $letterSpacing--0064;
+            line-height: normal;
+            @include for-tablet() {
+              font-size: $fontSize-16;
+            }
+          }
+          .tool-card__meta {
+            font-size: $fontSize-16;
+            font-weight: $regular-weight;
+            line-height: $lineHeight-21;
+            letter-spacing: $letterSpacing--005;
+            color: $dark-grey;
+            line-height: normal;
+            @include for-tablet() {
+              font-size: $fontSize-14;
+            }
+          }
+        }
+      }
+    }
+  }
+}

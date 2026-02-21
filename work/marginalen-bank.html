@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Marginalen Bank — UX case study by Lucas Rosendahl."
+    />
+    <title>Marginalen Bank — Lucas Rosendahl</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
+
+    <!-- Web App -->
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body class="page-work-detail">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="container header__inner">
+        <a class="header__logotype" href="/">
+          <img
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
+            alt="lucas rosendahl"
+          />
+        </a>
+        <a class="header__logotype__mobile" href="/">
+          <img
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
+            alt="lucas rosendahl"
+          />
+        </a>
+
+        <nav class="site-nav site-nav--desktop" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a href="/about">About</a></li>
+            <li><a href="/work" aria-current="page">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Mobile fullscreen menu -->
+      <nav
+        id="mobile-menu"
+        class="mobile-menu"
+        aria-label="Mobile"
+        aria-hidden="true"
+      >
+        <div class="container mobile-menu__inner">
+          <div class="mobile-menu__header">
+            <a class="header__logotype__white" href="/">
+              <img
+                src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+                alt="lucas rosendahl"
+              />
+            </a>
+
+            <button class="menu-close" type="button" aria-label="Close menu">
+              <svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.0538 28.3077L15 27.2538L20.6 21.6538L15 16.0538L16.0538 15L21.6538 20.6L27.2538 15L28.3077 16.0538L22.7077 21.6538L28.3077 27.2538L27.2538 28.3077L21.6538 22.7077L16.0538 28.3077Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="mobile-menu__content">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">01</span>
+                <a class="mobile-menu__link" href="/about">About</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">02</span>
+                <a class="mobile-menu__link is-active" href="/work"
+                  >Work</a
+                >
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">03</span>
+                <a class="mobile-menu__link" href="/#services">Services</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">04</span>
+                <a class="mobile-menu__link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="main">
+      <section class="section work-detail" aria-labelledby="case-title">
+        <div class="container inner-wrapper work-detail__container">
+          <!-- Top / Title -->
+          <div class="work-detail__top">
+            <a class="work-detail__back" href="/work">
+              <span class="work-detail__back-icon" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1539 6.34616L11.2077 7.43076L7.38845 11.25L19.5 11.25L19.5 12.75L7.38845 12.75L11.2077 16.5692L10.1539 17.6538L4.50005 12L10.1539 6.34616Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+
+              <span class="work-detail__back-text">Back</span>
+            </a>
+
+            <div class="work-detail__head">
+              <div class="work-detail__head-wrapper">
+                <div class="work-detail__head-left-top">
+                  <h1 id="case-title" class="page-title">Marginalen Bank</h1>
+                </div>
+
+                <div class="work-detail__head-right-top">
+                  <p class="work-detail__intro section-lead">
+                    Designing and improving digital banking experiences for
+                    private and business customers.
+                  </p>
+                </div>
+              </div>
+              <div class="work-detail__head-wrapper">
+                <div class="work-detail__head-left-bottom">
+                  <ul class="work-detail__meta" aria-label="Project metadata">
+                    <li>
+                      <span class="work-detail__meta-type">Services:</span> UX
+                      Design
+                    </li>
+                    <li class="work-detail__meta-separator">/</li>
+                    <li>
+                      <span class="work-detail__meta-type">Type:</span> Web
+                      &amp; Mobile
+                    </li>
+                    <li class="work-detail__meta-separator">/</li>
+                    <li>
+                      <span class="work-detail__meta-type">Industry:</span>
+                      Fintech
+                    </li>
+                    <li class="work-detail__meta-separator">/</li>
+                    <li>
+                      <span class="work-detail__meta-type">Year:</span> 2023 —
+                      Present
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="work-detail__head-right-bottom">
+                  <a
+                    class="button button--secondary__small work-detail__cta"
+                    href="https://www.marginalen.se/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero -->
+          <figure class="work-detail__hero" aria-label="Hero visual">
+            <img
+              src="/assets/images/projects/marginalen/hero-marginalen.webp"
+              alt="Marginalen Bank hero"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <!-- Section: Overview -->
+          <section
+            class="work-detail__section"
+            aria-labelledby="overview-title"
+          >
+            <div class="work-detail__section-wrapper">
+              <div class="work-detail__section-head">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text"
+                    ><span class="section-label__text-index">01</span>
+                    Context</span
+                  >
+                </div>
+              </div>
+
+              <div class="work-detail__section-body work-detail__two-col">
+                <div class="work-detail__col-top">
+                  <h2 id="overview-title" class="section-title">Overview</h2>
+                  <p class="work-detail__text">
+                    Marginalen Bank is a Swedish bank offering financial
+                    services for both private individuals and businesses. My
+                    work focuses on designing and improving the bank’s digital
+                    platforms — including a new internet bank for private and
+                    business customers, as well as the ongoing improvement of
+                    the mobile app for private users.
+                  </p>
+                </div>
+
+                <div class="work-detail__col-bottom">
+                  <h3 class="work-detail__sub-title">Role</h3>
+                  <p class="work-detail__text">
+                    I work as a Senior UX Designer at Marginalen Bank,
+                    collaborating closely with product managers, developers, and
+                    stakeholders across multiple teams. I have been involved in
+                    several initiatives across the bank’s digital services,
+                    including the design of the new internet bank for both
+                    private and business customers, and I currently focus on
+                    improving the existing mobile app for private users.
+                  </p>
+                  <p class="work-detail__text">
+                    My responsibilities include UX leadership, interaction
+                    design, information architecture, and building scalable
+                    design systems and components to ensure a consistent and
+                    user-focused experience across platforms.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <figure class="work-detail__media work-detail__media--wide">
+              <img
+                data-zoomable
+                src="/assets/images/projects/marginalen/overview-device.webp"
+                alt="Desktop and mobile screens from Marginalen Bank"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="captions-wrapper">
+                <figcaption
+                  class="work-detail__caption work-detail__caption-wide"
+                ></figcaption>
+                <figcaption
+                  class="work-detail__caption work-detail__caption-wide"
+                >
+                  Selected screens across web and mobile banking experiences.
+                </figcaption>
+              </div>
+            </figure>
+          </section>
+
+          <!-- Section: The challenge -->
+          <section
+            class="work-detail__section"
+            aria-labelledby="challenge-title"
+          >
+            <div class="work-detail__section-wrapper">
+              <div class="work-detail__section-head">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text"
+                    ><span class="section-label__text-index">02</span> The
+                    challenge</span
+                  >
+                </div>
+              </div>
+
+              <div class="work-detail__section-body work-detail__two-col">
+                <div class="work-detail__col-top">
+                  <h2 id="challenge-title" class="section-title">
+                    Designing clarity across complex banking products
+                  </h2>
+                  <p class="work-detail__text">
+                    Banking products often involve complex information, strict
+                    regulations, and a wide range of user needs. A key challenge
+                    was designing digital experiences that feel clear,
+                    trustworthy, and easy to use — while supporting both private
+                    individuals and business users with very different
+                    requirements.
+                  </p>
+                  <p class="work-detail__text">
+                    For the new internet bank, the challenge was building a
+                    scalable and intuitive foundation from the ground up,
+                    capable of supporting multiple customer segments and
+                    evolving business needs over time.
+                  </p>
+                  <p class="work-detail__text">
+                    For the mobile app, the challenge lies in evolving an
+                    existing product by improving usability, structure, and
+                    consistency — without disrupting established user behavior.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="work-detail__media-grid" role="list">
+              <figure class="work-detail__media" role="listitem">
+                <img
+                  data-zoomable
+                  src="/assets/images/projects/marginalen/challenge-01.webp"
+                  alt="Example interface improvement"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="work-detail__caption">
+                  Account overview design for the internet bank.
+                </figcaption>
+              </figure>
+
+              <figure class="work-detail__media" role="listitem">
+                <img
+                  data-zoomable
+                  src="/assets/images/projects/marginalen/challenge-02.webp"
+                  alt="Mobile flow refinement"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="work-detail__caption">
+                  The same account experience translated to mobile.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Section: Approach -->
+          <section
+            class="work-detail__section"
+            aria-labelledby="approach-title"
+          >
+            <div class="work-detail__section-wrapper">
+              <div class="work-detail__section-head">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text"
+                    ><span class="section-label__text-index">03</span>
+                    Approach</span
+                  >
+                </div>
+              </div>
+
+              <div class="work-detail__section-body work-detail__two-col">
+                <div class="work-detail__col-top">
+                  <h2 id="approach-title" class="section-title">
+                    Designing for clarity and scalability
+                  </h2>
+                  <p class="work-detail__text">
+                    My approach centers on clarity and usability. For the
+                    internet bank, this meant structuring complex functionality
+                    into understandable flows and creating a scalable design
+                    foundation that works for both private and business
+                    customers.
+                  </p>
+                  <p class="work-detail__text">
+                    For the mobile app, the focus is on iterative improvement —
+                    refining navigation, simplifying interactions, and
+                    continuously improving the experience based on insights from
+                    users, data, and cross-functional collaboration.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="work-detail__media-grid" role="list">
+              <figure class="work-detail__media" role="listitem">
+                <img
+                  data-zoomable
+                  src="/assets/images/projects/marginalen/approach-01.webp"
+                  alt="Example of scalable UI patterns"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="work-detail__caption">
+                  Payment and transfer flow in the internet bank.
+                </figcaption>
+              </figure>
+
+              <figure class="work-detail__media" role="listitem">
+                <img
+                  data-zoomable
+                  src="/assets/images/projects/marginalen/approach-02.webp"
+                  alt="Mobile UI refinements"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="work-detail__caption">
+                  The same flow adapted for the mobile app.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Section: Outcomes -->
+          <section
+            class="work-detail__section work-detail__section-outcomes"
+            aria-labelledby="outcomes-title"
+          >
+            <div class="work-detail__section-wrapper">
+              <div class="work-detail__section-head">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text"
+                    ><span class="section-label__text-index">04</span> Outcomes
+                    &amp; learnings
+                  </span>
+                </div>
+              </div>
+
+              <div class="work-detail__section-body work-detail__two-col">
+                <div class="work-detail__col-top">
+                  <h2 id="outcomes-title" class="section-title">
+                    What changed and what it reinforced
+                  </h2>
+                  <p class="work-detail__text">
+                    The work contributed to clearer and more consistent digital
+                    banking experiences across Marginalen Bank’s platforms. By
+                    aligning structure and interaction patterns between the
+                    internet bank and mobile app, the experience became easier
+                    to understand while remaining flexible across different
+                    contexts.
+                  </p>
+                  <p class="work-detail__text">
+                    Designing for both private and business users reinforced the
+                    importance of scalable UX foundations, close cross-team
+                    collaboration, and continuous iteration—especially within
+                    complex and regulated product environments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: More to explore -->
+          <section
+            class="work-detail__section work-detail__section-more"
+            aria-labelledby="more-title"
+          >
+            <div class="work-detail__section-body work-detail__more">
+              <div class="work-detail__more-left">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text">Related work</span>
+                </div>
+
+                <h2 id="more-title" class="section-title">More to explore</h2>
+                <p class="work-detail__text">
+                  A selection of related projects focused on clarity, structure,
+                  and purposeful design across different industries.
+                </p>
+              </div>
+
+              <div class="work-detail__more-right">
+                <a class="button button--secondary__small" href="/work">
+                  View all work
+                </a>
+              </div>
+            </div>
+
+            <div class="work-detail__related-grid project-grid" role="list">
+              <!-- Related card 1 -->
+              <article class="project-card" role="listitem">
+                <a class="project-card__link" href="/work/jtt">
+                  <div class="project-card__media" aria-hidden="true">
+                    <img
+                      class="project-card__img project-card__img--default"
+                      src="/assets/images/projects/jtt/thumbnail-jtt.webp"
+                      alt="JTT Fastighet & Konsult cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      class="project-card__img project-card__img--hover"
+                      src="/assets/images/projects/jtt/thumbnail-hover-jtt.webp"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="project-card__footer">
+                    <div class="project-card__left-info">
+                      <h3 class="project-card__title">
+                        JTT Fastighet &amp; Konsult
+                      </h3>
+                      <p class="project-card__meta">
+                        Property &amp; consulting
+                      </p>
+                    </div>
+                    <span class="project-card__year">2025</span>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Related card 2 -->
+              <article class="project-card" role="listitem">
+                <a class="project-card__link" href="/work/stegborgs">
+                  <div class="project-card__media" aria-hidden="true">
+                    <img
+                      class="project-card__img project-card__img--default"
+                      src="/assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
+                      alt="Stegborgs EL-evator cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      class="project-card__img project-card__img--hover"
+                      src="/assets/images/projects/stegborgs/thumbnail-hover-stegborgs.webp"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="project-card__footer">
+                    <div class="project-card__left-info">
+                      <h3 class="project-card__title">Stegborgs EL-evator</h3>
+                      <p class="project-card__meta">
+                        B2B website for lift systems
+                      </p>
+                    </div>
+                    <span class="project-card__year">2023</span>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer" role="contentinfo">
+        <div class="container footer__grid inner-wrapper">
+          <div class="footer__brand__cols__wrapper">
+            <div class="footer__brand">
+              <a class="footer__logotype" href="/">
+                <img
+                  src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                  alt="lucas rosendahl"
+                />
+              </a>
+              <p class="footer__text">
+                Building a brand, designing a product, or exploring an idea —
+                I’d love to hear from you.
+              </p>
+              <p class="footer__email">
+                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
+              </p>
+            </div>
+
+            <div class="footer__cols">
+              <div class="footer__col">
+                <p class="footer__title">Sitemap</p>
+                <ul class="footer__list">
+                  <li><a href="/work">Work</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/#services">Services</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                  <li><a href="/#faq">FAQ</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__col">
+                <p class="footer__title">Social</p>
+                <ul class="footer__list">
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/lucas-rosendahl/"
+                      rel="me"
+                      target="_blank"
+                      >LinkedIn</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Luchkiin"
+                      rel="me"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.figma.com/@lucasrosendahl"
+                      rel="me"
+                      target="_blank"
+                      >Figma</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__meta">
+            <p class="footer___copyright">
+              © Lucas Rosendahl <span id="year"></span>
+            </p>
+            <div class="footer__policies">
+              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/cookie-policy">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Cookie consent (same include on all pages) -->
+    <div
+      class="cookie-consent"
+      data-cookie-consent
+      hidden
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent"
+    >
+      <div class="cookie-consent__overlay" data-cookie-overlay></div>
+
+      <div class="cookie-consent__content">
+        <p class="cookie-consent__text">
+          This site uses cookies to enhance your experience. Read our
+          <a href="/cookie-policy">Cookie Policy</a>.
+        </p>
+
+        <div class="cookie-consent__actions">
+          <button
+            class="button button--secondary__small cookie-consent__btn"
+            type="button"
+            data-consent="decline"
+          >
+            Decline
+          </button>
+          <button
+            class="button button--secondary__small cookie-consent__btn"
+            type="button"
+            data-consent="accept"
+          >
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image viewer -->
+    <div class="image-viewer" data-image-viewer hidden aria-hidden="true">
+      <div class="image-viewer__overlay"></div>
+      <div class="image-viewer__dialog" role="dialog" aria-modal="true">
+        <figure class="image-viewer__figure">
+          <img class="image-viewer__img" data-image-viewer-img alt="" />
+        </figure>
+      </div>
+      <button
+        class="image-viewer__close"
+        type="button"
+        data-image-viewer-close
+        aria-label="Close"
+      >
+        ×
+      </button>
+    </div>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/image-viewer.js" defer></script>
+  </body>
+</html>

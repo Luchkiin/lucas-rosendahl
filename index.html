@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Lucas Rosendahl — UX Designer & Digital Creative. Selected work and case studies."
+    />
+    <title>Lucas Rosendahl — Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
+
+    <!-- Web App -->
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body class="page-home">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="container header__inner">
+        <a class="header__logotype" href="/" data-reveal="load"
+          ><img
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
+            alt="lucas rosendahl"
+        /></a>
+        <a class="header__logotype__mobile" href="/" data-reveal="load"
+          ><img
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+            alt="lucas rosendahl"
+        /></a>
+
+        <!-- Desktop / tablet nav -->
+        <nav class="site-nav site-nav--desktop" aria-label="Primary">
+          <ul
+            class="site-nav__list"
+            data-stagger
+            data-stagger-base="80"
+            data-stagger-step="70"
+          >
+            <li><a href="/about" data-reveal="load">About</a></li>
+            <li><a href="/work" data-reveal="load">Work</a></li>
+            <li><a href="#services" data-reveal="load">Services</a></li>
+            <li><a href="/contact" data-reveal="load">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Mobile fullscreen menu -->
+      <nav
+        id="mobile-menu"
+        class="mobile-menu"
+        aria-label="Mobile"
+        aria-hidden="true"
+      >
+        <div class="container mobile-menu__inner">
+          <div class="mobile-menu__header">
+            <a class="header__logotype__white" href="/"
+              ><img
+                src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+                alt="lucas rosendahl"
+            /></a>
+
+            <button class="menu-close" type="button" aria-label="Close menu">
+              <svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.0538 28.3077L15 27.2538L20.6 21.6538L15 16.0538L16.0538 15L21.6538 20.6L27.2538 15L28.3077 16.0538L22.7077 21.6538L28.3077 27.2538L27.2538 28.3077L21.6538 22.7077L16.0538 28.3077Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mobile-menu__content">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">01</span>
+                <a class="mobile-menu__link" href="/about">About</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">02</span>
+                <a class="mobile-menu__link" href="/work">Work</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">03</span>
+                <a class="mobile-menu__link" href="#services">Services</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">04</span>
+                <a class="mobile-menu__link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero (video) -->
+      <section class="hero" aria-label="Hero">
+        <div class="container container__hero">
+          <div class="hero-card">
+            <div class="hero-card__media" aria-hidden="true">
+              <video
+                class="hero-card__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="/assets/videos/abstract-blue-waves-fallback.webp"
+              >
+                <source
+                  src="/assets/videos/abstract-blue-waves-720.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="/assets/videos/abstract-blue-waves-720.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <div class="hero-card__overlay"></div>
+            </div>
+
+            <div
+              class="hero-card__content"
+              data-stagger
+              data-stagger-base="220"
+              data-stagger-step="110"
+            >
+              <p
+                class="hero-card__overline"
+                data-reveal="load"
+                data-reveal-hero
+              >
+                UX DESIGNER
+              </p>
+
+              <h1
+                class="hero-card__title h1-hero"
+                data-reveal="load"
+                data-reveal-hero
+              >
+                Lucas Rosendahl
+              </h1>
+
+              <p class="hero-card__lead" data-reveal="load" data-reveal-hero>
+                Senior UX Designer at Marginalen Bank focused on structure,
+                usability, and meaningful interactions.
+              </p>
+
+              <div
+                class="hero-card__actions"
+                data-reveal="load"
+                data-reveal-hero
+              >
+                <a class="button button--primary" href="/work">View work</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About teaser -->
+      <section class="section about-teaser" aria-labelledby="about-title">
+        <div class="container inner-wrapper">
+          <div class="border-wrapper" data-reveal data-reveal-card>
+            <div data-stagger data-stagger-base="120" data-stagger-step="90">
+              <div class="section-label" data-reveal>
+                <span class="section-label__dot" aria-hidden="true"></span>
+                <span class="section-label__text">About</span>
+              </div>
+
+              <div class="about-teaser__grid" data-stagger>
+                <h2 id="about-title" class="about-teaser__title" data-reveal>
+                  I’m Lucas Rosendahl, a UX designer and digital creative
+                  focused on clarity,
+                  <span>usability, and intuitive digital experiences.</span>
+                </h2>
+
+                <div class="about-teaser__actions" data-reveal>
+                  <a class="button button--secondary" href="/about">About me</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected work -->
+      <section class="section work" aria-labelledby="work-title">
+        <div class="container inner-wrapper">
+          <div class="section-head section-head--split" data-stagger>
+            <div data-reveal>
+              <div class="section-label">
+                <span class="section-label__dot" aria-hidden="true"></span>
+                <span class="section-label__text">Work</span>
+              </div>
+              <h2 id="work-title" class="section-title">Selected work</h2>
+              <p class="section-lead">
+                A curated selection of projects focused on clarity and purpose.
+              </p>
+            </div>
+
+            <div class="section-head__actions" data-reveal>
+              <a class="button button--secondary__small" href="/work"
+                >View all work</a
+              >
+            </div>
+          </div>
+
+          <div class="project-grid" role="list" data-stagger>
+            <!-- Card 1 -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-reveal
+              data-reveal-card
+            >
+              <a class="project-card__link" href="/work/marginalen-bank">
+                <div class="project-card__media" aria-hidden="true">
+                  <img
+                    class="project-card__img project-card__img--default"
+                    src="/assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                    alt="Marginalen Bank cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    class="project-card__img project-card__img--hover"
+                    src="/assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-card__footer">
+                  <div class="project-card__left-info">
+                    <h3 class="project-card__title">Marginalen Bank</h3>
+                    <p class="project-card__meta">Digital banking</p>
+                  </div>
+                  <span class="project-card__year">2023 — Present</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-reveal
+              data-reveal-card
+            >
+              <a class="project-card__link" href="/work/jtt">
+                <div class="project-card__media" aria-hidden="true">
+                  <img
+                    class="project-card__img project-card__img--default"
+                    src="/assets/images/projects/jtt/thumbnail-jtt.webp"
+                    alt="JTT Fastighet & Konsult cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    class="project-card__img project-card__img--hover"
+                    src="/assets/images/projects/jtt/thumbnail-hover-jtt.webp"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-card__footer">
+                  <div class="project-card__left-info">
+                    <h3 class="project-card__title">
+                      JTT Fastighet &amp; Konsult
+                    </h3>
+                    <p class="project-card__meta">Property &amp; consulting</p>
+                  </div>
+                  <span class="project-card__year">2025</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- Card 3 -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-reveal
+              data-reveal-card
+            >
+              <a class="project-card__link" href="/work/stegborgs">
+                <div class="project-card__media" aria-hidden="true">
+                  <img
+                    class="project-card__img project-card__img--default"
+                    src="/assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
+                    alt="Stegborgs EL-evator cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    class="project-card__img project-card__img--hover"
+                    src="/assets/images/projects/stegborgs/thumbnail-hover-stegborgs.webp"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-card__footer">
+                  <div class="project-card__left-info">
+                    <h3 class="project-card__title">Stegborgs EL-evator</h3>
+                    <p class="project-card__meta">
+                      B2B website for lift systems
+                    </p>
+                  </div>
+                  <span class="project-card__year">2023</span>
+                </div>
+              </a>
+            </article>
+
+            <!-- Card 4 -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-reveal
+              data-reveal-card
+            >
+              <a class="project-card__link" href="/work/youty">
+                <div class="project-card__media" aria-hidden="true">
+                  <img
+                    class="project-card__img project-card__img--default"
+                    src="/assets/images/projects/youty/thumbnail-youty.webp"
+                    alt="Youty cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    class="project-card__img project-card__img--hover"
+                    src="/assets/images/projects/youty/thumbnail-hover-youty.webp"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-card__footer">
+                  <div class="project-card__left-info">
+                    <h3 class="project-card__title">Youty</h3>
+                    <p class="project-card__meta">Beauty e-commerce</p>
+                  </div>
+                  <span class="project-card__year">2022</span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services panel -->
+      <section
+        class="section services"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <div class="container inner-wrapper">
+          <div class="panel panel--dark" data-reveal data-reveal-card>
+            <header class="panel__head" data-stagger>
+              <div class="section-label" data-reveal>
+                <span class="section-label__dot" aria-hidden="true"></span>
+                <span class="section-label__text">Services</span>
+              </div>
+              <h2 id="services-title" class="panel__title" data-reveal>
+                What I do
+              </h2>
+              <p class="panel__lead">
+                I design and build digital experiences with a focus on clarity,
+                usability, and detail — from structure and interaction to the
+                final interface.
+              </p>
+            </header>
+
+            <div
+              class="accordion"
+              data-accordion
+              data-accordion-single="true"
+              data-stagger
+            >
+              <details class="accordion__item" open data-reveal>
+                <summary class="accordion__summary">
+                  <div class="accordion__summary__left-info">
+                    <span class="accordion__index">01</span>
+                    <span class="accordion__label">Product discovery</span>
+                  </div>
+                  <span class="accordion__icon" aria-hidden="true"></span>
+                </summary>
+
+                <div class="accordion__content">
+                  <div class="accordion__content-inner">
+                    <p class="accordion__text">
+                      Understanding the problem before shaping the solution.
+                    </p>
+                    <ul class="tag-list" aria-label="Product discovery tags">
+                      <li class="tag">User Research</li>
+                      <li class="tag">Product Strategy</li>
+                      <li class="tag">Problem Definition</li>
+                      <li class="tag">User Journeys</li>
+                      <li class="tag">Concept Development</li>
+                      <li class="tag">Requirements Mapping</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+
+              <details class="accordion__item" data-reveal>
+                <summary class="accordion__summary">
+                  <div class="accordion__summary__left-info">
+                    <span class="accordion__index">02</span>
+                    <span class="accordion__label"
+                      >UX &amp; Interface design</span
+                    >
+                  </div>
+                  <span class="accordion__icon" aria-hidden="true"></span>
+                </summary>
+
+                <div class="accordion__content">
+                  <div class="accordion__content-inner">
+                    <p class="accordion__text">
+                      Designing clear, usable interfaces with intent and
+                      structure.
+                    </p>
+                    <ul class="tag-list" aria-label="UX & interface tags">
+                      <li class="tag">UX Design</li>
+                      <li class="tag">Interface Design</li>
+                      <li class="tag">Wireframing</li>
+                      <li class="tag">Prototyping</li>
+                      <li class="tag">Interaction Design</li>
+                      <li class="tag">Design Systems</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+
+              <details class="accordion__item" data-reveal>
+                <summary class="accordion__summary">
+                  <div class="accordion__summary__left-info">
+                    <span class="accordion__index">03</span>
+                    <span class="accordion__label">Digital production</span>
+                  </div>
+                  <span class="accordion__icon" aria-hidden="true"></span>
+                </summary>
+
+                <div class="accordion__content">
+                  <div class="accordion__content-inner">
+                    <p class="accordion__text">
+                      Turning design into polished, functional digital products.
+                    </p>
+                    <ul class="tag-list" aria-label="Digital production tags">
+                      <li class="tag">Design Implementation</li>
+                      <li class="tag">Responsive Layouts</li>
+                      <li class="tag">Component-Based Design</li>
+                      <li class="tag">Performance & Accessibility</li>
+                      <li class="tag">Quality Assurance</li>
+                      <li class="tag">Design-to-Code</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section faq" aria-labelledby="faq-title">
+        <div class="container inner-wrapper">
+          <div class="faq__grid" data-reveal>
+            <header class="faq__intro" data-stagger>
+              <div class="section-label" data-reveal>
+                <span class="section-label__dot" aria-hidden="true"></span>
+                <span class="section-label__text">FAQ</span>
+              </div>
+              <h2 id="faq-title" class="section-title" data-reveal>
+                How I work
+              </h2>
+              <p class="section-lead" data-reveal>
+                Answers to common questions about my process, services, and how
+                I collaborate with clients.
+              </p>
+              <div class="faq__actions" data-reveal>
+                <a class="button button--secondary" href="/contact"
+                  >Get in touch</a
+                >
+              </div>
+            </header>
+
+            <div class="faq__content">
+              <div class="accordion" data-accordion data-stagger>
+                <details class="accordion__item" open data-reveal>
+                  <summary class="accordion__summary">
+                    <span class="accordion__label"
+                      >What kind of clients do you typically work with?</span
+                    >
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion__content">
+                    <div class="accordion__content-inner">
+                      <p class="accordion__text">
+                        I work with startups, scale-ups, and established
+                        companies looking to improve or build digital products.
+                        Projects range from early-stage concepts to refining and
+                        evolving existing platforms.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <details class="accordion__item" data-reveal>
+                  <summary class="accordion__summary">
+                    <span class="accordion__label"
+                      >What services do you offer?</span
+                    >
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion__content">
+                    <div class="accordion__content-inner">
+                      <p class="accordion__text">
+                        I focus on product discovery, UX and interface design,
+                        and digital production. This includes research and
+                        strategy, design and prototyping, and bringing designs
+                        into polished, functional digital products.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <details class="accordion__item" data-reveal>
+                  <summary class="accordion__summary">
+                    <span class="accordion__label"
+                      >How long does a typical project take?</span
+                    >
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion__content">
+                    <div class="accordion__content-inner">
+                      <p class="accordion__text">
+                        Timelines vary depending on scope and complexity.
+                        Smaller projects usually take a few weeks, while larger
+                        product or website engagements can span several months.
+                        I define clear timelines at the start of each project.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <details class="accordion__item" data-reveal>
+                  <summary class="accordion__summary">
+                    <span class="accordion__label"
+                      >What is your pricing structure?</span
+                    >
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion__content">
+                    <div class="accordion__content-inner">
+                      <p class="accordion__text">
+                        Projects are typically priced as fixed scopes based on
+                        the work required. For ongoing collaborations, I also
+                        offer monthly retainers. Pricing is always discussed
+                        upfront to ensure clarity on both sides.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <details class="accordion__item" data-reveal>
+                  <summary class="accordion__summary">
+                    <span class="accordion__label"
+                      >Can you work with an existing website or product?</span
+                    >
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion__content">
+                    <div class="accordion__content-inner">
+                      <p class="accordion__text">
+                        Yes. I often work with existing products — improving
+                        usability, refining design systems, or redesigning parts
+                        of the experience while respecting what’s already in
+                        place.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <details class="accordion__item" data-reveal>
+                  <summary class="accordion__summary">
+                    <span class="accordion__label"
+                      >Do you offer ongoing support after launch?</span
+                    >
+                    <span class="accordion__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion__content">
+                    <div class="accordion__content-inner">
+                      <p class="accordion__text">
+                        Yes. I offer ongoing support for iteration,
+                        improvements, and maintenance to ensure the product
+                        continues to evolve after launch.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Contact -->
+      <footer class="site-footer" id="contact" role="contentinfo" data-reveal>
+        <div class="container footer__grid inner-wrapper" data-stagger>
+          <div class="footer__brand__cols__wrapper" data-reveal>
+            <div class="footer__brand">
+              <a class="footer__logotype" href="/"
+                ><img
+                  src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                  alt="lucas rosendahl"
+              /></a>
+              <p class="footer__text">
+                Building a brand, designing a product, or exploring an idea —
+                I’d love to hear from you.
+              </p>
+              <p class="footer__email">
+                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
+              </p>
+            </div>
+
+            <div class="footer__cols">
+              <div class="footer__col">
+                <p class="footer__title">Sitemap</p>
+                <ul class="footer__list">
+                  <li><a href="/work">Work</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                  <li><a href="#faq">FAQ</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__col">
+                <p class="footer__title">Social</p>
+                <ul class="footer__list">
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/lucas-rosendahl/"
+                      rel="me"
+                      target="_blank"
+                      >LinkedIn</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Luchkiin"
+                      rel="me"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.figma.com/@lucasrosendahl"
+                      rel="me"
+                      target="_blank"
+                      >Figma</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__meta" data-reveal>
+            <p class="footer___copyright">
+              © Lucas Rosendahl <span id="year"></span>
+            </p>
+            <div class="footer__policies">
+              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/cookie-policy">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Cookie consent -->
+    <div
+      class="cookie-consent"
+      data-cookie-consent
+      hidden
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent"
+    >
+      <div class="cookie-consent__overlay" data-cookie-overlay></div>
+
+      <div class="cookie-consent__content">
+        <p class="cookie-consent__text">
+          This site uses cookies to enhance your experience. Read our
+          <a href="/cookie-policy">Cookie Policy</a>.
+        </p>
+
+        <div class="cookie-consent__actions">
+          <button
+            class="button button--secondary__small cookie-consent__btn"
+            type="button"
+            data-consent="decline"
+          >
+            Decline
+          </button>
+          <button
+            class="button button--secondary__small cookie-consent__btn"
+            type="button"
+            data-consent="accept"
+          >
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/accordions.js" defer></script>
+    <script src="/js/reveal.js" defer></script>
+  </body>
+</html>

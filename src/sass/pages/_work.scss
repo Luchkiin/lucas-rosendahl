@@ -1,0 +1,201 @@
+@use "../abstracts/" as *;
+
+.work-page {
+  @include for-tablet() {
+    padding: $spacing-xxl 0;
+  }
+  @include for-mobile() {
+    padding: $spacing-xl 0;
+  }
+  .work-page__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: $spacing-xxxl;
+    margin-bottom: $spacing-xxxl;
+    @include for-tablet() {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: initial;
+      margin-bottom: $spacing-xxl;
+      gap: $spacing-xs;
+    }
+    @include for-mobile() {
+      margin-bottom: $spacing-xl;
+    }
+    .section-label {
+      margin-bottom: $spacing-xs;
+      @include for-tablet() {
+        margin-bottom: 12px;
+      }
+      @include for-mobile() {
+        margin-bottom: $spacing-xxs;
+      }
+    }
+    .page-title {
+      font-size: $fontSize-56;
+      font-weight: $semiBold-weight;
+      line-height: $lineHeight-72;
+      letter-spacing: $letterSpacing--0064;
+      @include for-tablet() {
+        font-size: $fontSize-48;
+        line-height: $lineHeight-60;
+      }
+      @include for-mobile() {
+        font-size: $fontSize-32;
+        line-height: normal;
+      }
+    }
+    .section-lead {
+      max-width: 400px;
+      text-align: right;
+      font-size: $fontSize-16;
+      font-weight: $regular-weight;
+      line-height: $lineHeight-21;
+      letter-spacing: $letterSpacing--005;
+      color: $dark-grey;
+      @include for-tablet() {
+        text-align: left;
+      }
+      @include for-mobile() {
+        font-size: $fontSize-14;
+      }
+    }
+  }
+
+  .work-results {
+    position: relative;
+  }
+
+  .work-panel {
+    // själva panelen fade/slide:ar
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 280ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+
+    &[hidden] {
+      display: none; // hidden ska stänga helt efter animationen
+    }
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  [data-work-results] {
+    transition: height 320ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: height;
+    overflow: clip;
+  }
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    .project-row {
+      border-top: 0.5px solid $grey;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .project-row__link {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr 1fr 75px 24px;
+      align-items: center;
+      gap: $spacing-xl;
+      padding: 12px 0 12px 6px;
+      text-decoration: none;
+      color: inherit;
+      transition: background-color 240ms cubic-bezier(0.22, 1, 0.36, 1);
+      @include for-tablet() {
+        grid-template-columns: 0.5fr 1fr 1fr 24px;
+        gap: $spacing-xl;
+        padding: $spacing-xs 0 $spacing-xs 6px;
+      }
+      @include for-mobile() {
+        grid-template-columns: 1fr auto; // enklare i mobil
+        grid-template-areas:
+          "title chevron"
+          "meta chevron";
+        align-items: center;
+        padding: 12px 0;
+        gap: 4px $spacing-s;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.025);
+      }
+    }
+
+    .project-row__index {
+      color: $dark-grey;
+      font-size: $fontSize-14;
+      font-weight: $regular-weight;
+      line-height: $lineHeight-21;
+      letter-spacing: $letterSpacing--005;
+      @include for-mobile() {
+        display: none;
+      }
+    }
+
+    .project-row__title {
+      font-size: $fontSize-20;
+      font-weight: $semiBold-weight;
+      letter-spacing: $letterSpacing--0064;
+      line-height: normal;
+      @include for-tablet() {
+        font-size: $fontSize-16;
+        line-height: normal;
+      }
+      @include for-mobile() {
+        grid-area: title;
+      }
+    }
+
+    .project-row__meta {
+      font-size: $fontSize-16;
+      font-weight: $regular-weight;
+      line-height: $lineHeight-21;
+      letter-spacing: $letterSpacing--005;
+      @include for-tablet() {
+        font-size: $fontSize-14;
+      }
+      @include for-mobile() {
+        grid-area: meta;
+      }
+    }
+
+    .project-row__thumb {
+      justify-self: end;
+      img {
+        width: 75px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 4px;
+        display: block;
+      }
+      @include for-tablet() {
+        display: none;
+      }
+    }
+    .project-row__thumb.with-border {
+      img {
+        border: solid 0.5px $grey;
+      }
+    }
+    .project-row__chevron {
+      justify-self: end;
+      width: 24px;
+      height: 24px;
+      @include for-mobile() {
+        grid-area: chevron;
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+@use "../abstracts/" as *;
+
+// Hero Headings
+h1.h1-hero {
+  font-size: $fontSize-64;
+  line-height: $lineHeight-75;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing--0064;
+  color: $white;
+  text-align: $text-left;
+  margin-bottom: $spacing-s;
+  @include for-tablet() {
+    font-size: $fontSize-56;
+    line-height: $lineHeight-72;
+    margin-bottom: $spacing-xs;
+  }
+  @include for-mobile() {
+    font-size: $fontSize-32;
+    margin-bottom: $spacing-xs;
+    line-height: normal;
+  }
+}
+
+// Headings
+.h1 {
+  font-size: $fontSize-56;
+  font-weight: $semiBold-weight;
+  line-height: $lineHeight-72;
+  letter-spacing: $letterSpacing--0064;
+  color: $black;
+  @include for-tablet() {
+    font-size: $fontSize-48;
+    font-weight: $semiBold-weight;
+    line-height: $lineHeight-60;
+    letter-spacing: $letterSpacing--0064;
+  }
+  @include for-mobile() {
+    font-size: $fontSize-32;
+    font-weight: $semiBold-weight;
+    letter-spacing: $letterSpacing--0064;
+    line-height: normal;
+  }
+}
+
+.h2 {
+  font-size: $fontSize-48;
+  font-weight: $semiBold-weight;
+  line-height: $lineHeight-60;
+  letter-spacing: $letterSpacing--0064;
+  color: $black;
+}
+
+.h3 {
+  font-size: $fontSize-32;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing--0064;
+  line-height: normal;
+  color: $black;
+}
+
+.h4 {
+  font-size: $fontSize-26;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing--0064;
+  line-height: normal;
+  color: $black;
+}
+
+.h5 {
+  font-size: $fontSize-20;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing--0064;
+  line-height: normal;
+  color: $black;
+}
+
+.h6 {
+  font-size: $fontSize-16;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing--0064;
+  line-height: normal;
+  color: $black;
+}
+
+// Body
+.body.body--large {
+  font-size: $fontSize-20;
+  font-weight: $regular-weight;
+  line-height: $lineHeight-29;
+  letter-spacing: $letterSpacing--005;
+  color: $black;
+}
+
+.body.body--medium {
+  font-size: $fontSize-16;
+  font-weight: $regular-weight;
+  line-height: $lineHeight-21;
+  letter-spacing: $letterSpacing--005;
+  color: $black;
+}
+
+.body.body--small {
+  font-size: $fontSize-14;
+  font-weight: $regular-weight;
+  line-height: $lineHeight-21;
+  letter-spacing: $letterSpacing--005;
+  color: $black;
+}
+
+.body.body--x-small {
+  font-size: $fontSize-12;
+  font-weight: $regular-weight;
+  line-height: $lineHeight-17;
+  letter-spacing: $letterSpacing--005;
+  color: $black;
+}
+
+// Subtitles
+.subtitle.subtitle--large {
+  font-size: $fontSize-18;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing-048;
+}
+
+.subtitle.subtitle--medium {
+  font-size: $fontSize-16;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing-048;
+}
+
+.subtitle.subtitle--small {
+  font-size: $fontSize-14;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing-048;
+  line-height: normal;
+}
+
+// Overlines
+.overline.overline--large {
+  font-size: $fontSize-14;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing--005;
+  text-transform: $uppercase;
+}
+.overline.overline--small {
+  font-size: $fontSize-12;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing--005;
+  text-transform: $uppercase;
+}
+
+// Links
+a.link.link--large {
+  font-size: $fontSize-20;
+  font-weight: $medium-weight;
+  line-height: $lineHeight-29;
+  letter-spacing: $letterSpacing--005;
+  color: $blue;
+  text-decoration: none;
+}
+
+a.link.link--medium {
+  font-size: $fontSize-16;
+  font-weight: $medium-weight;
+  line-height: $lineHeight-21;
+  letter-spacing: $letterSpacing--005;
+  color: $blue;
+  text-decoration: none;
+}
+
+a.link.link--small {
+  font-size: $fontSize-14;
+  font-weight: $medium-weight;
+  line-height: $lineHeight-21;
+  letter-spacing: $letterSpacing--005;
+  color: $blue;
+  text-decoration: none;
+}
+
+// Buttons
+button.btn.btn--large {
+  font-size: $fontSize-16;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing-025;
+  margin: 0;
+}
+
+button.btn.btn--small {
+  font-size: $fontSize-14;
+  font-weight: $semiBold-weight;
+  letter-spacing: $letterSpacing-025;
+  margin: 0;
+}
+

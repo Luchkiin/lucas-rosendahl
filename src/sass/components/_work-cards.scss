@@ -1,0 +1,160 @@
+@use "../abstracts/" as *;
+
+// Selected work
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-s;
+  @include for-tablet() {
+    gap: $spacing-xs;
+  }
+  @include for-mobile() {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    padding: $spacing-xxs;
+    background-color: $light-grey;
+    border-radius: $border-radius-xl;
+    overflow: hidden;
+    transition: background-color $hover-slow $hover-ease,
+      transform $hover-slow $hover-ease;
+    @include for-tablet() {
+      padding: 4px;
+    }
+    @include for-mobile() {
+      border-radius: $border-radius-l;
+    }
+    .project-card__link {
+      display: grid;
+      grid-template-rows: auto auto;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+    .project-card__media {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: $white;
+      border-radius: 11px;
+      overflow: hidden;
+      @include for-mobile() {
+        border-radius: 10px;
+      }
+      .project-card__img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        will-change: opacity, transform;
+        transition: opacity $hover-slow $hover-ease,
+          transform $hover-slow $hover-ease;
+      }
+
+      .project-card__img--default {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .project-card__img--hover {
+        opacity: 0;
+        transform: scale(1.02);
+      }
+    }
+    .project-card__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 12px;
+      background: transparent;
+      transition: color $hover-slow $hover-ease;
+      @include for-tablet() {
+        padding: $spacing-xs $spacing-xxs;
+      }
+      @include for-mobile() {
+        padding: 12px $spacing-xxs;
+      }
+      .project-card__left-info {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xxs;
+        @include for-tablet() {
+          gap: 4px;
+        }
+        .project-card__title {
+          font-size: $fontSize-20;
+          font-weight: $semiBold-weight;
+          letter-spacing: $letterSpacing--0064;
+          line-height: normal;
+          @include for-tablet() {
+            font-size: $fontSize-16;
+          }
+        }
+        .project-card__meta {
+          font-size: $fontSize-16;
+          font-weight: $regular-weight;
+          line-height: $lineHeight-21;
+          letter-spacing: $letterSpacing--005;
+          color: $darkest-grey;
+          transition: color $hover-slow $hover-ease,
+            opacity $hover-slow $hover-ease;
+          @include for-tablet() {
+            font-size: $fontSize-14;
+          }
+        }
+      }
+      .project-card__year {
+        font-size: $fontSize-16;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        @include for-tablet() {
+          font-size: $fontSize-14;
+        }
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $bg-dark;
+      }
+
+      &:hover .project-card__img--default {
+        opacity: 0;
+        transform: scale(1.01);
+      }
+      &:hover .project-card__img--hover {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      &:hover .project-card__footer {
+        color: $white;
+      }
+      &:hover
+        .project-card__footer
+        .project-card__left-info
+        .project-card__meta {
+        color: $white;
+      }
+    }
+
+    &:focus-within {
+      background: $bg-dark;
+    }
+    &:focus-within .project-card__footer {
+      color: $white;
+    }
+    &:focus-within
+      .project-card__footer
+      .project-card__left-info
+      .project-card__meta {
+      color: $white;
+    }
+    &:focus-within .project-card__img--default {
+      opacity: 0;
+    }
+    &:focus-within .project-card__img--hover {
+      opacity: 1;
+    }
+  }
+}

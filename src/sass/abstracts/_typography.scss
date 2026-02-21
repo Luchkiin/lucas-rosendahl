@@ -1,0 +1,45 @@
+// Font Sizes
+$fontSize-12: 0.75rem; //12 px
+$fontSize-14: 0.875rem; // 14px
+$fontSize-16: 1rem; // 16px
+$fontSize-18: 1.125rem; // 18 px
+$fontSize-20: 1.25rem; // 20px
+$fontSize-26: 1.625rem; // 26px
+$fontSize-32: 2rem; // 32px
+$fontSize-38: 2.375rem; // 38px
+$fontSize-48: 3rem; // 48 px
+$fontSize-56: 3.5rem; // 56 px
+$fontSize-64: 4rem; // 64 px
+
+// Font Weights
+$regular-weight: 400; // Regular
+$medium-weight: 500; // Medium
+$semiBold-weight: 600; // SemiBold
+
+// Line Heights/
+$lineHeight-17: 17px;
+$lineHeight-21: 21px;
+$lineHeight-29: 29px;
+$lineHeight-46: 46px;
+$lineHeight-60: 60px;
+$lineHeight-72: 72px;
+$lineHeight-75: 75px;
+
+// Letter Spacings
+$letterSpacing--0064: -0.064px;
+$letterSpacing--005: -0.005px;
+$letterSpacing-025: 0.25px;
+$letterSpacing-048: 0.48px;
+
+// Text Alignment
+$text-center: center;
+$text-left: left;
+$text-right: right;
+
+// Text Transforms
+$uppercase: uppercase;
+$lowercase: lowercase;
+$capitalize: capitalize;
+$underline: underline;
+$no-underline: none;
+$list-style-none: none;

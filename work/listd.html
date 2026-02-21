@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Listd — UX case study by Lucas Rosendahl."
+    />
+    <title>Listd — Lucas Rosendahl</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
+
+    <!-- Web App -->
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body class="page-work-detail">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="container header__inner">
+        <a class="header__logotype" href="/">
+          <img
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
+            alt="lucas rosendahl"
+          />
+        </a>
+        <a class="header__logotype__mobile" href="/">
+          <img
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
+            alt="lucas rosendahl"
+          />
+        </a>
+
+        <nav class="site-nav site-nav--desktop" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a href="/about">About</a></li>
+            <li><a href="/work" aria-current="page">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Mobile fullscreen menu -->
+      <nav
+        id="mobile-menu"
+        class="mobile-menu"
+        aria-label="Mobile"
+        aria-hidden="true"
+      >
+        <div class="container mobile-menu__inner">
+          <div class="mobile-menu__header">
+            <a class="header__logotype__white" href="/">
+              <img
+                src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+                alt="lucas rosendahl"
+              />
+            </a>
+
+            <button class="menu-close" type="button" aria-label="Close menu">
+              <svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.0538 28.3077L15 27.2538L20.6 21.6538L15 16.0538L16.0538 15L21.6538 20.6L27.2538 15L28.3077 16.0538L22.7077 21.6538L28.3077 27.2538L27.2538 28.3077L21.6538 22.7077L16.0538 28.3077Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="mobile-menu__content">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">01</span>
+                <a class="mobile-menu__link" href="/about">About</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">02</span>
+                <a class="mobile-menu__link is-active" href="/work"
+                  >Work</a
+                >
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">03</span>
+                <a class="mobile-menu__link" href="/#services">Services</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">04</span>
+                <a class="mobile-menu__link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="main">
+      <section class="section work-detail" aria-labelledby="case-title">
+        <div class="container inner-wrapper work-detail__container">
+          <!-- Top / Title -->
+          <div class="work-detail__top">
+            <a class="work-detail__back" href="/work">
+              <span class="work-detail__back-icon" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1539 6.34616L11.2077 7.43076L7.38845 11.25L19.5 11.25L19.5 12.75L7.38845 12.75L11.2077 16.5692L10.1539 17.6538L4.50005 12L10.1539 6.34616Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+
+              <span class="work-detail__back-text">Back</span>
+            </a>
+
+            <div class="work-detail__head">
+              <div class="work-detail__head-wrapper">
+                <div class="work-detail__head-left-top">
+                  <h1 id="case-title" class="page-title">Listd</h1>
+                </div>
+
+                <div class="work-detail__head-right-top">
+                  <p class="work-detail__intro section-lead">
+                    A lightweight to-do app focused on simplicity and everyday
+                    use.
+                  </p>
+                </div>
+              </div>
+
+              <div class="work-detail__head-wrapper">
+                <div class="work-detail__head-left-bottom">
+                  <ul class="work-detail__meta" aria-label="Project metadata">
+                    <li>
+                      <span class="work-detail__meta-type">Services:</span> UX
+                      Design &amp; Visual Design
+                    </li>
+                    <li class="work-detail__meta-separator">/</li>
+                    <li>
+                      <span class="work-detail__meta-type">Type:</span> Mobile
+                      app
+                    </li>
+                    <li class="work-detail__meta-separator">/</li>
+                    <li>
+                      <span class="work-detail__meta-type">Industry:</span>
+                      Productivity
+                    </li>
+                    <li class="work-detail__meta-separator">/</li>
+                    <li>
+                      <span class="work-detail__meta-type">Year:</span> 2019
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero -->
+          <figure class="work-detail__hero" aria-label="Hero visual">
+            <img
+              src="/assets/images/projects/listd/hero-listd.webp"
+              alt="Listd hero"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <!-- Section: Overview -->
+          <section
+            class="work-detail__section"
+            aria-labelledby="overview-title"
+          >
+            <div class="work-detail__section-wrapper">
+              <div class="work-detail__section-head">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text"
+                    ><span class="section-label__text-index">01</span>
+                    Context</span
+                  >
+                </div>
+              </div>
+
+              <div class="work-detail__section-body work-detail__two-col">
+                <div class="work-detail__col-top">
+                  <h2 id="overview-title" class="section-title">Overview</h2>
+                  <p class="work-detail__text">
+                    Listd is a simple to-do application designed to help users
+                    keep track of everyday tasks with minimal effort. The app
+                    focuses on essential functionality — creating, organizing,
+                    and completing tasks without unnecessary features or
+                    distractions.
+                  </p>
+                  <p class="work-detail__text">
+                    The project was created as a personal initiative, exploring
+                    how a stripped-down interface and clear interaction patterns
+                    can support daily productivity.
+                  </p>
+                </div>
+
+                <div class="work-detail__col-bottom">
+                  <h3 class="work-detail__sub-title">Role</h3>
+                  <p class="work-detail__text">
+                    I designed Listd end-to-end, covering UX design, visual
+                    design, and interaction patterns. This included defining the
+                    core task flows, designing the visual structure, and
+                    ensuring the app remained fast, intuitive, and easy to use.
+                  </p>
+                  <p class="work-detail__text">
+                    As a self-initiated project, Listd allowed for full
+                    ownership of design decisions and a strong focus on
+                    usability fundamentals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <figure class="work-detail__media work-detail__media--wide">
+              <img
+                data-zoomable
+                src="/assets/images/projects/listd/overview-device.webp"
+                alt="Listd app screens"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="captions-wrapper">
+                <figcaption
+                  class="work-detail__caption work-detail__caption-wide"
+                ></figcaption>
+                <figcaption
+                  class="work-detail__caption work-detail__caption-wide"
+                >
+                  App launch and primary task overview.
+                </figcaption>
+              </div>
+            </figure>
+          </section>
+
+          <!-- Section: The challenge -->
+          <section
+            class="work-detail__section"
+            aria-labelledby="challenge-title"
+          >
+            <div class="work-detail__section-wrapper">
+              <div class="work-detail__section-head">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text"
+                    ><span class="section-label__text-index">02</span> The
+                    challenge</span
+                  >
+                </div>
+              </div>
+
+              <div class="work-detail__section-body work-detail__two-col">
+                <div class="work-detail__col-top">
+                  <h2 id="challenge-title" class="section-title">
+                    Designing simplicity without losing usefulness
+                  </h2>
+                  <p class="work-detail__text">
+                    Many productivity apps become complex over time, introducing
+                    features that add friction instead of value. The main
+                    challenge was to design an experience that stayed simple
+                    while still supporting common use cases such as shopping
+                    lists, reminders, and daily task management.
+                  </p>
+                  <p class="work-detail__text">
+                    Another challenge was to ensure that interactions felt
+                    immediate and responsive, encouraging frequent, lightweight
+                    use.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="work-detail__media-grid" role="list">
+              <figure class="work-detail__media" role="listitem">
+                <img
+                  data-zoomable
+                  src="/assets/images/projects/listd/challenge-01.webp"
+                  alt="Task creation and hierarchy example"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="work-detail__caption">
+                  Structuring task creation to feel fast and frictionless.
+                </figcaption>
+              </figure>
+
+              <figure class="work-detail__media" role="listitem">
+                <img
+                  data-zoomable
+                  src="/assets/images/projects/listd/challenge-02.webp"
+                  alt="Interaction clarity example"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="work-detail__caption">
+                  Maintaining clarity while supporting common everyday use
+                  cases.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Section: Approach -->
+          <section
+            class="work-detail__section"
+            aria-labelledby="approach-title"
+          >
+            <div class="work-detail__section-wrapper">
+              <div class="work-detail__section-head">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text"
+                    ><span class="section-label__text-index">03</span>
+                    Approach</span
+                  >
+                </div>
+              </div>
+
+              <div class="work-detail__section-body work-detail__two-col">
+                <div class="work-detail__col-top">
+                  <h2 id="approach-title" class="section-title">
+                    Focusing on core actions and clarity
+                  </h2>
+                  <p class="work-detail__text">
+                    The design approach centered on reducing cognitive load and
+                    emphasizing the most important actions. Tasks are easy to
+                    create, edit, and complete, with clear visual feedback
+                    reinforcing progress.
+                  </p>
+                  <p class="work-detail__text">
+                    A minimal visual language and restrained use of color help
+                    keep the focus on content, while consistent interaction
+                    patterns support ease of learning and repeated use.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="work-detail__media-grid" role="list">
+              <figure class="work-detail__media" role="listitem">
+                <img
+                  data-zoomable
+                  src="/assets/images/projects/listd/approach-01.webp"
+                  alt="Core actions example"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="work-detail__caption">
+                  A lightweight interaction design for quick, repeated
+                  check-ins.
+                </figcaption>
+              </figure>
+
+              <figure class="work-detail__media" role="listitem">
+                <img
+                  data-zoomable
+                  src="/assets/images/projects/listd/approach-02.webp"
+                  alt="Feedback and polish example"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="work-detail__caption">
+                  Small interaction details reinforcing simplicity and ease of
+                  use.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Section: Outcomes -->
+          <section
+            class="work-detail__section work-detail__section-outcomes"
+            aria-labelledby="outcomes-title"
+          >
+            <div class="work-detail__section-wrapper">
+              <div class="work-detail__section-head">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text"
+                    ><span class="section-label__text-index">04</span> Outcomes
+                    &amp; learnings
+                  </span>
+                </div>
+              </div>
+
+              <div class="work-detail__section-body work-detail__two-col">
+                <div class="work-detail__col-top">
+                  <h2 id="outcomes-title" class="section-title">
+                    Small interactions, big impact
+                  </h2>
+                  <p class="work-detail__text">
+                    Listd resulted in a focused and approachable task-management
+                    experience built around everyday needs. The project
+                    reinforced the importance of prioritization, restraint, and
+                    designing for real-world usage where speed and clarity
+                    matter most.
+                  </p>
+                  <p class="work-detail__text">
+                    Working on Listd also highlighted how thoughtful UX
+                    decisions can elevate even the simplest product ideas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: More to explore -->
+          <section
+            class="work-detail__section work-detail__section-more"
+            aria-labelledby="more-title"
+          >
+            <div class="work-detail__section-body work-detail__more">
+              <div class="work-detail__more-left">
+                <div class="section-label">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text">Related work</span>
+                </div>
+
+                <h2 id="more-title" class="section-title">More to explore</h2>
+                <p class="work-detail__text">
+                  A selection of related projects focused on clarity, structure,
+                  and purposeful design across different industries.
+                </p>
+              </div>
+
+              <div class="work-detail__more-right">
+                <a class="button button--secondary__small" href="/work">
+                  View all work
+                </a>
+              </div>
+            </div>
+
+            <div class="work-detail__related-grid project-grid" role="list">
+              <!-- Related card 1 -->
+              <article class="project-card" role="listitem">
+                <a class="project-card__link" href="/work/marginalen">
+                  <div class="project-card__media" aria-hidden="true">
+                    <img
+                      class="project-card__img project-card__img--default"
+                      src="/assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                      alt="Marginalen Bank cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      class="project-card__img project-card__img--hover"
+                      src="/assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="project-card__footer">
+                    <div class="project-card__left-info">
+                      <h3 class="project-card__title">Marginalen Bank</h3>
+                      <p class="project-card__meta">Digital banking</p>
+                    </div>
+                    <span class="project-card__year">2023 — Present</span>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Related card 2 -->
+              <article class="project-card" role="listitem">
+                <a class="project-card__link" href="/work/jtt">
+                  <div class="project-card__media" aria-hidden="true">
+                    <img
+                      class="project-card__img project-card__img--default"
+                      src="/assets/images/projects/jtt/thumbnail-jtt.webp"
+                      alt="JTT Fastighet &amp; Konsult cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      class="project-card__img project-card__img--hover"
+                      src="/assets/images/projects/jtt/thumbnail-hover-jtt.webp"
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="project-card__footer">
+                    <div class="project-card__left-info">
+                      <h3 class="project-card__title">
+                        JTT Fastighet &amp; Konsult
+                      </h3>
+                      <p class="project-card__meta">
+                        Property &amp; consulting
+                      </p>
+                    </div>
+                    <span class="project-card__year">2025</span>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer" role="contentinfo">
+        <div class="container footer__grid inner-wrapper">
+          <div class="footer__brand__cols__wrapper">
+            <div class="footer__brand">
+              <a class="footer__logotype" href="/">
+                <img
+                  src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                  alt="lucas rosendahl"
+                />
+              </a>
+              <p class="footer__text">
+                Building a brand, designing a product, or exploring an idea —
+                I’d love to hear from you.
+              </p>
+              <p class="footer__email">
+                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
+              </p>
+            </div>
+
+            <div class="footer__cols">
+              <div class="footer__col">
+                <p class="footer__title">Sitemap</p>
+                <ul class="footer__list">
+                  <li><a href="/work">Work</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/#services">Services</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                  <li><a href="/#faq">FAQ</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__col">
+                <p class="footer__title">Social</p>
+                <ul class="footer__list">
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/lucas-rosendahl/"
+                      rel="me"
+                      target="_blank"
+                      >LinkedIn</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Luchkiin"
+                      rel="me"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.figma.com/@lucasrosendahl"
+                      rel="me"
+                      target="_blank"
+                      >Figma</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__meta">
+            <p class="footer___copyright">
+              © Lucas Rosendahl <span id="year"></span>
+            </p>
+            <div class="footer__policies">
+              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/cookie-policy">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Cookie consent (same include on all pages) -->
+    <div
+      class="cookie-consent"
+      data-cookie-consent
+      hidden
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent"
+    >
+      <div class="cookie-consent__overlay" data-cookie-overlay></div>
+
+      <div class="cookie-consent__content">
+        <p class="cookie-consent__text">
+          This site uses cookies to enhance your experience. Read our
+          <a href="/cookie-policy">Cookie Policy</a>.
+        </p>
+
+        <div class="cookie-consent__actions">
+          <button
+            class="button button--secondary__small cookie-consent__btn"
+            type="button"
+            data-consent="decline"
+          >
+            Decline
+          </button>
+          <button
+            class="button button--secondary__small cookie-consent__btn"
+            type="button"
+            data-consent="accept"
+          >
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image viewer -->
+    <div class="image-viewer" data-image-viewer hidden aria-hidden="true">
+      <div class="image-viewer__overlay"></div>
+      <div class="image-viewer__dialog" role="dialog" aria-modal="true">
+        <figure class="image-viewer__figure">
+          <img class="image-viewer__img" data-image-viewer-img alt="" />
+        </figure>
+      </div>
+      <button
+        class="image-viewer__close"
+        type="button"
+        data-image-viewer-close
+        aria-label="Close"
+      >
+        ×
+      </button>
+    </div>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/image-viewer.js" defer></script>
+  </body>
+</html>

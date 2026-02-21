@@ -1,0 +1,278 @@
+@use "../abstracts/" as *;
+
+// About
+.about-teaser {
+  padding-top: $spacing-m;
+  @include for-tablet() {
+    padding-top: $spacing-xs;
+    padding-bottom: $spacing-xxl;
+  }
+  @include for-mobile() {
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
+  }
+  .border-wrapper {
+    padding-bottom: $spacing-xxxl;
+    border-bottom: 0.5px solid $grey;
+    @include for-tablet() {
+      padding-bottom: $spacing-xxl;
+    }
+    @include for-mobile() {
+      padding-bottom: $spacing-xl;
+    }
+    .section-label {
+      margin-bottom: $spacing-xs;
+      @include for-tablet() {
+        margin-bottom: 12px;
+      }
+      @include for-mobile() {
+        margin-bottom: $spacing-xxs;
+      }
+    }
+    .about-teaser__grid {
+      max-width: 920px;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xl;
+      @include for-tablet() {
+        gap: $spacing-l;
+      }
+      @include for-mobile() {
+        gap: $spacing-s;
+      }
+      h2 {
+        font-size: $fontSize-48;
+        font-weight: $semiBold-weight;
+        line-height: $lineHeight-60;
+        letter-spacing: $letterSpacing--0064;
+        @include for-tablet() {
+          font-size: $fontSize-32;
+          font-weight: $semiBold-weight;
+          letter-spacing: $letterSpacing--0064;
+          line-height: normal;
+        }
+        @include for-mobile() {
+          font-size: $fontSize-26;
+          font-weight: $semiBold-weight;
+          letter-spacing: $letterSpacing--0064;
+        }
+        span {
+          color: $dark-grey;
+        }
+      }
+      .about-teaser__actions {
+        display: flex;
+      }
+    }
+  }
+}
+
+// Selected work
+.section.work {
+  padding-top: 0;
+  @include for-tablet() {
+    padding-bottom: $spacing-xxl;
+  }
+  @include for-mobile() {
+    padding-bottom: $spacing-xl;
+  }
+  .inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    @include for-tablet() {
+      gap: $spacing-m;
+    }
+    @include for-mobile() {
+      gap: $spacing-s;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      @include for-mobile() {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .section-label {
+        margin-bottom: $spacing-xs;
+        @include for-tablet() {
+          margin-bottom: 12px;
+        }
+        @include for-mobile() {
+          margin-bottom: $spacing-xxs;
+        }
+      }
+      h2 {
+        font-size: $fontSize-56;
+        font-weight: $semiBold-weight;
+        line-height: $lineHeight-72;
+        letter-spacing: $letterSpacing--0064;
+        margin-bottom: $spacing-s;
+        @include for-tablet() {
+          font-size: $fontSize-48;
+          line-height: $lineHeight-60;
+          margin-bottom: $spacing-xs;
+        }
+        @include for-mobile() {
+          font-size: $fontSize-32;
+          line-height: normal;
+        }
+      }
+      .section-lead {
+        font-size: $fontSize-16;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        color: $dark-grey;
+        max-width: 400px;
+        @include for-mobile() {
+          font-size: $fontSize-14;
+        }
+      }
+      .section-head__actions {
+        display: flex;
+        @include for-mobile() {
+          margin-top: $spacing-xs;
+        }
+      }
+    }
+  }
+}
+
+// Services
+.services {
+  padding: $spacing-xxxl $spacing-xl;
+  @include for-tablet() {
+    padding: $spacing-xxl $spacing-s;
+  }
+  @include for-mobile() {
+    padding: $spacing-xl $spacing-s;
+  }
+  .container {
+    background-color: $bg-dark;
+    padding: $spacing-xxxl $spacing-xxxl 56px $spacing-xxxl;
+    border-radius: $border-radius-xxl;
+    color: $white;
+    max-width: 1440px;
+    @include for-tablet() {
+      padding: $spacing-l $spacing-l $spacing-xs $spacing-l;
+    }
+    @include for-mobile() {
+      padding: $spacing-m $spacing-xs $spacing-xs $spacing-xs;
+    }
+    .section-label {
+      margin-bottom: $spacing-xs;
+      @include for-tablet() {
+        margin-bottom: 12px;
+      }
+      @include for-mobile() {
+        margin-bottom: $spacing-xxs;
+      }
+    }
+    .panel__head {
+      h2 {
+        font-size: $fontSize-56;
+        font-weight: $semiBold-weight;
+        line-height: $lineHeight-72;
+        letter-spacing: $letterSpacing--0064;
+        margin-bottom: $spacing-s;
+        @include for-tablet() {
+          font-size: $fontSize-48;
+          line-height: $lineHeight-60;
+          margin-bottom: $spacing-xs;
+        }
+        @include for-mobile() {
+          font-size: $fontSize-32;
+          line-height: normal;
+        }
+      }
+      .panel__lead {
+        font-size: $fontSize-16;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        color: $mid-grey;
+        max-width: 400px;
+        margin-bottom: $spacing-s;
+        @include for-tablet() {
+          margin-bottom: $spacing-xs;
+        }
+        @include for-mobile() {
+          font-size: $fontSize-14;
+        }
+      }
+    }
+  }
+}
+
+// FAQ
+.section.faq {
+  padding: $spacing-xxxl 0 56px 0;
+  @include for-tablet() {
+    padding: $spacing-xxl 0 $spacing-l 0;
+  }
+  @include for-mobile() {
+    padding: $spacing-xl 0 28px 0;
+  }
+  .faq__grid {
+    display: flex;
+    @include for-tablet() {
+      flex-direction: column;
+      gap: $spacing-l;
+    }
+    @include for-mobile() {
+      gap: $spacing-m;
+    }
+    .faq__intro {
+      flex: 1;
+      .section-label {
+        margin-bottom: $spacing-xs;
+        @include for-tablet() {
+          margin-bottom: 12px;
+        }
+        @include for-mobile() {
+          margin-bottom: $spacing-xxs;
+        }
+      }
+      h2 {
+        font-size: $fontSize-56;
+        font-weight: $semiBold-weight;
+        line-height: $lineHeight-72;
+        letter-spacing: $letterSpacing--0064;
+        margin-bottom: $spacing-s;
+        @include for-tablet() {
+          font-size: $fontSize-48;
+          line-height: $lineHeight-60;
+          margin-bottom: $spacing-xs;
+        }
+        @include for-mobile() {
+          font-size: $fontSize-32;
+          line-height: normal;
+        }
+      }
+      .section-lead {
+        max-width: 400px;
+        font-size: $fontSize-16;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        color: $dark-grey;
+        margin-bottom: $spacing-xl;
+        @include for-tablet() {
+          margin-bottom: $spacing-l;
+        }
+        @include for-mobile() {
+          margin-bottom: $spacing-s;
+          font-size: $fontSize-14;
+        }
+      }
+      .faq__actions {
+        display: flex;
+      }
+    }
+    .faq__content {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+//Transitions & Transforms
+$transition-250: all 250ms ease;
+$transition-300: all 300ms ease;
+$transition-500: all 500ms ease;
+$hover-effect-moveUp: translateY(-3px);
+$hover-effect-moveLeft: translateX(-3px);
+$hover-effect-moveRight: translateX(3px);
+$hover-ease: cubic-bezier(0.16, 1, 0.3, 1);
+$hover-fast: 320ms;
+$hover-med: 520ms;
+$hover-slow: 750ms;
+$menu-link-duration: 350ms;
+$menu-link-distance: 6px;
+$cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+// Z-Index
+$z-index: (
+  base: 1,
+  1: 100,
+  2: 200,
+  3: 300,
+  4: 400,
+  5: 500,
+  6: 600,
+  7: 700,
+  8: 800,
+  9: 900,
+);
+
+// Border Radius
+$border-radius-button-s: 35px;
+$border-radius-button-m: 43px;
+$border-radius-button-l: 54px;
+$border-radius-s: 4px;
+$border-radius-m: 8px;
+$border-radius-l: 12px;
+$border-radius-xl: 16px;
+$border-radius-xxl: 24px;
+
+// Box shadows
+$box-shadow-form: 0px 12px 42px rgba(0, 0, 0, 0.8);
+
+// Spacing
+$spacing-xxs: 8px;
+$spacing-xs: 16px;
+$spacing-s: 24px;
+$spacing-m: 32px;
+$spacing-l: 40px;
+$spacing-xl: 48px;
+$spacing-xxl: 64px;
+$spacing-xxxl: 80px;
+
+// Max Width
+$max-width-large: 1920px;
+$max-width: 1536px;
+$max-width-medium: 950px;
+$max-width-small: 750px;
+
+// Header Height
+$header-height-desktop: 81px;
+$header-height-tablet: 74.5px;
+$header-height-mobile: 52px;

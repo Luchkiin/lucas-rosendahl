@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="About Lucas Rosendahl — UX Designer & Digital Creative based in Stockholm."
+    />
+    <title>About — Lucas Rosendahl</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
+
+    <!-- Web App -->
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body class="page-about">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="container header__inner">
+        <a class="header__logotype" href="/"
+          ><img
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
+            alt="lucas rosendahl"
+        /></a>
+        <a class="header__logotype__mobile" href="/"
+          ><img
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
+            alt="lucas rosendahl"
+        /></a>
+
+        <!-- Desktop / tablet nav -->
+        <nav class="site-nav site-nav--desktop" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a href="/about" aria-current="page">About</a></li>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Mobile fullscreen menu -->
+      <nav
+        id="mobile-menu"
+        class="mobile-menu"
+        aria-label="Mobile"
+        aria-hidden="true"
+      >
+        <div class="container mobile-menu__inner">
+          <div class="mobile-menu__header">
+            <a class="header__logotype__white" href="/"
+              ><img
+                src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+                alt="lucas rosendahl"
+            /></a>
+
+            <button class="menu-close" type="button" aria-label="Close menu">
+              <svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.0538 28.3077L15 27.2538L20.6 21.6538L15 16.0538L16.0538 15L21.6538 20.6L27.2538 15L28.3077 16.0538L22.7077 21.6538L28.3077 27.2538L27.2538 28.3077L21.6538 22.7077L16.0538 28.3077Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="mobile-menu__content">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">01</span>
+                <a class="mobile-menu__link is-active" href="/about"
+                  >About</a
+                >
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">02</span>
+                <a class="mobile-menu__link" href="/work">Work</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">03</span>
+                <a class="mobile-menu__link" href="/#services">Services</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <span class="mobile-menu__index">04</span>
+                <a class="mobile-menu__link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- About page -->
+      <section class="section about-page" aria-labelledby="about-title">
+        <div class="container inner-wrapper">
+          <!-- Top / intro -->
+          <div class="about-page__head">
+            <div class="about-page__head-left">
+              <div class="section-label">
+                <span class="section-label__dot" aria-hidden="true"></span>
+                <span class="section-label__text">About</span>
+              </div>
+
+              <h1 id="about-title" class="page-title">Background</h1>
+
+              <div class="about-page__intro">
+                <p class="section-lead">
+                  I’m a UX designer based in Stockholm, working across
+                  discovery, design, and implementation to create clear and
+                  intuitive digital experiences.
+                </p>
+                <p class="section-lead">
+                  I care deeply about structure, usability, and detail —
+                  designing products that feel purposeful, considered, and easy
+                  to use.
+                </p>
+              </div>
+            </div>
+
+            <!-- Portrait -->
+            <div class="about-page__head-right" aria-hidden="true">
+              <img
+                class="about-page__portrait"
+                src="/assets/images/about/portrait.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <section class="section about-experience" aria-labelledby="exp-title">
+            <h2 id="exp-title" class="section-title">Experience</h2>
+
+            <div class="experience-list" role="list">
+              <!-- Row 1 -->
+              <article class="experience-row" role="listitem">
+                <div class="experience-row__top-wrapper">
+                  <div class="experience-row__time">2023 — Present</div>
+                  <div class="experience-row__body">
+                    <h3 class="experience-row__role">Senior UX Designer</h3>
+                  </div>
+                  <div class="experience-row__org">Marginalen Bank</div>
+                </div>
+
+                <div class="experience-row__bottom-wrapper">
+                  <div class="experience-row__empty" aria-hidden="true"></div>
+                  <div class="experience-row__body">
+                    <p class="experience-row__desc">
+                      Working closely with the UX design team at Marginalen Bank
+                      to improve customer-facing digital products and services.
+                      Currently acting as UX lead for the Marginalen Bank mobile
+                      app, focusing on usability, structure, and overall
+                      experience quality.
+                    </p>
+                  </div>
+                  <div class="experience-row__empty" aria-hidden="true"></div>
+                </div>
+              </article>
+
+              <!-- Row 2 -->
+              <article class="experience-row" role="listitem">
+                <div class="experience-row__top-wrapper">
+                  <div class="experience-row__time">2020 — Present</div>
+                  <div class="experience-row__body">
+                    <h3 class="experience-row__role">
+                      UX Designer &amp; Digital Creative — Independent
+                    </h3>
+                  </div>
+                  <div class="experience-row__org">lucas rosendahl</div>
+                </div>
+
+                <div class="experience-row__bottom-wrapper">
+                  <div class="experience-row__empty" aria-hidden="true"></div>
+                  <div class="experience-row__body">
+                    <p class="experience-row__desc">
+                      Collaborating with companies and individuals to design and
+                      build user-focused digital solutions. My work spans from
+                      early discovery and design to implementation, helping turn
+                      ideas into clear, scalable, and intuitive digital
+                      experiences.
+                    </p>
+                  </div>
+                  <div class="experience-row__empty" aria-hidden="true"></div>
+                </div>
+              </article>
+
+              <!-- Row 3 -->
+              <article class="experience-row" role="listitem">
+                <div class="experience-row__top-wrapper">
+                  <div class="experience-row__time">2020 — 2023</div>
+                  <div class="experience-row__body">
+                    <h3 class="experience-row__role">UX Designer</h3>
+                  </div>
+                  <div class="experience-row__org">NordicFeel Group</div>
+                </div>
+
+                <div class="experience-row__bottom-wrapper">
+                  <div class="experience-row__empty" aria-hidden="true"></div>
+                  <div class="experience-row__body">
+                    <p class="experience-row__desc">
+                      UX lead for multiple beauty e-commerce platforms,
+                      including Youty, NordicFeel, Eleven, and Blush.
+                      Responsible for improving conversion, usability, and
+                      consistency across complex e-commerce ecosystems.
+                    </p>
+                  </div>
+                  <div class="experience-row__empty" aria-hidden="true"></div>
+                </div>
+              </article>
+
+              <!-- Row 4 -->
+              <article class="experience-row" role="listitem">
+                <div class="experience-row__top-wrapper">
+                  <div class="experience-row__time">2020</div>
+                  <div class="experience-row__body">
+                    <h3 class="experience-row__role">
+                      UX Design Consultant (Contract)
+                    </h3>
+                  </div>
+                  <div class="experience-row__org">12iD</div>
+                </div>
+
+                <div class="experience-row__bottom-wrapper">
+                  <div class="experience-row__empty" aria-hidden="true"></div>
+                  <div class="experience-row__body">
+                    <p class="experience-row__desc">
+                      Led UX design for 12iD’s mobile app and website, with a
+                      focus on structure, flows, and overall user experience.
+                    </p>
+                  </div>
+                  <div class="experience-row__empty" aria-hidden="true"></div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Tools -->
+          <section class="section about-tools" aria-labelledby="tools-title">
+            <h2 id="tools-title" class="section-title">
+              Tools &amp; platforms
+            </h2>
+
+            <div class="tools-grid" role="list">
+              <!-- Tool card -->
+              <article class="tool-card" role="listitem">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.7515 50C24.7527 50 28 46.7147 28 42.6667V35.3333H20.7515C16.7503 35.3333 13.5029 38.6187 13.5029 42.6667C13.5029 46.7147 16.7503 50 20.7515 50Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M13.5029 28C13.5029 23.952 16.7503 20.6667 20.7515 20.6667H28V35.3333H20.7515C16.7503 35.3333 13.5029 32.048 13.5029 28Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M13.5029 13.3333C13.5029 9.28533 16.7503 6 20.7515 6H28V20.6667H20.7515C16.7503 20.6667 13.5029 17.3813 13.5029 13.3333Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M28 6H35.2486C39.2498 6 42.4971 9.28533 42.4971 13.3333C42.4971 17.3813 39.2498 20.6667 35.2486 20.6667H28V6Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M42.4971 28C42.4971 32.048 39.2498 35.3333 35.2486 35.3333C31.2474 35.3333 28 32.048 28 28C28 23.952 31.2474 20.6667 35.2486 20.6667C39.2498 20.6667 42.4971 23.952 42.4971 28Z"
+                      fill="#A6A6A6"
+                    />
+                  </svg>
+                </div>
+                <div class="tool-card__body">
+                  <h3 class="tool-card__title">Figma</h3>
+                  <p class="tool-card__meta">
+                    Interface design, prototyping, and design systems.
+                  </p>
+                </div>
+              </article>
+
+              <article class="tool-card" role="listitem">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      width="56"
+                      height="56"
+                      fill="white"
+                      style="mix-blend-mode: luminosity"
+                    />
+                    <path
+                      d="M35.7774 20.223C40.0722 24.5179 40.0722 31.4805 35.7799 35.7753L35.7774 35.7779C33.63 37.9253 33.63 41.4075 35.7774 43.5553C37.9248 45.7027 41.407 45.7027 43.5548 43.5553C52.147 34.9627 52.1444 21.0331 43.5548 12.4434L35.7774 20.223Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M43.557 12.4434C34.9673 3.85343 21.0377 3.85086 12.4451 12.4434C3.85294 21.0356 3.8555 34.9653 12.4451 43.5553L20.2226 35.7779C15.9277 31.483 15.9277 24.5179 20.2226 20.2205C24.5174 15.9257 31.4825 15.9257 35.7799 20.2205C37.9273 22.3683 41.4096 22.3683 43.557 20.2205C45.7044 18.0756 45.7044 14.5934 43.557 12.4434Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M43.557 43.5575L35.7799 35.7804C31.4847 40.0752 24.5199 40.0752 20.2226 35.7804L12.4451 43.5575C21.0352 52.1475 34.9648 52.1475 43.557 43.5575Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M43.5555 35.7786C41.4077 33.6308 37.9251 33.6301 35.7774 35.7779C33.6296 37.9256 33.63 41.4086 35.7777 43.5564C37.9255 45.7045 41.4077 45.7045 43.5555 43.5564C45.7033 41.4086 45.7033 37.9264 43.5555 35.7786Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M20.2215 35.7786C18.0737 33.6308 14.5915 33.6308 12.4437 35.7786C10.2959 37.9264 10.2959 41.409 12.4437 43.5567C14.5915 45.7045 18.0737 45.7045 20.2215 43.5567C22.3696 41.409 22.3696 37.9264 20.2215 35.7786Z"
+                      fill="#A6A6A6"
+                    />
+                  </svg>
+                </div>
+                <div class="tool-card__body">
+                  <h3 class="tool-card__title">Google Marketing Platform</h3>
+                  <p class="tool-card__meta">
+                    Analytics, insights, and data-driven optimization.
+                  </p>
+                </div>
+              </article>
+
+              <article class="tool-card" role="listitem">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.3194 30.148V35.4426C24.4036 35.4378 28.3191 33.8802 31.2071 31.1112C34.0951 28.3422 35.7197 24.588 35.7247 20.6722H30.2024C30.1992 23.1843 29.1568 25.5928 27.3042 27.3691C25.4514 29.1455 22.9395 30.1448 20.3194 30.148Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M20.3178 44.7323C17.7165 44.7323 15.2218 43.7415 13.3824 41.978C11.543 40.2144 10.5097 37.8225 10.5097 35.3284C10.5097 32.8342 11.543 30.4424 13.3824 28.6787C15.2218 26.9152 17.7165 25.9244 20.3178 25.9244V20.6688C18.3091 20.666 16.3195 21.0426 14.4626 21.7771C12.6058 22.5115 10.9179 23.5896 9.49555 24.9494C8.07316 26.3092 6.94406 27.9245 6.17271 29.7027C5.40137 31.481 5.00289 33.3875 5.00002 35.3134C4.99715 37.2393 5.38995 39.1469 6.15599 40.9273C6.92204 42.7076 8.04632 44.3259 9.46465 45.6897C10.883 47.0535 12.5676 48.1361 14.4223 48.8756C16.277 49.6152 18.2654 49.9973 20.2741 50H20.3178V44.7323Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M20.3194 44.7325V49.9881C24.3761 49.9881 28.2667 48.443 31.1353 45.6927C34.0038 42.9423 35.6153 39.212 35.6153 35.3225H30.1276C30.1259 37.8166 29.0923 40.2083 27.2534 41.9724C25.4146 43.7366 22.9208 44.7293 20.3194 44.7325Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M20.3194 15.4099V20.6656C24.3761 20.6656 28.2667 19.1205 31.1353 16.3702C34.0038 13.6198 35.6153 9.88956 35.6153 6H30.1276C30.1259 8.49415 29.0923 10.8858 27.2534 12.65C25.4146 14.4142 22.9208 15.4068 20.3194 15.4099Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M35.7041 15.4099V20.6656C39.7609 20.6656 43.6514 19.1205 46.5199 16.3702C49.3886 13.6198 51 9.88956 51 6H45.5154C45.5137 8.49466 44.4795 10.8867 42.64 12.651C40.8005 14.4153 38.306 15.4076 35.7041 15.4099Z"
+                      fill="#A6A6A6"
+                    />
+                  </svg>
+                </div>
+                <div class="tool-card__body">
+                  <h3 class="tool-card__title">Optimizely</h3>
+                  <p class="tool-card__meta">
+                    CMS and experimentation platform for content-driven and
+                    enterprise websites.
+                  </p>
+                </div>
+              </article>
+
+              <article class="tool-card" role="listitem">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M28 6C15.856 6 6 15.856 6 28C6 40.144 15.856 50 28 50C40.144 50 50 40.144 50 28C50.0176 15.856 40.1616 6 28 6ZM11.5616 24.7968C11.5616 17.4752 17.4928 11.5616 24.8144 11.5616C31.696 11.5616 37.3632 16.8064 37.9968 23.5296C37.592 23.4944 37.1696 23.4768 36.7472 23.4768C29.4256 23.4768 23.4768 29.408 23.4768 36.7472C23.4768 37.1696 23.4944 37.592 23.5296 37.9968C16.824 37.3456 11.5616 31.696 11.5616 24.7968Z"
+                      fill="#A6A6A6"
+                    />
+                  </svg>
+                </div>
+                <div class="tool-card__body">
+                  <h3 class="tool-card__title">Litium</h3>
+                  <p class="tool-card__meta">
+                    E-commerce CMS platform for scalable commerce solutions.
+                  </p>
+                </div>
+              </article>
+
+              <article class="tool-card" role="listitem">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.3881 6H17.3534V7.95937H19.1648V6H21.1301V11.9297H19.1648V9.95312H17.3705V11.9297H15.3881M23.7277 7.97656H21.9931V6H27.4361V7.97656H25.6929V11.9297H23.7277M28.2991 6H30.3583L31.6229 8.08828L32.8875 6H34.9468V11.9297H32.9815V8.99062L31.6058 11.1219L30.2302 8.99062V11.9297H28.2991M35.9209 6H37.8862V9.97031H40.6717V11.9297H35.9209"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M15.3197 46.4766L12.5 14.6453H43.5L40.6803 46.4594L27.9744 50"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M28 47.293V17.2578H40.6717L38.2536 44.4141"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M18.2591 21.1508H28V25.0523H22.5143L22.8732 29.0484H28V32.9414H19.3186M19.4895 34.9008H23.3859L23.6593 38.0203L28 39.1891V43.2625L20.0364 41.0281"
+                      fill="#757575"
+                    />
+                    <path
+                      d="M37.7067 21.1508H27.9829V25.0523H37.3478M36.9975 29.0484H27.9829V32.95H32.7679L32.3151 38.0203L27.9829 39.1891V43.2453L35.9294 41.0281"
+                      fill="#757575"
+                    />
+                  </svg>
+                </div>
+                <div class="tool-card__body">
+                  <h3 class="tool-card__title">HTML</h3>
+                  <p class="tool-card__meta">Semantic, accessible markup.</p>
+                </div>
+              </article>
+
+              <article class="tool-card" role="listitem">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 6H42.96C44.8271 6 46.6178 6.74171 47.938 8.06197C49.2583 9.38222 50 11.1729 50 13.04V42.96C50 44.8271 49.2583 46.6178 47.938 47.938C46.6178 49.2583 44.8271 50 42.96 50H13.04C11.1729 50 9.38222 49.2583 8.06197 47.938C6.74171 46.6178 6 44.8271 6 42.96V6Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M21.7564 46.48C18.9303 46.4774 17.1866 44.8859 17.22 41.9572V34.5481C17.22 33.0635 17.6547 31.9345 18.5242 31.1618C20.0857 29.6575 23.7087 29.566 25.2381 31.1847C26.1806 32.0159 26.5361 33.7138 26.4516 35.2983H23.208C23.2326 34.6757 23.1996 33.7328 22.8335 33.3777C22.3579 32.734 21.1017 32.8096 20.7695 33.4798C20.5653 33.8432 20.4632 34.3813 20.4632 35.0932V41.5252C20.4632 42.8738 20.9318 43.5558 21.8695 43.5707C22.3077 43.5707 22.6408 43.4114 22.8674 43.0933C23.1838 42.7158 23.233 41.8798 23.2075 41.2752H26.4512C26.673 44.3583 24.8536 46.5183 21.7564 46.48ZM32.0542 46.48C28.9227 46.5231 27.5217 44.295 27.6084 41.2752H30.6704C30.5854 42.5917 31.0378 43.7907 32.1219 43.7071C32.6055 43.7071 32.946 43.5558 33.1427 43.2526C33.5167 42.6986 33.5867 41.0988 33.0521 40.4797C32.6785 39.8835 31.3348 39.3573 30.625 39.0026C29.6117 38.5178 28.8822 37.9422 28.436 37.2752C27.4298 35.795 27.523 32.5461 28.935 31.2296C30.3069 29.6051 33.8898 29.5303 35.2631 31.1957C36.1101 32.0542 36.4801 33.7433 36.4084 35.2978H33.4595C33.4846 34.659 33.4243 33.628 33.1762 33.2523C33.0024 32.9342 32.6732 32.7749 32.1897 32.7749C31.3277 32.7749 30.897 33.2901 30.897 34.3202C30.9062 35.414 31.3326 35.8628 32.3261 36.32C33.6126 36.8198 35.2486 37.6734 35.8417 38.7065C37.6105 41.8543 36.3974 46.6635 32.0542 46.48ZM41.9436 46.48C38.8121 46.5231 37.4112 44.295 37.4978 41.2752H40.5598C40.4749 42.5917 40.9272 43.7907 42.0114 43.7071C42.4949 43.7071 42.8355 43.5558 43.0322 43.2526C43.4062 42.6986 43.4761 41.0988 42.9415 40.4797C42.568 39.8835 41.2242 39.3573 40.5145 39.0026C39.5012 38.5178 38.7716 37.9422 38.3255 37.2752C37.3192 35.795 37.4125 32.5461 38.8244 31.2296C40.1964 29.6051 43.7793 29.5303 45.1525 31.1957C45.9995 32.0542 46.3696 33.7433 46.2978 35.2978H43.349C43.374 34.659 43.3138 33.628 43.0656 33.2523C42.8918 32.9342 42.5627 32.7749 42.0791 32.7749C41.2172 32.7749 40.7864 33.2901 40.7864 34.3202C40.7956 35.414 41.222 35.8628 42.2155 36.32C43.5021 36.8198 45.138 37.6734 45.7311 38.7065C47.4999 41.8543 46.2868 46.6635 41.9436 46.48Z"
+                      fill="#757575"
+                    />
+                  </svg>
+                </div>
+                <div class="tool-card__body">
+                  <h3 class="tool-card__title">CSS / Sass</h3>
+                  <p class="tool-card__meta">
+                    Responsive layouts and scalable styling.
+                  </p>
+                </div>
+              </article>
+
+              <article class="tool-card" role="listitem">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M50 6H6V50H50V6Z" fill="#A6A6A6" />
+                    <path
+                      d="M35.5568 40.3752C36.4431 41.8223 37.5962 42.886 39.6356 42.886C41.3488 42.886 42.4432 42.0297 42.4432 40.8466C42.4432 39.4288 41.3187 38.9267 39.433 38.1018L38.3994 37.6584C35.4157 36.3872 33.4337 34.7949 33.4337 31.4285C33.4337 28.3276 35.7964 25.9669 39.4889 25.9669C42.1177 25.9669 44.0076 26.8818 45.3695 29.2774L42.1498 31.3447C41.441 30.0736 40.6762 29.5728 39.4889 29.5728C38.2778 29.5728 37.5103 30.3411 37.5103 31.3447C37.5103 32.5851 38.2785 33.0872 40.0525 33.8555L41.0862 34.2983C44.5992 35.8048 46.5827 37.3406 46.5827 40.7935C46.5827 44.5161 43.6584 46.5554 39.7312 46.5554C35.8914 46.5554 33.4106 44.7256 32.1968 42.3272L35.5568 40.3752ZM20.9509 40.7335C21.6004 41.8858 22.1913 42.8601 23.6119 42.8601C24.9703 42.8601 25.8272 42.3286 25.8272 40.262V26.203H29.9618V40.3179C29.9618 44.5992 27.4517 46.5477 23.7879 46.5477C20.4774 46.5477 18.5603 44.8345 17.5853 42.7711L20.9509 40.7335Z"
+                      fill="#757575"
+                    />
+                  </svg>
+                </div>
+                <div class="tool-card__body">
+                  <h3 class="tool-card__title">JavaScript</h3>
+                  <p class="tool-card__meta">
+                    Interactive and dynamic user experiences.
+                  </p>
+                </div>
+              </article>
+
+              <article class="tool-card" role="listitem">
+                <div class="tool-card__icon" aria-hidden="true">
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M37.209 49.8119C37.9016 50.0833 38.6913 50.0659 39.3904 49.7276L48.4437 45.346C49.395 44.8856 50 43.9173 50 42.8549V13.1453C50 12.0829 49.3951 11.1145 48.4437 10.6541L39.3904 6.27244C38.4729 5.82844 37.3993 5.9372 36.5941 6.52595C36.4791 6.61006 36.3695 6.70396 36.2667 6.80745L18.9351 22.711L11.3858 16.9472C10.6831 16.4107 9.70009 16.4547 9.0474 17.0518L6.6261 19.2671C5.82773 19.9975 5.82681 21.2608 6.62412 21.9925L13.1711 28L6.62412 34.0075C5.82681 34.7392 5.82773 36.0025 6.6261 36.7329L9.0474 38.9482C9.70009 39.5454 10.6831 39.5893 11.3858 39.0528L18.9351 33.2891L36.2667 49.1925C36.5409 49.4685 36.8628 49.6763 37.209 49.8119ZM39.0134 17.9597L25.8627 28L39.0134 38.0402V17.9597Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M48.444 10.6609L39.3835 6.27323C38.3347 5.76535 37.0814 5.97959 36.2584 6.80741L6.59776 34.0075C5.79996 34.7391 5.80088 36.0024 6.59973 36.7329L9.0225 38.9482C9.6756 39.5453 10.6592 39.5893 11.3624 39.0528L47.0806 11.7992C48.2789 10.8849 50 11.7445 50 13.2573V13.1515C50 12.0896 49.3952 11.1216 48.444 10.6609Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M48.444 45.339L39.3835 49.7267C38.3347 50.2347 37.0814 50.0204 36.2584 49.1925L6.59776 21.9924C5.79996 21.2608 5.80088 19.9975 6.59973 19.2671L9.0225 17.0518C9.6756 16.4546 10.6592 16.4107 11.3624 16.9472L47.0806 44.2007C48.2789 45.115 50 44.2554 50 42.7426V42.8484C50 43.9103 49.3952 44.8783 48.444 45.339Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      d="M39.3839 49.7275C38.3348 50.2351 37.0815 50.0204 36.2584 49.1925C37.2726 50.2126 39.0067 49.4901 39.0067 48.0475V7.95238C39.0067 6.50978 37.2726 5.78734 36.2584 6.80741C37.0815 5.97951 38.3348 5.76496 39.3839 6.27239L48.4428 10.6541C49.3947 11.1145 50 12.0829 50 13.1453V42.8549C50 43.9173 49.3947 44.8856 48.4427 45.346L39.3839 49.7275Z"
+                      fill="#A6A6A6"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M37.1823 49.8119C37.8749 50.0833 38.6646 50.0659 39.3636 49.7276L48.417 45.346C49.3683 44.8856 49.9733 43.9173 49.9733 42.8549V13.1453C49.9733 12.0829 49.3683 11.1145 48.417 10.6541L39.3636 6.27241C38.4462 5.82842 37.3725 5.93717 36.5674 6.52592C36.4524 6.61003 36.3428 6.70394 36.24 6.80742L18.9084 22.7109L11.3591 16.9472C10.6564 16.4107 9.67336 16.4547 9.02067 17.0518L6.59973 19.2671C5.80136 19.9975 5.80045 21.2608 6.59776 21.9924L13.1444 28L6.59776 34.0075C5.80045 34.7392 5.80136 36.0024 6.59973 36.7329L9.02067 38.9482C9.67336 39.5453 10.6564 39.5893 11.3591 39.0528L18.9084 33.289L36.24 49.1925C36.5141 49.4684 36.8361 49.6763 37.1823 49.8119ZM38.9866 17.9597L25.8359 28L38.9866 38.0402V17.9597Z"
+                      fill="#A6A6A6"
+                    />
+                  </svg>
+                </div>
+                <div class="tool-card__body">
+                  <h3 class="tool-card__title">Visual Studio Code</h3>
+                  <p class="tool-card__meta">
+                    Development environment for digital production.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer" role="contentinfo">
+        <div class="container footer__grid inner-wrapper">
+          <div class="footer__brand__cols__wrapper">
+            <div class="footer__brand">
+              <a class="footer__logotype" href="/"
+                ><img
+                  src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                  alt="lucas rosendahl"
+              /></a>
+              <p class="footer__text">
+                Building a brand, designing a product, or exploring an idea —
+                I’d love to hear from you.
+              </p>
+              <p class="footer__email">
+                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
+              </p>
+            </div>
+
+            <div class="footer__cols">
+              <div class="footer__col">
+                <p class="footer__title">Sitemap</p>
+                <ul class="footer__list">
+                  <li><a href="/work">Work</a></li>
+                  <li><a href="/about" aria-current="page">About</a></li>
+                  <li><a href="/#services">Services</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                  <li><a href="/#faq">FAQ</a></li>
+                </ul>
+              </div>
+
+              <div class="footer__col">
+                <p class="footer__title">Social</p>
+                <ul class="footer__list">
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/lucas-rosendahl/"
+                      rel="me"
+                      target="_blank"
+                      >LinkedIn</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Luchkiin"
+                      rel="me"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.figma.com/@lucasrosendahl"
+                      rel="me"
+                      target="_blank"
+                      >Figma</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__meta">
+            <p class="footer___copyright">
+              © Lucas Rosendahl <span id="year"></span>
+            </p>
+            <div class="footer__policies">
+              <a href="/privacy-policy.html">Privacy Policy</a>
+              <a href="/cookie-policy.html">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Cookie consent -->
+    <div
+      class="cookie-consent"
+      data-cookie-consent
+      hidden
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie consent"
+    >
+      <div class="cookie-consent__overlay" data-cookie-overlay></div>
+
+      <div class="cookie-consent__content">
+        <p class="cookie-consent__text">
+          This site uses cookies to enhance your experience. Read our
+          <a href="/cookie-policy">Cookie Policy</a>.
+        </p>
+
+        <div class="cookie-consent__actions">
+          <button
+            class="button button--secondary__small cookie-consent__btn"
+            type="button"
+            data-consent="decline"
+          >
+            Decline
+          </button>
+          <button
+            class="button button--secondary__small cookie-consent__btn"
+            type="button"
+            data-consent="accept"
+          >
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+@use "../abstracts/" as *;
+
+.site-footer {
+  background-color: $bg-dark;
+  color: $white;
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: $spacing-xxxl;
+    padding-bottom: $spacing-xxxl;
+    gap: $spacing-xxxl;
+    @include for-tablet() {
+      padding: $spacing-xxl $spacing-xl;
+      gap: $spacing-xl;
+    }
+    @include for-mobile() {
+      padding: $spacing-xl $spacing-s;
+      gap: $spacing-m;
+    }
+    .footer__brand__cols__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex: 0 0 auto;
+      @include for-tablet() {
+        gap: $spacing-xl;
+      }
+      @include for-mobile() {
+        flex-direction: column;
+        gap: $spacing-m;
+      }
+      .footer__logotype {
+        img {
+          @include for-tablet() {
+            width: 200px;
+          }
+        }
+      }
+      .footer__text {
+        font-size: $fontSize-14;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        color: $mid-grey;
+        margin-top: $spacing-m;
+        margin-bottom: $spacing-s;
+        max-width: 400px;
+        @include for-tablet() {
+          margin-top: $spacing-s;
+          margin-bottom: $spacing-xs;
+        }
+      }
+      .footer__email {
+        font-size: $fontSize-20;
+        font-weight: $semiBold-weight;
+        letter-spacing: $letterSpacing--0064;
+        line-height: normal;
+        color: $white;
+        a {
+          position: relative;
+          background-image: linear-gradient(
+            to right,
+            $blue 0%,
+            $blue 50%,
+            $white 50%,
+            $white 100%
+          );
+          background-size: 200% 100%;
+          background-position: 100% 0;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          transition: background-position 500ms cubic-bezier(0.22, 1, 0.36, 1);
+          &:hover {
+            background-position: 0 0;
+          }
+        }
+        @include for-tablet() {
+          font-size: $fontSize-16;
+        }
+      }
+      .footer__cols {
+        display: flex;
+        gap: 96px;
+        justify-content: flex-end;
+        @include for-tablet() {
+          gap: $spacing-xl;
+        }
+        @include for-mobile() {
+          justify-content: flex-start;
+          flex-direction: column;
+          gap: $spacing-m;
+        }
+        .footer__col {
+          &:first-child {
+            width: 97.65px;
+          }
+          @include for-mobile() {
+            width: initial;
+          }
+          &:last-child {
+            width: 95.55px;
+            @include for-mobile() {
+              width: initial;
+            }
+          }
+          .footer__title {
+            color: $mid-grey;
+            font-size: $fontSize-12;
+            font-weight: $semiBold-weight;
+            letter-spacing: $letterSpacing--005;
+            text-transform: $uppercase;
+            line-height: normal;
+          }
+          .footer__list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: $spacing-xs;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-xxs;
+            a {
+              font-size: $fontSize-14;
+              font-weight: $semiBold-weight;
+              letter-spacing: $letterSpacing-048;
+              position: relative;
+              background-image: linear-gradient(
+                to right,
+                $blue 0%,
+                $blue 50%,
+                $white 50%,
+                $white 100%
+              );
+              background-size: 200% 100%;
+              background-position: 100% 0;
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+              transition: background-position 500ms
+                cubic-bezier(0.22, 1, 0.36, 1);
+              &:hover {
+                background-position: 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include for-mobile() {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-s;
+      }
+      .footer___copyright {
+        font-size: $fontSize-14;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        color: $mid-grey;
+        @include for-mobile() {
+          order: 2;
+        }
+      }
+      .footer__policies {
+        display: flex;
+        gap: 96px;
+        font-size: $fontSize-14;
+        font-weight: $semiBold-weight;
+        letter-spacing: $letterSpacing-048;
+        @include for-tablet() {
+          gap: $spacing-xl;
+        }
+        @include for-mobile() {
+          flex-direction: column;
+          gap: $spacing-xxs;
+          order: 1;
+        }
+        a {
+          position: relative;
+          background-image: linear-gradient(
+            to right,
+            $blue 0%,
+            $blue 50%,
+            $white 50%,
+            $white 100%
+          );
+          background-size: 200% 100%;
+          background-position: 100% 0;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          transition: background-position 500ms cubic-bezier(0.22, 1, 0.36, 1);
+          &:hover {
+            background-position: 0 0;
+          }
+        }
+      }
+    }
+  }
+}

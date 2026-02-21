@@ -1,0 +1,149 @@
+@use "../abstracts/" as *;
+
+/* Lås scroll när viewer är öppen (JS använder body: fixed) */
+html.is-viewer-open,
+html.is-viewer-open body {
+  overflow: hidden;
+}
+
+/* Förhindrar layout-shift när scrollbar försvinner (desktop) */
+@supports (scrollbar-gutter: stable) {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.image-viewer__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  opacity: 0;
+  transition: opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  .image-viewer.is-open & {
+    opacity: 1;
+  }
+}
+
+.image-viewer__dialog {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: $spacing-xl;
+}
+
+/*
+  Viktigt:
+  - JS sätter width/height inline när bilden är "contain"-beräknad
+  - Därför: INTE låsa width/height här, utan låt inline vinna.
+*/
+.image-viewer__img {
+  display: block;
+  max-width: min(1440px, 100%);
+  max-height: calc(100vh - (2 * #{$spacing-xl}));
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  border-radius: $border-radius-xl;
+
+  opacity: 0;
+  transform: translateY(8px) scale(0.99);
+  transition:
+    opacity 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* När open-animationen är klar (clone bortstädad) */
+.image-viewer.is-ready .image-viewer__img {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Under FLIP-animationen vill vi inte se "riktiga" viewer-bilden under */
+.image-viewer.is-animating .image-viewer__img {
+  opacity: 0 !important;
+  transform: translateY(8px) scale(0.99) !important;
+}
+
+.image-viewer__close {
+  position: fixed;
+  top: calc(#{$spacing-s} + env(safe-area-inset-top));
+  right: $spacing-s;
+  z-index: 1001;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 0;
+
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    opacity 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 200ms ease;
+
+  .image-viewer.is-open & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+/* Döljer originalbilden under FLIP (så man inte ser dubbel) */
+img.is-zoom-hidden {
+  visibility: hidden;
+}
+
+/* Clone-elementet som flyger (FLIP) */
+.image-viewer__clone {
+  position: fixed;
+  z-index: 1000;
+  border-radius: $border-radius-xl;
+  will-change: transform;
+  object-fit: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-viewer,
+  .image-viewer__overlay,
+  .image-viewer__img,
+  .image-viewer__close {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .image-viewer__img {
+    opacity: 1 !important;
+  }
+}

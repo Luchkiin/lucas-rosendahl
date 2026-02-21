@@ -1,0 +1,380 @@
+@use "../abstracts/" as *;
+
+.work-detail {
+  @include for-tablet() {
+    padding: $spacing-xxl 0;
+  }
+  @include for-mobile() {
+    padding: $spacing-xl 0;
+  }
+  .work-detail__top {
+    .work-detail__head {
+      margin-top: $spacing-xs;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xxxl;
+      margin-bottom: $spacing-s;
+      @include for-tablet() {
+        margin-top: 12px;
+        gap: $spacing-l;
+      }
+      @include for-mobile() {
+        margin-top: $spacing-xxs;
+        gap: $spacing-m;
+      }
+      .work-detail__head-wrapper {
+        display: flex;
+        gap: $spacing-xl;
+        justify-content: space-between;
+        &:last-child {
+          flex-wrap: wrap;
+          gap: $spacing-s;
+        }
+        @include for-tablet() {
+          flex-direction: column;
+          gap: $spacing-xs;
+        }
+        &:last-child {
+          @include for-tablet() {
+            flex-direction: row;
+            gap: $spacing-xl;
+          }
+          @include for-mobile() {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: $spacing-s;
+          }
+        }
+        .work-detail__head-left-top {
+          h1 {
+            font-size: $fontSize-56;
+            font-weight: $semiBold-weight;
+            line-height: $lineHeight-72;
+            letter-spacing: $letterSpacing--0064;
+            @include for-tablet() {
+              font-size: $fontSize-48;
+              line-height: $lineHeight-60;
+            }
+            @include for-mobile() {
+              font-size: $fontSize-32;
+              line-height: normal;
+            }
+          }
+        }
+        .work-detail__head-right-top {
+          max-width: 400px;
+          text-align: right;
+          display: flex;
+          align-items: flex-end;
+          @include for-tablet() {
+            text-align: left;
+          }
+          p {
+            font-size: $fontSize-16;
+            font-weight: $regular-weight;
+            line-height: $lineHeight-21;
+            letter-spacing: $letterSpacing--005;
+            color: $dark-grey;
+            @include for-mobile() {
+              font-size: $fontSize-14;
+            }
+          }
+        }
+        .work-detail__head-left-bottom {
+          display: flex;
+          align-items: flex-end;
+          ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            column-gap: 12px;
+            row-gap: $spacing-xxs;
+            flex-wrap: wrap;
+            @include for-tablet() {
+              flex-direction: column;
+              gap: $spacing-xxs;
+            }
+            li {
+              font-size: $fontSize-16;
+              font-weight: $semiBold-weight;
+              letter-spacing: $letterSpacing--0064;
+              line-height: normal;
+              @include for-mobile() {
+                font-size: $fontSize-14;
+                letter-spacing: $letterSpacing-048;
+              }
+              .work-detail__meta-type {
+                color: $dark-grey;
+              }
+            }
+            .work-detail__meta-separator {
+              color: $dark-grey;
+              @include for-tablet() {
+                display: none;
+              }
+            }
+          }
+        }
+        .work-detail__head-right-bottom {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  .work-detail__hero {
+    @include for-tablet() {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+    img {
+      border-radius: $border-radius-xl;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include for-mobile() {
+        border-radius: $border-radius-l;
+      }
+    }
+  }
+  .work-detail__section {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xxxl;
+    padding-bottom: 0;
+    @include for-tablet() {
+      gap: $spacing-xxl;
+      padding-top: $spacing-xxl;
+    }
+    @include for-mobile() {
+      gap: $spacing-xl;
+      padding-top: $spacing-xl;
+    }
+    .work-detail__section-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      @include for-tablet() {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .section-label {
+        margin-bottom: $spacing-xs;
+        @include for-tablet() {
+          margin-bottom: 12px;
+        }
+        @include for-mobile() {
+          margin-bottom: $spacing-xxs;
+        }
+        .section-label__text-index {
+          color: $dark-grey;
+        }
+      }
+      .work-detail__section-body {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xl;
+        @include for-tablet() {
+          gap: $spacing-l;
+        }
+        @include for-mobile() {
+          gap: $spacing-m;
+        }
+        .work-detail__col-top,
+        .work-detail__col-bottom {
+          max-width: 700px;
+          @include for-tablet() {
+            max-width: 600px;
+          }
+          .section-title {
+            margin-bottom: $spacing-s;
+            font-size: $fontSize-32;
+            font-weight: $semiBold-weight;
+            letter-spacing: $letterSpacing--0064;
+            line-height: normal;
+            max-width: 600px;
+            @include for-tablet() {
+              font-size: $fontSize-26;
+              margin-bottom: $spacing-xs;
+            }
+            @include for-mobile() {
+              font-size: $fontSize-20;
+            }
+          }
+          .work-detail__text {
+            font-size: $fontSize-16;
+            font-weight: $regular-weight;
+            line-height: $lineHeight-21;
+            letter-spacing: $letterSpacing--005;
+            color: $dark-grey;
+            margin-bottom: $spacing-xs;
+            @include for-mobile() {
+              font-size: $fontSize-14;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          .work-detail__sub-title {
+            margin-bottom: $spacing-s;
+            font-size: $fontSize-32;
+            font-weight: $semiBold-weight;
+            letter-spacing: $letterSpacing--0064;
+            line-height: normal;
+            max-width: 600px;
+            @include for-tablet() {
+              font-size: $fontSize-26;
+              margin-bottom: $spacing-xs;
+            }
+            @include for-mobile() {
+              font-size: $fontSize-20;
+            }
+          }
+        }
+      }
+    }
+    .work-detail__media {
+      img {
+        border-radius: $border-radius-xl;
+        @include for-mobile() {
+          border-radius: $border-radius-l;
+        }
+      }
+
+      .captions-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        @include for-tablet() {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .work-detail__caption-wide {
+          margin-left: 0;
+          @include for-tablet() {
+            margin-left: $spacing-s;
+            margin-right: $spacing-s;
+          }
+          @include for-mobile() {
+            margin-left: $spacing-xs;
+            margin-right: $spacing-xs;
+          }
+          &:first-child {
+            @include for-tablet() {
+              display: none;
+            }
+          }
+        }
+      }
+      .work-detail__caption {
+        display: flex;
+        margin-left: $spacing-s;
+        margin-right: $spacing-s;
+        margin-top: $spacing-xs;
+        font-size: $fontSize-16;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        color: $dark-grey;
+        @include for-tablet() {
+          font-size: $fontSize-14;
+        }
+        @include for-mobile() {
+          font-size: $fontSize-12;
+          line-height: $lineHeight-17;
+        }
+        @include for-mobile() {
+          margin-left: $spacing-xs;
+          margin-right: $spacing-xs;
+          margin-top: $spacing-xxs;
+        }
+      }
+    }
+    .work-detail__media-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: $spacing-xxs;
+      row-gap:  $spacing-xl;
+      @include for-tablet() {
+        grid-template-columns: 1fr;
+        gap: $spacing-m;
+      }
+      @include for-mobile() {
+        gap: $spacing-s;
+      }
+      .work-detail__caption {
+        margin-left: $spacing-s;
+        margin-right: $spacing-s;
+        @include for-mobile() {
+          margin-left: $spacing-xs;
+          margin-right: $spacing-xs;
+          margin-top: $spacing-xxs;
+        }
+      }
+    }
+  }
+  .work-detail__section-outcomes {
+    padding-bottom: $spacing-xxxl;
+    border-bottom: 0.5px solid $grey;
+    @include for-tablet() {
+      padding: $spacing-xxl 0;
+    }
+    @include for-mobile() {
+      padding: $spacing-xl 0;
+    }
+  }
+
+  .work-detail__section-more {
+    gap: $spacing-xl;
+    @include for-tablet() {
+      padding-top: $spacing-xxl;
+      gap: $spacing-m;
+    }
+    @include for-mobile() {
+      padding-top: $spacing-xl;
+    }
+    .work-detail__section-body.work-detail__more {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .section-label {
+        margin-bottom: $spacing-xs;
+        @include for-tablet() {
+          margin-bottom: 12px;
+        }
+        @include for-mobile() {
+          margin-bottom: $spacing-xxs;
+        }
+      }
+      .section-title {
+        font-size: $fontSize-48;
+        font-weight: $semiBold-weight;
+        line-height: $lineHeight-60;
+        letter-spacing: $letterSpacing--0064;
+        margin-bottom: $spacing-s;
+        @include for-tablet() {
+          font-size: $fontSize-32;
+          line-height: normal;
+          margin-bottom: $spacing-xs;
+        }
+        @include for-mobile() {
+          font-size: $fontSize-26;
+          line-height: normal;
+        }
+      }
+      .work-detail__text {
+        max-width: 400px;
+        font-size: $fontSize-16;
+        font-weight: $regular-weight;
+        line-height: $lineHeight-21;
+        letter-spacing: $letterSpacing--005;
+        color: $dark-grey;
+      }
+      .work-detail__more-right {
+        display: flex;
+      }
+    }
+  }
+}
