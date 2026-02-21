@@ -92,21 +92,21 @@ button, input[type=submit], input[type=reset] {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  src: url("../../../assets/fonts/manrope-v19-latin-regular.woff2") format("woff2"), url("../../../assets/fonts/manrope-v19-latin-regular.woff") format("woff");
+  src: url("../assets/fonts/manrope-v19-latin-regular.woff2") format("woff2"), url("../assets/fonts/manrope-v19-latin-regular.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
-  src: url("../../../assets/fonts/manrope-v19-latin-500.woff2") format("woff2"), url("../../../assets/fonts/manrope-v19-latin-500.woff") format("woff");
+  src: url("../assets/fonts/manrope-v19-latin-500.woff2") format("woff2"), url("../assets/fonts/manrope-v19-latin-500.woff") format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 600;
-  src: url("../../../assets/fonts/manrope-v19-latin-600.woff2") format("woff2"), url("../../../assets/fonts/manrope-v19-latin-600.woff") format("woff");
+  src: url("../assets/fonts/manrope-v19-latin-600.woff2") format("woff2"), url("../assets/fonts/manrope-v19-latin-600.woff") format("woff");
 }
 body {
   background-color: #FFFFFF;
