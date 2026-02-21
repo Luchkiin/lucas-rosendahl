@@ -24,7 +24,9 @@
 
     <!-- Web App -->
     <link rel="manifest" href="assets/favicons/site.webmanifest" />
-
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -124,7 +126,8 @@
     </header>
 
     <!-- Main -->
-    <main id="main">
+    <div class="page-transition" data-page>
+      <main id="main">
       <section class="section legal-page" aria-labelledby="privacy-title">
         <div class="container inner-wrapper legal-page__content">
           <!-- Intro -->
@@ -300,7 +303,8 @@
           </div>
         </div>
       </footer>
-    </main>
+      </main>
+    </div>
 
     <!-- Cookie consent -->
     <div
@@ -339,5 +343,6 @@
     </div>
 
     <script src="/js/main.js" defer></script>
+    <script src="/js/reveal.js" defer></script>
   </body>
 </html>
