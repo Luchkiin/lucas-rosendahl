@@ -35,9 +35,6 @@
 
     <!-- Web App -->
     <link rel="manifest" href="assets/favicons/site.webmanifest" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -146,22 +143,22 @@
       <section class="section about-page" aria-labelledby="about-title">
         <div class="container inner-wrapper">
           <!-- Top / intro -->
-          <div class="about-page__head">
+          <div class="about-page__head" data-stagger data-stagger-base="220" data-stagger-step="120">
             <div class="about-page__head-left">
-              <div class="section-label">
+              <div class="section-label" data-reveal="load">
                 <span class="section-label__dot" aria-hidden="true"></span>
                 <span class="section-label__text">About</span>
               </div>
 
-              <h1 id="about-title" class="page-title">Background</h1>
+              <h1 id="about-title" class="page-title" data-reveal="load">Background</h1>
 
-              <div class="about-page__intro">
-                <p class="section-lead">
+              <div class="about-page__intro" data-stagger data-stagger-base="340" data-stagger-step="140">
+                <p class="section-lead" data-reveal="load">
                   I’m a UX designer based in Stockholm, working across
                   discovery, design, and implementation to create clear and
                   intuitive digital experiences.
                 </p>
-                <p class="section-lead">
+                <p class="section-lead" data-reveal="load">
                   I care deeply about structure, usability, and detail —
                   designing products that feel purposeful, considered, and easy
                   to use.
@@ -170,7 +167,7 @@
             </div>
 
             <!-- Portrait -->
-            <div class="about-page__head-right" aria-hidden="true">
+            <div class="about-page__head-right" aria-hidden="true" data-reveal="load" data-reveal-card>
               <img
                 class="about-page__portrait"
                 src="assets/images/about/portrait.webp"
@@ -183,11 +180,11 @@
 
           <!-- Experience -->
           <section class="section about-experience" aria-labelledby="exp-title">
-            <h2 id="exp-title" class="section-title">Experience</h2>
+            <h2 id="exp-title" class="section-title" data-reveal="scroll">Experience</h2>
 
-            <div class="experience-list" role="list">
+            <div class="experience-list" role="list" data-stagger data-stagger-base="160" data-stagger-step="120">
               <!-- Row 1 -->
-              <article class="experience-row" role="listitem">
+              <article class="experience-row" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="experience-row__top-wrapper">
                   <div class="experience-row__time">2023 — Present</div>
                   <div class="experience-row__body">
@@ -212,7 +209,7 @@
               </article>
 
               <!-- Row 2 -->
-              <article class="experience-row" role="listitem">
+              <article class="experience-row" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="experience-row__top-wrapper">
                   <div class="experience-row__time">2020 — Present</div>
                   <div class="experience-row__body">
@@ -239,7 +236,7 @@
               </article>
 
               <!-- Row 3 -->
-              <article class="experience-row" role="listitem">
+              <article class="experience-row" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="experience-row__top-wrapper">
                   <div class="experience-row__time">2020 — 2023</div>
                   <div class="experience-row__body">
@@ -263,7 +260,7 @@
               </article>
 
               <!-- Row 4 -->
-              <article class="experience-row" role="listitem">
+              <article class="experience-row" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="experience-row__top-wrapper">
                   <div class="experience-row__time">2020</div>
                   <div class="experience-row__body">
@@ -290,13 +287,13 @@
 
           <!-- Tools -->
           <section class="section about-tools" aria-labelledby="tools-title">
-            <h2 id="tools-title" class="section-title">
+            <h2 id="tools-title" class="section-title" data-reveal="scroll">
               Tools &amp; platforms
             </h2>
 
-            <div class="tools-grid" role="list">
+            <div class="tools-grid" role="list" data-stagger data-stagger-base="140" data-stagger-step="80">
               <!-- Tool card -->
-              <article class="tool-card" role="listitem">
+              <article class="tool-card" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="tool-card__icon" aria-hidden="true">
                   <svg
                     width="56"
@@ -335,7 +332,7 @@
                 </div>
               </article>
 
-              <article class="tool-card" role="listitem">
+              <article class="tool-card" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="tool-card__icon" aria-hidden="true">
                   <svg
                     width="56"
@@ -380,7 +377,7 @@
                 </div>
               </article>
 
-              <article class="tool-card" role="listitem">
+              <article class="tool-card" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="tool-card__icon" aria-hidden="true">
                   <svg
                     width="56"
@@ -420,7 +417,7 @@
                 </div>
               </article>
 
-              <article class="tool-card" role="listitem">
+              <article class="tool-card" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="tool-card__icon" aria-hidden="true">
                   <svg
                     width="56"
@@ -445,7 +442,7 @@
                 </div>
               </article>
 
-              <article class="tool-card" role="listitem">
+              <article class="tool-card" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="tool-card__icon" aria-hidden="true">
                   <svg
                     width="56"
@@ -482,7 +479,7 @@
                 </div>
               </article>
 
-              <article class="tool-card" role="listitem">
+              <article class="tool-card" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="tool-card__icon" aria-hidden="true">
                   <svg
                     width="56"
@@ -509,7 +506,7 @@
                 </div>
               </article>
 
-              <article class="tool-card" role="listitem">
+              <article class="tool-card" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="tool-card__icon" aria-hidden="true">
                   <svg
                     width="56"
@@ -533,7 +530,7 @@
                 </div>
               </article>
 
-              <article class="tool-card" role="listitem">
+              <article class="tool-card" role="listitem" data-reveal="scroll" data-reveal-card>
                 <div class="tool-card__icon" aria-hidden="true">
                   <svg
                     width="56"
@@ -581,7 +578,7 @@
       </section>
 
       <!-- Footer -->
-      <footer class="site-footer" role="contentinfo">
+      <footer class="site-footer" role="contentinfo" data-reveal="scroll">
         <div class="container footer__grid inner-wrapper">
           <div class="footer__brand__cols__wrapper">
             <div class="footer__brand">

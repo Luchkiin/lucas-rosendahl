@@ -20,6 +20,7 @@
         document.documentElement.classList.add("js");
       })();
     </script>
+
     <!-- Favicon -->
     <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
@@ -35,9 +36,6 @@
 
     <!-- Web App -->
     <link rel="manifest" href="assets/favicons/site.webmanifest" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -662,9 +660,9 @@
         </section>
 
         <!-- Footer / Contact -->
-        <footer class="site-footer" id="contact" role="contentinfo" data-reveal>
-          <div class="container footer__grid inner-wrapper" data-stagger>
-            <div class="footer__brand__cols__wrapper" data-reveal>
+        <footer class="site-footer" role="contentinfo" data-reveal="scroll">
+          <div class="container footer__grid inner-wrapper">
+            <div class="footer__brand__cols__wrapper">
               <div class="footer__brand">
                 <a class="footer__logotype" href="./"
                   ><img
