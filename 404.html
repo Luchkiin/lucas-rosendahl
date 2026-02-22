@@ -43,7 +43,11 @@
 
     <!-- Header -->
     <header class="site-header" role="banner">
-      <div class="container header__inner">
+      <div
+        class="container header__inner"
+        data-reveal="load"
+        data-header-reveal
+      >
         <a class="header__logotype" href="./">
           <img
             src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
@@ -62,7 +66,7 @@
           <ul class="site-nav__list">
             <li><a href="about">About</a></li>
             <li><a href="work">Work</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="./#services">Services</a></li>
             <li><a href="contact">Contact</a></li>
           </ul>
         </nav>
@@ -123,7 +127,7 @@
               </li>
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">03</span>
-                <a class="mobile-menu__link" href="#services">Services</a>
+                <a class="mobile-menu__link" href="./#services">Services</a>
               </li>
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">04</span>
@@ -139,21 +143,28 @@
     <div class="page-transition" data-page>
       <main id="main">
         <section class="section not-found" aria-labelledby="not-found-title">
-          <div class="container inner-wrapper not-found__content">
+          <div
+            class="container inner-wrapper not-found__content"
+            data-stagger
+            data-stagger-base="220"
+            data-stagger-step="120"
+          >
             <div class="not-found__left">
-              <div class="section-label">
+              <div class="section-label" data-reveal="load">
                 <span class="section-label__dot" aria-hidden="true"></span>
                 <span class="section-label__text">404</span>
               </div>
 
-              <h1 id="not-found-title" class="page-title">Page not found</h1>
+              <h1 id="not-found-title" class="page-title" data-reveal="load">
+                Page not found
+              </h1>
 
-              <p class="section-lead">
+              <p class="section-lead" data-reveal="load">
                 The page you are looking for does not exist or has been removed.
               </p>
             </div>
 
-            <div class="not-found__right">
+            <div class="not-found__right" data-reveal="load">
               <a class="button button--secondary__small" href="./"
                 >Back to home</a
               >
@@ -162,9 +173,14 @@
         </section>
 
         <!-- Footer -->
-        <footer class="site-footer" role="contentinfo" data-reveal="scroll">
-          <div class="container footer__grid inner-wrapper">
-            <div class="footer__brand__cols__wrapper">
+        <footer class="site-footer" role="contentinfo">
+          <div
+            class="container footer__grid inner-wrapper"
+            data-stagger
+            data-stagger-base="140"
+            data-stagger-step="120"
+          >
+            <div class="footer__brand__cols__wrapper" data-reveal>
               <div class="footer__brand">
                 <a class="footer__logotype" href="./"
                   ><img
@@ -188,8 +204,8 @@
                   <ul class="footer__list">
                     <li><a href="about">About</a></li>
                     <li><a href="work">Work</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="/#faq">FAQ</a></li>
+                    <li><a href="./#services">Services</a></li>
+                    <li><a href="./#faq">FAQ</a></li>
                     <li><a href="contact">Contact</a></li>
                   </ul>
                 </div>
@@ -226,11 +242,16 @@
               </div>
             </div>
 
-            <div class="footer__meta">
-              <p class="footer___copyright">
+            <div
+            class="footer__meta"
+            data-stagger
+            data-stagger-base="260"
+            data-stagger-step="120"
+          >
+              <p class="footer___copyright" data-reveal>
                 © Lucas Rosendahl <span id="year"></span>
               </p>
-              <div class="footer__policies">
+              <div class="footer__policies" data-reveal>
                 <a href="privacy-policy">Privacy Policy</a>
                 <a href="cookie-policy">Cookie Policy</a>
               </div>

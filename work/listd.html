@@ -43,7 +43,7 @@
 
     <!-- Header -->
     <header class="site-header" role="banner">
-      <div class="container header__inner">
+      <div class="container header__inner" data-reveal="load" data-header-reveal>
         <a class="header__logotype" href="./">
           <img
             src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
@@ -61,7 +61,7 @@
           <ul class="site-nav__list">
             <li><a href="about">About</a></li>
             <li><a href="work" aria-current="page">Work</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="./#services">Services</a></li>
             <li><a href="contact">Contact</a></li>
           </ul>
         </nav>
@@ -126,7 +126,7 @@
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">03</span>
-                <a class="mobile-menu__link" href="#services">Services</a>
+                <a class="mobile-menu__link" href="./#services">Services</a>
               </li>
 
               <li class="mobile-menu__item">
@@ -555,8 +555,13 @@
 
       <!-- Footer -->
       <footer class="site-footer" role="contentinfo" data-reveal="scroll">
-        <div class="container footer__grid inner-wrapper">
-          <div class="footer__brand__cols__wrapper">
+        <div
+          class="container footer__grid inner-wrapper"
+          data-stagger
+          data-stagger-base="140"
+          data-stagger-step="120"
+        >
+          <div class="footer__brand__cols__wrapper" data-reveal>
             <div class="footer__brand">
               <a class="footer__logotype" href="./">
                 <img
@@ -579,9 +584,9 @@
                 <ul class="footer__list">
                   <li><a href="work">Work</a></li>
                   <li><a href="about">About</a></li>
-                  <li><a href="#services">Services</a></li>
+                  <li><a href="./#services">Services</a></li>
                   <li><a href="contact">Contact</a></li>
-                  <li><a href="/#faq">FAQ</a></li>
+                  <li><a href="./#faq">FAQ</a></li>
                 </ul>
               </div>
 
@@ -617,11 +622,16 @@
             </div>
           </div>
 
-          <div class="footer__meta">
-            <p class="footer___copyright">
+          <div
+            class="footer__meta"
+            data-stagger
+            data-stagger-base="260"
+            data-stagger-step="120"
+          >
+            <p class="footer___copyright" data-reveal>
               © Lucas Rosendahl <span id="year"></span>
             </p>
-            <div class="footer__policies">
+            <div class="footer__policies" data-reveal>
               <a href="privacy-policy">Privacy Policy</a>
               <a href="cookie-policy">Cookie Policy</a>
             </div>
