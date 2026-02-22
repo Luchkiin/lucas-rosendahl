@@ -43,7 +43,11 @@
 
     <!-- Header -->
     <header class="site-header" role="banner">
-      <div class="container header__inner" data-reveal="load" data-header-reveal>
+      <div
+        class="container header__inner"
+        data-reveal="load"
+        data-header-reveal
+      >
         <a class="header__logotype" href="./"
           ><img
             src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
@@ -139,403 +143,441 @@
 
     <div class="page-transition" data-page>
       <main id="main">
-      <!-- Contact -->
-      <section class="section contact-page" aria-labelledby="contact-title">
-        <div class="container inner-wrapper">
-          <div class="contact-page__head">
-            <div class="contact-page__head-left">
-              <div class="section-label">
-                <span class="section-label__dot" aria-hidden="true"></span>
-                <span class="section-label__text">Contact</span>
-              </div>
-
-              <h1 id="contact-title" class="page-title">Let’s talk</h1>
-            </div>
-            <div class="contact-page__intro">
-              <p class="section-lead">
-                Looking to collaborate or start a project? I’d love to hear from
-                you.
-              </p>
-            </div>
-          </div>
-
-          <div class="contact-page__grid">
-            <div class="contact-page__cols">
-              <div class="contact-page__col">
-                <p class="contact-page__col-title">New business</p>
-                <ul class="contact-page__list">
-                  <li>Lucas Rosendahl</li>
-                  <li>
-                    <a href="mailto:lr@lucasrosendahl.com"
-                      >lr@lucasrosendahl.com</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="contact-page__divider" aria-hidden="true"></div>
-
-              <div class="contact-page__col">
-                <p class="contact-page__col-title">Social</p>
-                <ul class="contact-page__list">
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/lucas-rosendahl/"
-                      target="_blank"
-                      rel="me"
-                      >LinkedIn</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Luchkiin"
-                      target="_blank"
-                      rel="me"
-                      >GitHub</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.figma.com/@lucasrosendahl"
-                      target="_blank"
-                      rel="me"
-                      >Figma</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Right / form -->
-            <div class="contact-page__form">
-              <form
-                class="contact-form"
-                action="https://formspree.io/f/mgoloone"
-                method="POST"
-                novalidate
-              >
-                <div class="field">
-                  <label class="field__label" for="name">Name</label>
-                  <input
-                    class="field__input"
-                    id="name"
-                    name="name"
-                    type="text"
-                    autocomplete="name"
-                    placeholder="First and last name"
-                    required
-                    minlength="2"
-                    aria-describedby="name-error"
-                  />
-                  <p
-                    id="name-error"
-                    class="field__error"
-                    aria-live="polite"
-                    hidden
-                  ></p>
+        <!-- Contact -->
+        <section class="section contact-page" aria-labelledby="contact-title">
+          <div class="container inner-wrapper">
+            <div
+              class="contact-page__head"
+              data-stagger
+              data-stagger-base="220"
+              data-stagger-step="120"
+            >
+              <div class="contact-page__head-left">
+                <div class="section-label" data-reveal="load">
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text">Contact</span>
                 </div>
 
-                <div class="field">
-                  <label class="field__label" for="email">Email</label>
-                  <input
-                    class="field__input"
-                    id="email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="Your email"
-                    required
-                    aria-describedby="email-error"
-                  />
-                  <p
-                    id="email-error"
-                    class="field__error"
-                    aria-live="polite"
-                    hidden
-                  ></p>
-                </div>
-
-                <div class="field">
-                  <label class="field__label" for="message">Message</label>
-                  <textarea
-                    class="field__textarea"
-                    id="message"
-                    name="message"
-                    rows="5"
-                    placeholder="Tell me about your project..."
-                    required
-                    minlength="10"
-                    aria-describedby="message-error"
-                  ></textarea>
-                  <p id="message-error" class="field__error" aria-live="polite" hidden></p>
-                </div>
-
-                <!-- Honeypot (spam) -->
-                <input
-                  type="text"
-                  name="_gotcha"
-                  class="contact-form__gotcha"
-                  tabindex="-1"
-                  autocomplete="off"
-                />
-
-                <!-- (valfritt) subject -->
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="New message from lucasrosendahl.com"
-                />
-
-                <p class="contact-form__fineprint">
-                  By submitting this form, you agree to the
-                  <a
-                    href="privacy-policy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Privacy Policy</a
-                  >.
+                <h1 id="contact-title" class="page-title" data-reveal="load">
+                  Let’s talk
+                </h1>
+              </div>
+              <div class="contact-page__intro">
+                <p class="section-lead" data-reveal="load">
+                  Looking to collaborate or start a project? I’d love to hear
+                  from you.
                 </p>
-
-                <p
-                  class="contact-form__status"
-                  role="status"
-                  aria-live="polite"
-                  hidden
-                ></p>
-
-                <button class="button button--secondary" type="submit">
-                  Send message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="section faq" aria-labelledby="faq-title">
-        <div class="container inner-wrapper">
-          <div class="faq__grid">
-            <header class="faq__intro">
-              <div class="section-label">
-                <span class="section-label__dot" aria-hidden="true"></span>
-                <span class="section-label__text">FAQ</span>
-              </div>
-              <h2 id="faq-title" class="section-title">
-                Your questions,<br />answered
-              </h2>
-              <p class="section-lead">
-                Answers to common questions about my process, services, and how
-                I collaborate with clients.
-              </p>
-            </header>
-
-            <div class="faq__content">
-              <div class="accordion" data-accordion>
-                <details class="accordion__item" open>
-                  <summary class="accordion__summary">
-                    <span class="accordion__label"
-                      >What kind of clients do you typically work with?</span
-                    >
-                    <span class="accordion__icon" aria-hidden="true"></span>
-                  </summary>
-                  <div class="accordion__content">
-                    <div class="accordion__content-inner">
-                      <p class="accordion__text">
-                        I work with startups, scale-ups, and established
-                        companies looking to improve or build digital products.
-                        Projects range from early-stage concepts to refining and
-                        evolving existing platforms.
-                      </p>
-                    </div>
-                  </div>
-                </details>
-
-                <details class="accordion__item">
-                  <summary class="accordion__summary">
-                    <span class="accordion__label"
-                      >What services do you offer?</span
-                    >
-                    <span class="accordion__icon" aria-hidden="true"></span>
-                  </summary>
-                  <div class="accordion__content">
-                    <div class="accordion__content-inner">
-                      <p class="accordion__text">
-                        I focus on product discovery, UX and interface design,
-                        and digital production. This includes research and
-                        strategy, design and prototyping, and bringing designs
-                        into polished, functional digital products.
-                      </p>
-                    </div>
-                  </div>
-                </details>
-
-                <details class="accordion__item">
-                  <summary class="accordion__summary">
-                    <span class="accordion__label"
-                      >How long does a typical project take?</span
-                    >
-                    <span class="accordion__icon" aria-hidden="true"></span>
-                  </summary>
-                  <div class="accordion__content">
-                    <div class="accordion__content-inner">
-                      <p class="accordion__text">
-                        Timelines vary depending on scope and complexity.
-                        Smaller projects usually take a few weeks, while larger
-                        product or website engagements can span several months.
-                        I define clear timelines at the start of each project.
-                      </p>
-                    </div>
-                  </div>
-                </details>
-
-                <details class="accordion__item">
-                  <summary class="accordion__summary">
-                    <span class="accordion__label"
-                      >What is your pricing structure?</span
-                    >
-                    <span class="accordion__icon" aria-hidden="true"></span>
-                  </summary>
-                  <div class="accordion__content">
-                    <div class="accordion__content-inner">
-                      <p class="accordion__text">
-                        Projects are typically priced as fixed scopes based on
-                        the work required. For ongoing collaborations, I also
-                        offer monthly retainers. Pricing is always discussed
-                        upfront to ensure clarity on both sides.
-                      </p>
-                    </div>
-                  </div>
-                </details>
-
-                <details class="accordion__item">
-                  <summary class="accordion__summary">
-                    <span class="accordion__label"
-                      >Can you work with an existing website or product?</span
-                    >
-                    <span class="accordion__icon" aria-hidden="true"></span>
-                  </summary>
-                  <div class="accordion__content">
-                    <div class="accordion__content-inner">
-                      <p class="accordion__text">
-                        Yes. I often work with existing products — improving
-                        usability, refining design systems, or redesigning parts
-                        of the experience while respecting what’s already in
-                        place.
-                      </p>
-                    </div>
-                  </div>
-                </details>
-
-                <details class="accordion__item">
-                  <summary class="accordion__summary">
-                    <span class="accordion__label"
-                      >Do you offer ongoing support after launch?</span
-                    >
-                    <span class="accordion__icon" aria-hidden="true"></span>
-                  </summary>
-                  <div class="accordion__content">
-                    <div class="accordion__content-inner">
-                      <p class="accordion__text">
-                        Yes. I offer ongoing support for iteration,
-                        improvements, and maintenance to ensure the product
-                        continues to evolve after launch.
-                      </p>
-                    </div>
-                  </div>
-                </details>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Footer -->
-      <footer class="site-footer" role="contentinfo" data-reveal="scroll">
-        <div
-          class="container footer__grid inner-wrapper"
-          data-stagger
-          data-stagger-base="140"
-          data-stagger-step="120"
-        >
-          <div class="footer__brand__cols__wrapper" data-reveal>
-            <div class="footer__brand">
-              <a class="footer__logotype" href="./"
-                ><img
-                  src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
-                  alt="lucas rosendahl"
-              /></a>
-              <p class="footer__text">
-                Building a brand, designing a product, or exploring an idea —
-                I’d love to hear from you.
-              </p>
-              <p class="footer__email">
-                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
-              </p>
-            </div>
+            <div
+              class="contact-page__grid"
+              data-stagger
+              data-stagger-base="140"
+              data-stagger-step="120"
+            >
+              <div class="contact-page__cols" data-reveal data-reveal-card>
+                <div class="contact-page__col">
+                  <p class="contact-page__col-title">New business</p>
+                  <ul class="contact-page__list">
+                    <li>Lucas Rosendahl</li>
+                    <li>
+                      <a href="mailto:lr@lucasrosendahl.com"
+                        >lr@lucasrosendahl.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
 
-            <div class="footer__cols">
-              <div class="footer__col">
-                <p class="footer__title">Sitemap</p>
-                <ul class="footer__list">
-                  <li><a href="work">Work</a></li>
-                  <li><a href="about">About</a></li>
-                  <li><a href="./#services">Services</a></li>
-                  <li>
-                    <a href="/contact.html" aria-current="page">Contact</a>
-                  </li>
-                  <li><a href="./#faq">FAQ</a></li>
-                </ul>
+                <div class="contact-page__divider" aria-hidden="true"></div>
+
+                <div class="contact-page__col">
+                  <p class="contact-page__col-title">Social</p>
+                  <ul class="contact-page__list">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/lucas-rosendahl/"
+                        target="_blank"
+                        rel="me"
+                        >LinkedIn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Luchkiin"
+                        target="_blank"
+                        rel="me"
+                        >GitHub</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.figma.com/@lucasrosendahl"
+                        target="_blank"
+                        rel="me"
+                        >Figma</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              <div class="footer__col">
-                <p class="footer__title">Social</p>
-                <ul class="footer__list">
-                  <li>
+              <!-- Right / form -->
+              <div class="contact-page__form" data-reveal data-reveal-card>
+                <form
+                  class="contact-form"
+                  action="https://formspree.io/f/mgoloone"
+                  method="POST"
+                  novalidate
+                  data-stagger
+                  data-stagger-base="160"
+                  data-stagger-step="90"
+                >
+                  <div class="field" data-reveal>
+                    <label class="field__label" for="name">Name</label>
+                    <input
+                      class="field__input"
+                      id="name"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      placeholder="First and last name"
+                      required
+                      minlength="2"
+                      aria-describedby="name-error"
+                    />
+                    <p
+                      id="name-error"
+                      class="field__error"
+                      aria-live="polite"
+                      hidden
+                    ></p>
+                  </div>
+
+                  <div class="field" data-reveal>
+                    <label class="field__label" for="email">Email</label>
+                    <input
+                      class="field__input"
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      placeholder="Your email"
+                      required
+                      aria-describedby="email-error"
+                    />
+                    <p
+                      id="email-error"
+                      class="field__error"
+                      aria-live="polite"
+                      hidden
+                    ></p>
+                  </div>
+
+                  <div class="field" data-reveal>
+                    <label class="field__label" for="message">Message</label>
+                    <textarea
+                      class="field__textarea"
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Tell me about your project..."
+                      required
+                      minlength="10"
+                      aria-describedby="message-error"
+                    ></textarea>
+                    <p
+                      id="message-error"
+                      class="field__error"
+                      aria-live="polite"
+                      hidden
+                    ></p>
+                  </div>
+
+                  <!-- Honeypot (spam) -->
+                  <input
+                    type="text"
+                    name="_gotcha"
+                    class="contact-form__gotcha"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+
+                  <!-- (valfritt) subject -->
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New message from lucasrosendahl.com"
+                  />
+
+                  <p class="contact-form__fineprint" data-reveal>
+                    By submitting this form, you agree to the
                     <a
-                      href="https://www.linkedin.com/in/lucas-rosendahl/"
-                      rel="me"
+                      href="privacy-policy"
                       target="_blank"
-                      >LinkedIn</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Luchkiin"
-                      rel="me"
-                      target="_blank"
-                      >GitHub</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.figma.com/@lucasrosendahl"
-                      rel="me"
-                      target="_blank"
-                      >Figma</a
-                    >
-                  </li>
-                </ul>
+                      rel="noopener noreferrer"
+                      >Privacy Policy</a
+                    >.
+                  </p>
+
+                  <p
+                    class="contact-form__status"
+                    role="status"
+                    aria-live="polite"
+                    hidden
+                  ></p>
+
+                  <button
+                    class="button button--secondary"
+                    type="submit"
+                    data-reveal
+                  >
+                    Send message
+                  </button>
+                </form>
               </div>
             </div>
           </div>
+        </section>
 
+        <!-- FAQ -->
+        <section class="section faq" aria-labelledby="faq-title">
+          <div class="container inner-wrapper">
+            <div class="faq__grid" data-reveal>
+              <header
+                class="faq__intro"
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="100"
+              >
+                <div class="section-label" data-reveal>
+                  <span class="section-label__dot" aria-hidden="true"></span>
+                  <span class="section-label__text">FAQ</span>
+                </div>
+                <h2 id="faq-title" class="section-title" data-reveal>
+                  Your questions,<br />answered
+                </h2>
+                <p class="section-lead" data-reveal>
+                  Answers to common questions about my process, services, and
+                  how I collaborate with clients.
+                </p>
+              </header>
+
+              <div class="faq__content">
+                <div
+                  class="accordion"
+                  data-accordion
+                  data-stagger
+                  data-stagger-base="140"
+                  data-stagger-step="90"
+                >
+                  <details class="accordion__item" open data-reveal>
+                    <summary class="accordion__summary">
+                      <span class="accordion__label"
+                        >What kind of clients do you typically work with?</span
+                      >
+                      <span class="accordion__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion__content">
+                      <div class="accordion__content-inner">
+                        <p class="accordion__text">
+                          I work with startups, scale-ups, and established
+                          companies looking to improve or build digital
+                          products. Projects range from early-stage concepts to
+                          refining and evolving existing platforms.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details class="accordion__item" data-reveal>
+                    <summary class="accordion__summary">
+                      <span class="accordion__label"
+                        >What services do you offer?</span
+                      >
+                      <span class="accordion__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion__content">
+                      <div class="accordion__content-inner">
+                        <p class="accordion__text">
+                          I focus on product discovery, UX and interface design,
+                          and digital production. This includes research and
+                          strategy, design and prototyping, and bringing designs
+                          into polished, functional digital products.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details class="accordion__item" data-reveal>
+                    <summary class="accordion__summary">
+                      <span class="accordion__label"
+                        >How long does a typical project take?</span
+                      >
+                      <span class="accordion__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion__content">
+                      <div class="accordion__content-inner">
+                        <p class="accordion__text">
+                          Timelines vary depending on scope and complexity.
+                          Smaller projects usually take a few weeks, while
+                          larger product or website engagements can span several
+                          months. I define clear timelines at the start of each
+                          project.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details class="accordion__item" data-reveal>
+                    <summary class="accordion__summary">
+                      <span class="accordion__label"
+                        >What is your pricing structure?</span
+                      >
+                      <span class="accordion__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion__content">
+                      <div class="accordion__content-inner">
+                        <p class="accordion__text">
+                          Projects are typically priced as fixed scopes based on
+                          the work required. For ongoing collaborations, I also
+                          offer monthly retainers. Pricing is always discussed
+                          upfront to ensure clarity on both sides.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details class="accordion__item" data-reveal>
+                    <summary class="accordion__summary">
+                      <span class="accordion__label"
+                        >Can you work with an existing website or product?</span
+                      >
+                      <span class="accordion__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion__content">
+                      <div class="accordion__content-inner">
+                        <p class="accordion__text">
+                          Yes. I often work with existing products — improving
+                          usability, refining design systems, or redesigning
+                          parts of the experience while respecting what’s
+                          already in place.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details class="accordion__item" data-reveal>
+                    <summary class="accordion__summary">
+                      <span class="accordion__label"
+                        >Do you offer ongoing support after launch?</span
+                      >
+                      <span class="accordion__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion__content">
+                      <div class="accordion__content-inner">
+                        <p class="accordion__text">
+                          Yes. I offer ongoing support for iteration,
+                          improvements, and maintenance to ensure the product
+                          continues to evolve after launch.
+                        </p>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo">
           <div
-            class="footer__meta"
+            class="container footer__grid inner-wrapper"
             data-stagger
-            data-stagger-base="260"
+            data-stagger-base="140"
             data-stagger-step="120"
           >
-            <p class="footer___copyright" data-reveal>
-              © Lucas Rosendahl <span id="year"></span>
-            </p>
-            <div class="footer__policies" data-reveal>
-              <a href="privacy-policy">Privacy Policy</a>
-              <a href="cookie-policy">Cookie Policy</a>
+            <div class="footer__brand__cols__wrapper" data-reveal>
+              <div class="footer__brand">
+                <a class="footer__logotype" href="./"
+                  ><img
+                    src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    alt="lucas rosendahl"
+                /></a>
+                <p class="footer__text">
+                  Building a brand, designing a product, or exploring an idea —
+                  I’d love to hear from you.
+                </p>
+                <p class="footer__email">
+                  <a href="mailto:lr@lucasrosendahl.com"
+                    >lr@lucasrosendahl.com</a
+                  >
+                </p>
+              </div>
+
+              <div class="footer__cols">
+                <div class="footer__col">
+                  <p class="footer__title">Sitemap</p>
+                  <ul class="footer__list">
+                    <li><a href="work">Work</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="./#services">Services</a></li>
+                    <li>
+                      <a href="contact" aria-current="page">Contact</a>
+                    </li>
+                    <li><a href="./#faq">FAQ</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer__col">
+                  <p class="footer__title">Social</p>
+                  <ul class="footer__list">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/lucas-rosendahl/"
+                        rel="me"
+                        target="_blank"
+                        >LinkedIn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Luchkiin"
+                        rel="me"
+                        target="_blank"
+                        >GitHub</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.figma.com/@lucasrosendahl"
+                        rel="me"
+                        target="_blank"
+                        >Figma</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="footer__meta"
+              data-stagger
+              data-stagger-base="260"
+              data-stagger-step="120"
+            >
+              <p class="footer___copyright" data-reveal>
+                © Lucas Rosendahl <span id="year"></span>
+              </p>
+              <div class="footer__policies" data-reveal>
+                <a href="privacy-policy">Privacy Policy</a>
+                <a href="cookie-policy">Cookie Policy</a>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
       </main>
     </div>
 
