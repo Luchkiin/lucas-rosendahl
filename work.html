@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -43,7 +43,11 @@
 
     <!-- Header -->
     <header class="site-header" role="banner">
-      <div class="container header__inner" data-reveal="load" data-header-reveal>
+      <div
+        class="container header__inner"
+        data-reveal="load"
+        data-header-reveal
+      >
         <a class="header__logotype" href="./"
           ><img
             src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
@@ -117,9 +121,7 @@
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">02</span>
-                <a class="mobile-menu__link is-active" href="work"
-                  >Work</a
-                >
+                <a class="mobile-menu__link is-active" href="work">Work</a>
               </li>
 
               <li class="mobile-menu__item">
@@ -139,795 +141,878 @@
 
     <div class="page-transition" data-page>
       <main id="main">
-      <!-- Work page -->
-      <div class="work-content" data-work-root>
-        <section class="section work-page" aria-labelledby="work-title">
-          <div class="container inner-wrapper">
-            <!-- Header row -->
-            <div class="work-page__head">
-              <div class="work-page__head-left">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text">Work</span>
-                </div>
-
-                <h1 id="work-title" class="page-title">Projects</h1>
-              </div>
-
-              <p class="work-page__head-right section-lead">
-                A curated selection of projects that reflect how I approach
-                design: simple, clear, and intentional.
-              </p>
-            </div>
-
-            <!-- Controls row -->
-            <div
-              class="work-controls"
-              aria-label="Project filters and view options"
-            >
+        <!-- Work page -->
+        <div class="work-content" data-work-root data-reveal-scope>
+          <section class="section work-page" aria-labelledby="work-title">
+            <div class="container inner-wrapper">
+              <!-- Header row -->
               <div
-                class="work-filters"
-                role="group"
-                aria-label="Filter projects"
+                class="work-page__head"
+                data-stagger
+                data-stagger-base="220"
+                data-stagger-step="120"
               >
-                <button
-                  class="chip is-active"
-                  type="button"
-                  data-filter="all"
-                  aria-pressed="true"
-                >
-                  All
-                </button>
-                <button
-                  class="chip"
-                  type="button"
-                  data-filter="mobile"
-                  aria-pressed="false"
-                >
-                  Mobile
-                </button>
-                <button
-                  class="chip"
-                  type="button"
-                  data-filter="web"
-                  aria-pressed="false"
-                >
-                  Web design
-                </button>
-              </div>
+                <div class="work-page__head-left">
+                  <div class="section-label" data-reveal="load">
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text">Work</span>
+                  </div>
 
-              <div class="work-view" role="group" aria-label="Toggle view">
-                <button
-                  class="icon-button is-active"
-                  type="button"
-                  aria-label="Grid view"
-                  aria-pressed="true"
-                  data-view="grid"
-                >
-                  <span class="sr-only">Grid</span>
-                  <!-- replace with your svg -->
-                  <span class="icon" aria-hidden="true"
-                    ><svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M3.5 11V3.5H11V11H3.5ZM3.5 20.5V13H11V20.5H3.5ZM13 11V3.5H20.5V11H13ZM13 20.5V13H20.5V20.5H13Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </span>
-                </button>
-
-                <button
-                  class="icon-button"
-                  type="button"
-                  aria-label="List view"
-                  aria-pressed="false"
-                  data-view="list"
-                >
-                  <span class="sr-only">List</span>
-                  <!-- replace with your svg -->
-                  <span class="icon" aria-hidden="true"
-                    ><svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.50235 8.73083V7.06417H22V8.73083H6.50235ZM6.50235 12.8333V11.1667H22V12.8333H6.50235ZM6.50235 16.9358V15.2692H22V16.9358H6.50235ZM2.95029 8.795C2.68108 8.795 2.45539 8.70796 2.27324 8.53389C2.09108 8.35981 2 8.14407 2 7.88667C2 7.63556 2.09108 7.425 2.27324 7.255C2.45539 7.085 2.68108 7 2.95029 7C3.21951 7 3.4452 7.085 3.62735 7.255C3.80951 7.425 3.90059 7.63556 3.90059 7.88667C3.90059 8.14407 3.80951 8.35981 3.62735 8.53389C3.4452 8.70796 3.21951 8.795 2.95029 8.795ZM2.95029 12.8867C2.68108 12.8867 2.45539 12.8017 2.27324 12.6317C2.09108 12.4619 2 12.2513 2 12C2 11.735 2.09108 11.5174 2.27324 11.3472C2.45539 11.177 2.68108 11.0919 2.95029 11.0919C3.21951 11.0919 3.4452 11.177 3.62735 11.3472C3.80951 11.5174 3.90059 11.735 3.90059 12C3.90059 12.2513 3.80951 12.4619 3.62735 12.6317C3.4452 12.8017 3.21951 12.8867 2.95029 12.8867ZM2.95029 17C2.68108 17 2.45539 16.913 2.27324 16.7389C2.09108 16.5648 2 16.3492 2 16.0919C2 15.8406 2.09108 15.63 2.27324 15.46C2.45539 15.29 2.68108 15.205 2.95029 15.205C3.21951 15.205 3.4452 15.29 3.62735 15.46C3.80951 15.63 3.90059 15.8406 3.90059 16.0919C3.90059 16.3492 3.80951 16.5648 3.62735 16.7389C3.4452 16.913 3.21951 17 2.95029 17Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <div class="work-results" data-work-results>
-              <div class="work-panel is-active" data-panel="grid">
-                <!-- GRID VIEW -->
-                <div class="project-grid" role="list" data-view-panel="grid">
-                  <!-- 01 -->
-                  <article
-                    class="project-card"
-                    role="listitem"
-                    data-tags="mobile web"
-                  >
-                    <a
-                      class="project-card__link"
-                      href="work/marginalen-bank"
-                    >
-                      <div class="project-card__media" aria-hidden="true">
-                        <img
-                          class="project-card__img project-card__img--default"
-                          src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
-                          alt="Marginalen Bank cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <img
-                          class="project-card__img project-card__img--hover"
-                          src="assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div class="project-card__footer">
-                        <div class="project-card__left-info">
-                          <h2 class="project-card__title">Marginalen Bank</h2>
-                          <p class="project-card__meta">Digital banking</p>
-                        </div>
-                        <span class="project-card__year">2023 — Present</span>
-                      </div>
-                    </a>
-                  </article>
-
-                  <!-- 02 -->
-                  <article class="project-card" role="listitem" data-tags="web">
-                    <a class="project-card__link" href="work/jtt">
-                      <div class="project-card__media" aria-hidden="true">
-                        <img
-                          class="project-card__img project-card__img--default"
-                          src="assets/images/projects/jtt/thumbnail-jtt.webp"
-                          alt="JTT Fastighet & Konsult cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <img
-                          class="project-card__img project-card__img--hover"
-                          src="assets/images/projects/jtt/thumbnail-hover-jtt.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div class="project-card__footer">
-                        <div class="project-card__left-info">
-                          <h2 class="project-card__title">
-                            JTT Fastighet &amp; Konsult
-                          </h2>
-                          <p class="project-card__meta">
-                            Property &amp; consulting
-                          </p>
-                        </div>
-                        <span class="project-card__year">2025</span>
-                      </div>
-                    </a>
-                  </article>
-
-                  <!-- 03 -->
-                  <article class="project-card" role="listitem" data-tags="web">
-                    <a class="project-card__link" href="work/stegborgs">
-                      <div class="project-card__media" aria-hidden="true">
-                        <img
-                          class="project-card__img project-card__img--default"
-                          src="assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
-                          alt="Stegborgs EL-evator cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <img
-                          class="project-card__img project-card__img--hover"
-                          src="assets/images/projects/stegborgs/thumbnail-hover-stegborgs.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div class="project-card__footer">
-                        <div class="project-card__left-info">
-                          <h2 class="project-card__title">
-                            Stegborgs EL-evator
-                          </h2>
-                          <p class="project-card__meta">
-                            B2B website for lift systems
-                          </p>
-                        </div>
-                        <span class="project-card__year">2023</span>
-                      </div>
-                    </a>
-                  </article>
-
-                  <!-- 04 -->
-                  <article class="project-card" role="listitem" data-tags="web">
-                    <a class="project-card__link" href="work/youty">
-                      <div class="project-card__media" aria-hidden="true">
-                        <img
-                          class="project-card__img project-card__img--default"
-                          src="assets/images/projects/youty/thumbnail-youty.webp"
-                          alt="Youty cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <img
-                          class="project-card__img project-card__img--hover"
-                          src="assets/images/projects/youty/thumbnail-hover-youty.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div class="project-card__footer">
-                        <div class="project-card__left-info">
-                          <h2 class="project-card__title">Youty</h2>
-                          <p class="project-card__meta">Beauty e-commerce</p>
-                        </div>
-                        <span class="project-card__year">2022</span>
-                      </div>
-                    </a>
-                  </article>
-
-                  <!-- 05 -->
-                  <article class="project-card" role="listitem" data-tags="web">
-                    <a
-                      class="project-card__link"
-                      href="work/giw-autopart"
-                    >
-                      <div class="project-card__media" aria-hidden="true">
-                        <img
-                          class="project-card__img project-card__img--default"
-                          src="assets/images/projects/giw/thumbnail-giw.webp"
-                          alt="GIW Autopart cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <img
-                          class="project-card__img project-card__img--hover"
-                          src="assets/images/projects/giw/thumbnail-hover-giw.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div class="project-card__footer">
-                        <div class="project-card__left-info">
-                          <h2 class="project-card__title">GIW Autopart</h2>
-                          <p class="project-card__meta">Car care e-commerce</p>
-                        </div>
-                        <span class="project-card__year">2020</span>
-                      </div>
-                    </a>
-                  </article>
-
-                  <!-- 06 -->
-                  <article
-                    class="project-card"
-                    role="listitem"
-                    data-tags="mobile web"
-                  >
-                    <a class="project-card__link" href="work/12id">
-                      <div class="project-card__media" aria-hidden="true">
-                        <img
-                          class="project-card__img project-card__img--default"
-                          src="assets/images/projects/12id/thumbnail-12id.webp"
-                          alt="12iD cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <img
-                          class="project-card__img project-card__img--hover"
-                          src="assets/images/projects/12id/thumbnail-hover-12id.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div class="project-card__footer">
-                        <div class="project-card__left-info">
-                          <h2 class="project-card__title">12iD</h2>
-                          <p class="project-card__meta">
-                            Digital identity platform
-                          </p>
-                        </div>
-                        <span class="project-card__year">2020</span>
-                      </div>
-                    </a>
-                  </article>
-
-                  <!-- 07 -->
-                  <article
-                    class="project-card"
-                    role="listitem"
-                    data-tags="mobile"
-                  >
-                    <a class="project-card__link" href="work/geosty">
-                      <div class="project-card__media" aria-hidden="true">
-                        <img
-                          class="project-card__img project-card__img--default"
-                          src="assets/images/projects/geosty/thumbnail-geosty.webp"
-                          alt="Geosty cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <img
-                          class="project-card__img project-card__img--hover"
-                          src="assets/images/projects/geosty/thumbnail-hover-geosty.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div class="project-card__footer">
-                        <div class="project-card__left-info">
-                          <h2 class="project-card__title">Geosty</h2>
-                          <p class="project-card__meta">Mobile weather app</p>
-                        </div>
-                        <span class="project-card__year">2020</span>
-                      </div>
-                    </a>
-                  </article>
-
-                  <!-- 08 -->
-                  <article
-                    class="project-card"
-                    role="listitem"
-                    data-tags="mobile"
-                  >
-                    <a class="project-card__link" href="work/listd">
-                      <div class="project-card__media" aria-hidden="true">
-                        <img
-                          class="project-card__img project-card__img--default"
-                          src="assets/images/projects/listd/thumbnail-listd.webp"
-                          alt="Listd cover"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <img
-                          class="project-card__img project-card__img--hover"
-                          src="assets/images/projects/listd/thumbnail-hover-listd.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-
-                      <div class="project-card__footer">
-                        <div class="project-card__left-info">
-                          <h2 class="project-card__title">Listd</h2>
-                          <p class="project-card__meta">Minimal to-do app</p>
-                        </div>
-                        <span class="project-card__year">2019</span>
-                      </div>
-                    </a>
-                  </article>
+                  <h1 id="work-title" class="page-title" data-reveal="load">
+                    Projects
+                  </h1>
                 </div>
+
+                <p
+                  class="work-page__head-right section-lead"
+                  data-reveal="load"
+                >
+                  A curated selection of projects that reflect how I approach
+                  design: simple, clear, and intentional.
+                </p>
               </div>
 
-              <div class="work-panel" data-panel="list" hidden>
-                <!-- LIST VIEW (hidden by default, toggle later with JS) -->
+              <!-- Controls row -->
+              <div
+                class="work-controls"
+                aria-label="Project filters and view options"
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
                 <div
-                  class="project-list"
-                  role="list"
-                  data-view-panel="list"
-                  hidden
+                  class="work-filters"
+                  role="group"
+                  aria-label="Filter projects"
+                  data-reveal="load"
                 >
-                  <article
-                    class="project-row"
-                    role="listitem"
-                    data-tags="mobile web"
+                  <button
+                    class="chip is-active"
+                    type="button"
+                    data-filter="all"
+                    aria-pressed="true"
                   >
-                    <a
-                      class="project-row__link"
-                      href="work/marginalen-bank"
+                    All
+                  </button>
+                  <button
+                    class="chip"
+                    type="button"
+                    data-filter="mobile"
+                    aria-pressed="false"
+                  >
+                    Mobile
+                  </button>
+                  <button
+                    class="chip"
+                    type="button"
+                    data-filter="web"
+                    aria-pressed="false"
+                  >
+                    Web design
+                  </button>
+                </div>
+
+                <div
+                  class="work-view"
+                  role="group"
+                  aria-label="Toggle view"
+                  data-reveal="load"
+                >
+                  <button
+                    class="icon-button is-active"
+                    type="button"
+                    aria-label="Grid view"
+                    aria-pressed="true"
+                    data-view="grid"
+                  >
+                    <span class="sr-only">Grid</span>
+                    <!-- replace with your svg -->
+                    <span class="icon" aria-hidden="true"
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.5 11V3.5H11V11H3.5ZM3.5 20.5V13H11V20.5H3.5ZM13 11V3.5H20.5V11H13ZM13 20.5V13H20.5V20.5H13Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+
+                  <button
+                    class="icon-button"
+                    type="button"
+                    aria-label="List view"
+                    aria-pressed="false"
+                    data-view="list"
+                  >
+                    <span class="sr-only">List</span>
+                    <!-- replace with your svg -->
+                    <span class="icon" aria-hidden="true"
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.50235 8.73083V7.06417H22V8.73083H6.50235ZM6.50235 12.8333V11.1667H22V12.8333H6.50235ZM6.50235 16.9358V15.2692H22V16.9358H6.50235ZM2.95029 8.795C2.68108 8.795 2.45539 8.70796 2.27324 8.53389C2.09108 8.35981 2 8.14407 2 7.88667C2 7.63556 2.09108 7.425 2.27324 7.255C2.45539 7.085 2.68108 7 2.95029 7C3.21951 7 3.4452 7.085 3.62735 7.255C3.80951 7.425 3.90059 7.63556 3.90059 7.88667C3.90059 8.14407 3.80951 8.35981 3.62735 8.53389C3.4452 8.70796 3.21951 8.795 2.95029 8.795ZM2.95029 12.8867C2.68108 12.8867 2.45539 12.8017 2.27324 12.6317C2.09108 12.4619 2 12.2513 2 12C2 11.735 2.09108 11.5174 2.27324 11.3472C2.45539 11.177 2.68108 11.0919 2.95029 11.0919C3.21951 11.0919 3.4452 11.177 3.62735 11.3472C3.80951 11.5174 3.90059 11.735 3.90059 12C3.90059 12.2513 3.80951 12.4619 3.62735 12.6317C3.4452 12.8017 3.21951 12.8867 2.95029 12.8867ZM2.95029 17C2.68108 17 2.45539 16.913 2.27324 16.7389C2.09108 16.5648 2 16.3492 2 16.0919C2 15.8406 2.09108 15.63 2.27324 15.46C2.45539 15.29 2.68108 15.205 2.95029 15.205C3.21951 15.205 3.4452 15.29 3.62735 15.46C3.80951 15.63 3.90059 15.8406 3.90059 16.0919C3.90059 16.3492 3.80951 16.5648 3.62735 16.7389C3.4452 16.913 3.21951 17 2.95029 17Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="work-results" data-work-results>
+                <div class="work-panel is-active" data-panel="grid">
+                  <!-- GRID VIEW -->
+                  <div
+                    class="project-grid"
+                    role="list"
+                    data-view-panel="grid"
+                    data-stagger
+                    data-stagger-base="140"
+                    data-stagger-step="90"
+                  >
+                    <!-- 01 -->
+                    <article
+                      class="project-card"
+                      role="listitem"
+                      data-tags="mobile web"
+                      data-reveal
+                      data-reveal-card
                     >
-                      <span class="project-row__index">01</span>
-                      <span class="project-row__title">Marginalen Bank</span>
-                      <span class="project-row__meta">Digital banking</span>
-                      <span
-                        class="project-row__thumb with-border"
-                        aria-hidden="true"
-                      >
-                        <img
-                          src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </span>
-                      <span class="project-row__chevron" aria-hidden="true">
-                        <!-- Chevron Right (24px) -->
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
-                            fill="black"
+                      <a class="project-card__link" href="work/marginalen-bank">
+                        <div class="project-card__media" aria-hidden="true">
+                          <img
+                            class="project-card__img project-card__img--default"
+                            src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                            alt="Marginalen Bank cover"
+                            loading="lazy"
+                            decoding="async"
                           />
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
-
-                  <article class="project-row" role="listitem" data-tags="web">
-                    <a class="project-row__link" href="work/jtt">
-                      <span class="project-row__index">02</span>
-                      <span class="project-row__title"
-                        >JTT Fastighet &amp; Konsult</span
-                      >
-                      <span class="project-row__meta"
-                        >Property &amp; consulting</span
-                      >
-                      <span class="project-row__thumb" aria-hidden="true">
-                        <img
-                          src="assets/images/projects/jtt/thumbnail-jtt.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </span>
-                      <span class="project-row__chevron" aria-hidden="true">
-                        <!-- Chevron Right (24px) -->
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
-                            fill="black"
+                          <img
+                            class="project-card__img project-card__img--hover"
+                            src="assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
                           />
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
+                        </div>
 
-                  <article class="project-row" role="listitem" data-tags="web">
-                    <a class="project-row__link" href="work/stegborgs">
-                      <span class="project-row__index">03</span>
-                      <span class="project-row__title"
-                        >Stegborgs EL-evator</span
-                      >
-                      <span class="project-row__meta"
-                        >B2B website for lift systems</span
-                      >
-                      <span class="project-row__thumb" aria-hidden="true">
-                        <img
-                          src="assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </span>
-                      <span class="project-row__chevron" aria-hidden="true">
-                        <!-- Chevron Right (24px) -->
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
-                            fill="black"
+                        <div class="project-card__footer">
+                          <div class="project-card__left-info">
+                            <h2 class="project-card__title">Marginalen Bank</h2>
+                            <p class="project-card__meta">Digital banking</p>
+                          </div>
+                          <span class="project-card__year">2023 — Present</span>
+                        </div>
+                      </a>
+                    </article>
+
+                    <!-- 02 -->
+                    <article
+                      class="project-card"
+                      role="listitem"
+                      data-tags="web"
+                      data-reveal
+                      data-reveal-card
+                    >
+                      <a class="project-card__link" href="work/jtt">
+                        <div class="project-card__media" aria-hidden="true">
+                          <img
+                            class="project-card__img project-card__img--default"
+                            src="assets/images/projects/jtt/thumbnail-jtt.webp"
+                            alt="JTT Fastighet & Konsult cover"
+                            loading="lazy"
+                            decoding="async"
                           />
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
-
-                  <article class="project-row" role="listitem" data-tags="web">
-                    <a class="project-row__link" href="work/youty">
-                      <span class="project-row__index">04</span>
-                      <span class="project-row__title">Youty</span>
-                      <span class="project-row__meta">Beauty e-commerce</span>
-                      <span class="project-row__thumb" aria-hidden="true">
-                        <img
-                          src="assets/images/projects/youty/thumbnail-youty.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </span>
-                      <span class="project-row__chevron" aria-hidden="true">
-                        <!-- Chevron Right (24px) -->
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
-                            fill="black"
+                          <img
+                            class="project-card__img project-card__img--hover"
+                            src="assets/images/projects/jtt/thumbnail-hover-jtt.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
                           />
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
+                        </div>
 
-                  <article class="project-row" role="listitem" data-tags="web">
-                    <a class="project-row__link" href="work/giw-autopart">
-                      <span class="project-row__index">05</span>
-                      <span class="project-row__title">GIW Autopart</span>
-                      <span class="project-row__meta">Car care e-commerce</span>
-                      <span
-                        class="project-row__thumb with-border"
-                        aria-hidden="true"
-                      >
-                        <img
-                          src="assets/images/projects/giw/thumbnail-giw.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </span>
-                      <span class="project-row__chevron" aria-hidden="true">
-                        <!-- Chevron Right (24px) -->
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
-                            fill="black"
+                        <div class="project-card__footer">
+                          <div class="project-card__left-info">
+                            <h2 class="project-card__title">
+                              JTT Fastighet &amp; Konsult
+                            </h2>
+                            <p class="project-card__meta">
+                              Property &amp; consulting
+                            </p>
+                          </div>
+                          <span class="project-card__year">2025</span>
+                        </div>
+                      </a>
+                    </article>
+
+                    <!-- 03 -->
+                    <article
+                      class="project-card"
+                      role="listitem"
+                      data-tags="web"
+                      data-reveal
+                      data-reveal-card
+                    >
+                      <a class="project-card__link" href="work/stegborgs">
+                        <div class="project-card__media" aria-hidden="true">
+                          <img
+                            class="project-card__img project-card__img--default"
+                            src="assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
+                            alt="Stegborgs EL-evator cover"
+                            loading="lazy"
+                            decoding="async"
                           />
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
+                          <img
+                            class="project-card__img project-card__img--hover"
+                            src="assets/images/projects/stegborgs/thumbnail-hover-stegborgs.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
 
-                  <article
-                    class="project-row"
-                    role="listitem"
-                    data-tags="mobile web"
+                        <div class="project-card__footer">
+                          <div class="project-card__left-info">
+                            <h2 class="project-card__title">
+                              Stegborgs EL-evator
+                            </h2>
+                            <p class="project-card__meta">
+                              B2B website for lift systems
+                            </p>
+                          </div>
+                          <span class="project-card__year">2023</span>
+                        </div>
+                      </a>
+                    </article>
+
+                    <!-- 04 -->
+                    <article
+                      class="project-card"
+                      role="listitem"
+                      data-tags="web"
+                      data-reveal
+                      data-reveal-card
+                    >
+                      <a class="project-card__link" href="work/youty">
+                        <div class="project-card__media" aria-hidden="true">
+                          <img
+                            class="project-card__img project-card__img--default"
+                            src="assets/images/projects/youty/thumbnail-youty.webp"
+                            alt="Youty cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <img
+                            class="project-card__img project-card__img--hover"
+                            src="assets/images/projects/youty/thumbnail-hover-youty.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+
+                        <div class="project-card__footer">
+                          <div class="project-card__left-info">
+                            <h2 class="project-card__title">Youty</h2>
+                            <p class="project-card__meta">Beauty e-commerce</p>
+                          </div>
+                          <span class="project-card__year">2022</span>
+                        </div>
+                      </a>
+                    </article>
+
+                    <!-- 05 -->
+                    <article
+                      class="project-card"
+                      role="listitem"
+                      data-tags="web"
+                      data-reveal
+                      data-reveal-card
+                    >
+                      <a class="project-card__link" href="work/giw-autopart">
+                        <div class="project-card__media" aria-hidden="true">
+                          <img
+                            class="project-card__img project-card__img--default"
+                            src="assets/images/projects/giw/thumbnail-giw.webp"
+                            alt="GIW Autopart cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <img
+                            class="project-card__img project-card__img--hover"
+                            src="assets/images/projects/giw/thumbnail-hover-giw.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+
+                        <div class="project-card__footer">
+                          <div class="project-card__left-info">
+                            <h2 class="project-card__title">GIW Autopart</h2>
+                            <p class="project-card__meta">
+                              Car care e-commerce
+                            </p>
+                          </div>
+                          <span class="project-card__year">2020</span>
+                        </div>
+                      </a>
+                    </article>
+
+                    <!-- 06 -->
+                    <article
+                      class="project-card"
+                      role="listitem"
+                      data-tags="mobile web"
+                      data-reveal
+                      data-reveal-card
+                    >
+                      <a class="project-card__link" href="work/12id">
+                        <div class="project-card__media" aria-hidden="true">
+                          <img
+                            class="project-card__img project-card__img--default"
+                            src="assets/images/projects/12id/thumbnail-12id.webp"
+                            alt="12iD cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <img
+                            class="project-card__img project-card__img--hover"
+                            src="assets/images/projects/12id/thumbnail-hover-12id.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+
+                        <div class="project-card__footer">
+                          <div class="project-card__left-info">
+                            <h2 class="project-card__title">12iD</h2>
+                            <p class="project-card__meta">
+                              Digital identity platform
+                            </p>
+                          </div>
+                          <span class="project-card__year">2020</span>
+                        </div>
+                      </a>
+                    </article>
+
+                    <!-- 07 -->
+                    <article
+                      class="project-card"
+                      role="listitem"
+                      data-tags="mobile"
+                      data-reveal
+                      data-reveal-card
+                    >
+                      <a class="project-card__link" href="work/geosty">
+                        <div class="project-card__media" aria-hidden="true">
+                          <img
+                            class="project-card__img project-card__img--default"
+                            src="assets/images/projects/geosty/thumbnail-geosty.webp"
+                            alt="Geosty cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <img
+                            class="project-card__img project-card__img--hover"
+                            src="assets/images/projects/geosty/thumbnail-hover-geosty.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+
+                        <div class="project-card__footer">
+                          <div class="project-card__left-info">
+                            <h2 class="project-card__title">Geosty</h2>
+                            <p class="project-card__meta">Mobile weather app</p>
+                          </div>
+                          <span class="project-card__year">2020</span>
+                        </div>
+                      </a>
+                    </article>
+
+                    <!-- 08 -->
+                    <article
+                      class="project-card"
+                      role="listitem"
+                      data-tags="mobile"
+                      data-reveal
+                      data-reveal-card
+                    >
+                      <a class="project-card__link" href="work/listd">
+                        <div class="project-card__media" aria-hidden="true">
+                          <img
+                            class="project-card__img project-card__img--default"
+                            src="assets/images/projects/listd/thumbnail-listd.webp"
+                            alt="Listd cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <img
+                            class="project-card__img project-card__img--hover"
+                            src="assets/images/projects/listd/thumbnail-hover-listd.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+
+                        <div class="project-card__footer">
+                          <div class="project-card__left-info">
+                            <h2 class="project-card__title">Listd</h2>
+                            <p class="project-card__meta">Minimal to-do app</p>
+                          </div>
+                          <span class="project-card__year">2019</span>
+                        </div>
+                      </a>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="work-panel" data-panel="list" hidden>
+                  <!-- LIST VIEW (hidden by default, toggle later with JS) -->
+                  <div
+                    class="project-list"
+                    role="list"
+                    data-view-panel="list"
+                    data-stagger
+                    data-stagger-base="140"
+                    data-stagger-step="70"
                   >
-                    <a class="project-row__link" href="work/12id">
-                      <span class="project-row__index">06</span>
-                      <span class="project-row__title">12iD</span>
-                      <span class="project-row__meta"
-                        >Digital identity platform</span
-                      >
-                      <span class="project-row__thumb" aria-hidden="true">
-                        <img
-                          src="assets/images/projects/12id/thumbnail-12id.webp"
-                          alt=""
+                    <article
+                      class="project-row"
+                      role="listitem"
+                      data-tags="mobile web"
+                      data-reveal
+                    >
+                      <a class="project-row__link" href="work/marginalen-bank">
+                        <span class="project-row__index">01</span>
+                        <span class="project-row__title">Marginalen Bank</span>
+                        <span class="project-row__meta">Digital banking</span>
+                        <span
+                          class="project-row__thumb with-border"
                           aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </span>
-                      <span class="project-row__chevron" aria-hidden="true">
-                        <!-- Chevron Right (24px) -->
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path
-                            d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
-                            fill="black"
+                          <img
+                            src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
                           />
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
+                        </span>
+                        <span class="project-row__chevron" aria-hidden="true">
+                          <!-- Chevron Right (24px) -->
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </article>
 
-                  <article
-                    class="project-row"
-                    role="listitem"
-                    data-tags="mobile"
-                  >
-                    <a class="project-row__link" href="work/geosty">
-                      <span class="project-row__index">07</span>
-                      <span class="project-row__title">Geosty</span>
-                      <span class="project-row__meta">Mobile weather app</span>
-                      <span class="project-row__thumb" aria-hidden="true">
-                        <img
-                          src="assets/images/projects/geosty/thumbnail-geosty.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </span>
-                      <span class="project-row__chevron" aria-hidden="true">
-                        <!-- Chevron Right (24px) -->
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                    <article
+                      class="project-row"
+                      role="listitem"
+                      data-tags="web"
+                      data-reveal
+                    >
+                      <a class="project-row__link" href="work/jtt">
+                        <span class="project-row__index">02</span>
+                        <span class="project-row__title"
+                          >JTT Fastighet &amp; Konsult</span
                         >
-                          <path
-                            d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
-                            fill="black"
+                        <span class="project-row__meta"
+                          >Property &amp; consulting</span
+                        >
+                        <span class="project-row__thumb" aria-hidden="true">
+                          <img
+                            src="assets/images/projects/jtt/thumbnail-jtt.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
                           />
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
+                        </span>
+                        <span class="project-row__chevron" aria-hidden="true">
+                          <!-- Chevron Right (24px) -->
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </article>
 
-                  <article
-                    class="project-row"
-                    role="listitem"
-                    data-tags="mobile"
-                  >
-                    <a class="project-row__link" href="work/listd">
-                      <span class="project-row__index">08</span>
-                      <span class="project-row__title">Listd</span>
-                      <span class="project-row__meta">Minimal to-do app</span>
-                      <span class="project-row__thumb" aria-hidden="true">
-                        <img
-                          src="assets/images/projects/listd/thumbnail-listd.webp"
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </span>
-                      <span class="project-row__chevron" aria-hidden="true">
-                        <!-- Chevron Right (24px) -->
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                    <article
+                      class="project-row"
+                      role="listitem"
+                      data-tags="web"
+                      data-reveal
+                    >
+                      <a class="project-row__link" href="work/stegborgs">
+                        <span class="project-row__index">03</span>
+                        <span class="project-row__title"
+                          >Stegborgs EL-evator</span
                         >
-                          <path
-                            d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
-                            fill="black"
+                        <span class="project-row__meta"
+                          >B2B website for lift systems</span
+                        >
+                        <span class="project-row__thumb" aria-hidden="true">
+                          <img
+                            src="assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
                           />
-                        </svg>
-                      </span>
-                    </a>
-                  </article>
+                        </span>
+                        <span class="project-row__chevron" aria-hidden="true">
+                          <!-- Chevron Right (24px) -->
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </article>
+
+                    <article
+                      class="project-row"
+                      role="listitem"
+                      data-tags="web"
+                      data-reveal
+                    >
+                      <a class="project-row__link" href="work/youty">
+                        <span class="project-row__index">04</span>
+                        <span class="project-row__title">Youty</span>
+                        <span class="project-row__meta">Beauty e-commerce</span>
+                        <span class="project-row__thumb" aria-hidden="true">
+                          <img
+                            src="assets/images/projects/youty/thumbnail-youty.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </span>
+                        <span class="project-row__chevron" aria-hidden="true">
+                          <!-- Chevron Right (24px) -->
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </article>
+
+                    <article
+                      class="project-row"
+                      role="listitem"
+                      data-tags="web"
+                      data-reveal
+                    >
+                      <a class="project-row__link" href="work/giw-autopart">
+                        <span class="project-row__index">05</span>
+                        <span class="project-row__title">GIW Autopart</span>
+                        <span class="project-row__meta"
+                          >Car care e-commerce</span
+                        >
+                        <span
+                          class="project-row__thumb with-border"
+                          aria-hidden="true"
+                        >
+                          <img
+                            src="assets/images/projects/giw/thumbnail-giw.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </span>
+                        <span class="project-row__chevron" aria-hidden="true">
+                          <!-- Chevron Right (24px) -->
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </article>
+
+                    <article
+                      class="project-row"
+                      role="listitem"
+                      data-tags="mobile web"
+                      data-reveal
+                    >
+                      <a class="project-row__link" href="work/12id">
+                        <span class="project-row__index">06</span>
+                        <span class="project-row__title">12iD</span>
+                        <span class="project-row__meta"
+                          >Digital identity platform</span
+                        >
+                        <span class="project-row__thumb" aria-hidden="true">
+                          <img
+                            src="assets/images/projects/12id/thumbnail-12id.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </span>
+                        <span class="project-row__chevron" aria-hidden="true">
+                          <!-- Chevron Right (24px) -->
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </article>
+
+                    <article
+                      class="project-row"
+                      role="listitem"
+                      data-tags="mobile"
+                      data-reveal
+                    >
+                      <a class="project-row__link" href="work/geosty">
+                        <span class="project-row__index">07</span>
+                        <span class="project-row__title">Geosty</span>
+                        <span class="project-row__meta"
+                          >Mobile weather app</span
+                        >
+                        <span class="project-row__thumb" aria-hidden="true">
+                          <img
+                            src="assets/images/projects/geosty/thumbnail-geosty.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </span>
+                        <span class="project-row__chevron" aria-hidden="true">
+                          <!-- Chevron Right (24px) -->
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </article>
+
+                    <article
+                      class="project-row"
+                      role="listitem"
+                      data-tags="mobile"
+                      data-reveal
+                    >
+                      <a class="project-row__link" href="work/listd">
+                        <span class="project-row__index">08</span>
+                        <span class="project-row__title">Listd</span>
+                        <span class="project-row__meta">Minimal to-do app</span>
+                        <span class="project-row__thumb" aria-hidden="true">
+                          <img
+                            src="assets/images/projects/listd/thumbnail-listd.webp"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </span>
+                        <span class="project-row__chevron" aria-hidden="true">
+                          <!-- Chevron Right (24px) -->
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.69836 17.6538L8.64453 16.6L13.2445 12L8.64453 7.40002L9.69836 6.34619L15.3522 12L9.69836 17.6538Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </article>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
 
-      <!-- Footer -->
-      <footer class="site-footer" role="contentinfo">
-        <div
-          class="container footer__grid inner-wrapper"
-          data-stagger
-          data-stagger-base="140"
-          data-stagger-step="120"
-        >
-          <div class="footer__brand__cols__wrapper" data-reveal>
-            <div class="footer__brand">
-              <a class="footer__logotype" href="./"
-                ><img
-                  src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
-                  alt="lucas rosendahl"
-              /></a>
-              <p class="footer__text">
-                Building a brand, designing a product, or exploring an idea —
-                I’d love to hear from you.
-              </p>
-              <p class="footer__email">
-                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
-              </p>
-            </div>
-
-            <div class="footer__cols">
-              <div class="footer__col">
-                <p class="footer__title">Sitemap</p>
-                <ul class="footer__list">
-                  <li><a href="work" aria-current="page">Work</a></li>
-                  <li><a href="about">About</a></li>
-                  <li><a href="./#services">Services</a></li>
-                  <li><a href="contact">Contact</a></li>
-                  <li><a href="./#faq">FAQ</a></li>
-                </ul>
-              </div>
-
-              <div class="footer__col">
-                <p class="footer__title">Social</p>
-                <ul class="footer__list">
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/lucas-rosendahl/"
-                      rel="me"
-                      target="_blank"
-                      >LinkedIn</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Luchkiin"
-                      rel="me"
-                      target="_blank"
-                      >GitHub</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.figma.com/@lucasrosendahl"
-                      rel="me"
-                      target="_blank"
-                      >Figma</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo">
           <div
-            class="footer__meta"
+            class="container footer__grid inner-wrapper"
             data-stagger
-            data-stagger-base="260"
+            data-stagger-base="140"
             data-stagger-step="120"
           >
-            <p class="footer___copyright" data-reveal>
-              © Lucas Rosendahl <span id="year"></span>
-            </p>
-            <div class="footer__policies" data-reveal>
-              <a href="privacy-policy">Privacy Policy</a>
-              <a href="cookie-policy">Cookie Policy</a>
+            <div class="footer__brand__cols__wrapper" data-reveal>
+              <div class="footer__brand">
+                <a class="footer__logotype" href="./"
+                  ><img
+                    src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    alt="lucas rosendahl"
+                /></a>
+                <p class="footer__text">
+                  Building a brand, designing a product, or exploring an idea —
+                  I’d love to hear from you.
+                </p>
+                <p class="footer__email">
+                  <a href="mailto:lr@lucasrosendahl.com"
+                    >lr@lucasrosendahl.com</a
+                  >
+                </p>
+              </div>
+
+              <div class="footer__cols">
+                <div class="footer__col">
+                  <p class="footer__title">Sitemap</p>
+                  <ul class="footer__list">
+                    <li><a href="work" aria-current="page">Work</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="./#services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="./#faq">FAQ</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer__col">
+                  <p class="footer__title">Social</p>
+                  <ul class="footer__list">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/lucas-rosendahl/"
+                        rel="me"
+                        target="_blank"
+                        >LinkedIn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Luchkiin"
+                        rel="me"
+                        target="_blank"
+                        >GitHub</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.figma.com/@lucasrosendahl"
+                        rel="me"
+                        target="_blank"
+                        >Figma</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="footer__meta"
+              data-stagger
+              data-stagger-base="260"
+              data-stagger-step="120"
+            >
+              <p class="footer___copyright" data-reveal>
+                © Lucas Rosendahl <span id="year"></span>
+              </p>
+              <div class="footer__policies" data-reveal>
+                <a href="privacy-policy">Privacy Policy</a>
+                <a href="cookie-policy">Cookie Policy</a>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
       </main>
     </div>
 
-        <!-- Cookie consent -->
+    <!-- Cookie consent -->
     <div
       class="cookie-consent"
       data-cookie-consent

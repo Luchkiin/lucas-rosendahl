@@ -209,6 +209,7 @@
 
       setFilterButtonStates(filter);
       applyFilter(filter);
+      window.dispatchEvent(new Event("scroll"));
     });
   });
 
@@ -222,6 +223,7 @@
 
       setViewButtonStates(view);
       setViewSmooth(view);
+      window.dispatchEvent(new Event("scroll"));
 
       // efter view byte: säkerställ höjd matchar (om fonts/images påverkar)
       window.setTimeout(refreshResultsHeight, 50);
@@ -239,12 +241,4 @@
 
   // ===== Kickoff =====
   initPanels();
-
-  /**
-   * OBS: Dina LIST-rader saknar data-tags just nu.
-   * För att filter ska funka även i list-läget, lägg data-tags på varje .project-row:
-   * <article class="project-row" data-tags="mobile web" ...>
-   *
-   * Alternativt kan vi mappa tags via index, men detta är enklast & robustast.
-   */
 })();
