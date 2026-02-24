@@ -12,20 +12,22 @@
   if (!workControls) return;
 
   const filterButtons = $$(".work-filters .chip");
+  const viewWrap = $(".work-view");
   const viewButtons = $$(".work-view .icon-button");
 
   const results = $("[data-work-results]");
   const gridPanel = $('[data-panel="grid"]');
   const listPanel = $('[data-panel="list"]');
 
-  if (!results || !gridPanel || !listPanel) return;
+  if (!viewWrap || !results || !gridPanel || !listPanel) return;
 
   // Items
   const gridItems = $$('[data-view-panel="grid"] .project-card');
   const listItems = $$('[data-view-panel="list"] .project-row');
 
   // ===== Config =====
-  const FILTER_FADE_MS = 220; // matcha din CSS (~240ms)
+  const FILTER_FADE_MS = 220; // matchar ~240ms CSS-känsla
+  const CLEANUP_MS = 340;
   const VIEW_HEIGHT_SETTLE_MS = 60;
 
   // ===== State =====
@@ -49,7 +51,7 @@
 
   let state = loadState();
 
-  // ===== UI state setters =====
+  // ===== UI setters =====
   const setFilterButtonStates = (filter) => {
     filterButtons.forEach((btn) => {
       const isActive = btn.dataset.filter === filter;
@@ -66,7 +68,52 @@
     });
   };
 
-  // ===== Filtering logic =====
+  // ===== Sliding pill =====
+  const setViewPill = () => {
+    const activeBtn = viewWrap.querySelector(".icon-button.is-active");
+    if (!activeBtn) return;
+
+    // ::before har left/top = 3px -> aligna mot det
+    const x = activeBtn.offsetLeft - 3;
+    const w = activeBtn.offsetWidth;
+
+    viewWrap.style.setProperty("--pill-x", `${x}px`);
+    viewWrap.style.setProperty("--pill-w", `${w}px`);
+  };
+
+  // ===== FIX: Mobile floating position (teleport to body) =====
+  // Gör att den inte hamnar "inne i" layout/overflow nära footer.
+  const originalParent = viewWrap.parentElement;
+  const originalNext = viewWrap.nextElementSibling;
+  const mqMobile =
+    window.matchMedia?.("(max-width: 767px)") || { matches: false };
+
+  const moveWorkView = () => {
+    const isMobile = mqMobile.matches;
+
+    if (isMobile) {
+      if (viewWrap.parentElement !== document.body) {
+        document.body.appendChild(viewWrap);
+      }
+      viewWrap.classList.add("is-floating");
+    } else {
+      if (viewWrap.parentElement !== originalParent) {
+        if (originalNext) originalParent.insertBefore(viewWrap, originalNext);
+        else originalParent.appendChild(viewWrap);
+      }
+      viewWrap.classList.remove("is-floating");
+    }
+
+    // Pill måste beräknas om efter flytt/layout
+    requestAnimationFrame(setViewPill);
+  };
+
+  moveWorkView();
+  if (mqMobile.addEventListener) mqMobile.addEventListener("change", moveWorkView);
+  else if (mqMobile.addListener) mqMobile.addListener(moveWorkView);
+  // ===== /FIX =====
+
+  // ===== Filtering =====
   const matchesFilter = (el, filter) => {
     if (filter === "all") return true;
     const tagsRaw = (el.dataset.tags || "").toLowerCase();
@@ -74,28 +121,19 @@
     return tags.includes(filter);
   };
 
-  // ===== Active-panel helpers =====
+  // ===== Panel helpers =====
   const getActivePanel = () => $(".work-panel.is-active");
 
   const getActiveItems = () => {
     const panel = getActivePanel();
     if (!panel) return [];
-    // Både cards & rows har data-tags
     return $$("[data-tags]", panel);
   };
 
   const getVisibleItemsInActivePanel = () =>
     getActiveItems().filter((el) => !el.hidden);
 
-  // Force-reveal för list rows som annars väntar på scroll
-  const forceRevealIfNeeded = (el) => {
-    // reveal.js använder class + data-revealed
-    if (el.hasAttribute("data-reveal") && el.getAttribute("data-revealed") !== "true") {
-      el.classList.add("is-revealed");
-      el.setAttribute("data-revealed", "true");
-    }
-  };
-
+  // ===== Visual classes =====
   const setVisualHidden = (el) => {
     el.classList.add("is-filter-hidden");
     el.classList.remove("is-filter-visible");
@@ -120,7 +158,6 @@
 
     const from = results.offsetHeight;
     results.style.height = `${from}px`;
-    // force reflow
     void results.offsetHeight;
 
     const to = activePanel.offsetHeight;
@@ -134,16 +171,14 @@
     results.addEventListener("transitionend", onEnd);
   };
 
-  // ===== Apply filter (no animation, used internally) =====
+  // ===== Apply filter NOW =====
   const applyFilterNow = (filter) => {
-    // Grid
     gridItems.forEach((item) => {
       const show = matchesFilter(item, filter);
       item.hidden = !show;
       item.setAttribute("aria-hidden", show ? "false" : "true");
     });
 
-    // List
     listItems.forEach((item) => {
       const show = matchesFilter(item, filter);
       item.hidden = !show;
@@ -151,53 +186,42 @@
     });
   };
 
-  // ===== Smooth filter animation (grid + list) =====
+  // ===== Smooth filter animation =====
   const applyFilterAnimated = (filter) => {
     if (prefersReducedMotion) {
       applyFilterNow(filter);
-      // Säkerställ att list-rows inte “saknas”
-      getVisibleItemsInActivePanel().forEach(forceRevealIfNeeded);
+      getVisibleItemsInActivePanel().forEach(setVisualVisible);
       refreshResultsHeight();
       return;
     }
 
     document.documentElement.classList.add("work-is-filtering");
 
-    // 1) lås wrapper-höjd på nuvarande state (stabil layout under fade-out)
+    // lås height före fade (stabil layout)
     const fromHeight = getActivePanel()?.offsetHeight ?? results.offsetHeight;
     results.style.height = `${fromHeight}px`;
     void results.offsetHeight;
 
-    // 2) fade out nuvarande synliga (utan att hidden)
+    // fade out nuvarande synliga (utan hidden)
     const beforeVisible = getVisibleItemsInActivePanel();
     beforeVisible.forEach(setVisualHidden);
 
-    // 3) efter fade-out: toggla hidden + fade in de nya
     window.setTimeout(() => {
-      // Apply hidden/show
       applyFilterNow(filter);
 
-      // Viktigt: “force reveal” på synliga list rows efter filter
       const afterVisible = getVisibleItemsInActivePanel();
-      afterVisible.forEach(forceRevealIfNeeded);
 
-      // Starta nya synliga i hidden-visual state (för att kunna animera in)
+      // init-state för fade-in
       afterVisible.forEach(setVisualHidden);
-
-      // force reflow innan vi slår på visible
       void results.offsetHeight;
-
-      // 4) fade in
       afterVisible.forEach(setVisualVisible);
 
-      // 5) animera höjd till nya panelhöjden
       refreshResultsHeight();
 
-      // 6) släpp lås efter att höjden hunnit sätta sig lite
       window.setTimeout(() => {
         results.style.height = "auto";
         document.documentElement.classList.remove("work-is-filtering");
-      }, 340);
+      }, CLEANUP_MS);
     }, FILTER_FADE_MS);
   };
 
@@ -214,11 +238,7 @@
       prev.hidden = true;
       next.hidden = false;
       results.style.height = "auto";
-      // efter view byte: se till att synliga items är “visible”
-      getVisibleItemsInActivePanel().forEach((el) => {
-        forceRevealIfNeeded(el);
-        setVisualVisible(el);
-      });
+      getVisibleItemsInActivePanel().forEach(setVisualVisible);
       return;
     }
 
@@ -243,12 +263,7 @@
       results.style.height = "auto";
       results.removeEventListener("transitionend", onEnd);
 
-      // init visuals + reveal safety
-      const afterVisible = getVisibleItemsInActivePanel();
-      afterVisible.forEach((el) => {
-        forceRevealIfNeeded(el);
-        setVisualVisible(el);
-      });
+      getVisibleItemsInActivePanel().forEach(setVisualVisible);
     };
 
     results.addEventListener("transitionend", onEnd);
@@ -276,13 +291,11 @@
 
     applyFilterNow(startFilter);
 
-    // Visual init: synliga ska vara visible + (för list) revealade
-    getVisibleItemsInActivePanel().forEach((el) => {
-      forceRevealIfNeeded(el);
-      setVisualVisible(el);
-    });
-
+    // init visuals
+    getVisibleItemsInActivePanel().forEach(setVisualVisible);
     results.style.height = "auto";
+
+    requestAnimationFrame(setViewPill);
   };
 
   // ===== Events =====
@@ -309,6 +322,7 @@
       saveState(state);
 
       setViewButtonStates(view);
+      requestAnimationFrame(setViewPill);
       setViewSmooth(view);
 
       window.setTimeout(refreshResultsHeight, VIEW_HEIGHT_SETTLE_MS);
@@ -319,6 +333,7 @@
     "resize",
     () => {
       refreshResultsHeight();
+      setViewPill();
     },
     { passive: true }
   );

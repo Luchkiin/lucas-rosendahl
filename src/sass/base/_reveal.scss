@@ -126,3 +126,11 @@ html.js .site-header [data-header-reveal] [data-reveal] {
     transition-delay: 0ms !important;
   }
 }
+
+@include for-mobile() {
+  html.js [data-page],
+  html.is-loaded [data-page],
+  html.js.is-loaded [data-page].is-page-visible {
+    transform: none !important;
+  }
+}
