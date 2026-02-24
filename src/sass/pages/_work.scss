@@ -71,7 +71,8 @@
     // själva panelen fade/slide:ar
     opacity: 0;
     transform: translateY(6px);
-    transition: opacity 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    transition:
+      opacity 280ms cubic-bezier(0.22, 1, 0.36, 1),
       transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity, transform;
 
@@ -198,4 +199,55 @@
       }
     }
   }
+
+  .project-card,
+  .project-row {
+    transition:
+      opacity 240ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .work-is-filtering .project-card,
+  .work-is-filtering .project-row {
+    pointer-events: none;
+  }
+
+  .is-filter-hidden {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  .is-filter-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .project-row {
+      transition: none !important;
+    }
+  }
+}
+
+/* WORK: batch animation (grid + list) */
+.page-work [data-reveal-batch="work"] .project-card,
+.page-work [data-reveal-batch="work"] .project-row {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.page-work [data-reveal-batch="work"].is-revealed .project-card,
+.page-work [data-reveal-batch="work"].is-revealed .project-row {
+  opacity: 1;
+  transform: translateY(0);
 }

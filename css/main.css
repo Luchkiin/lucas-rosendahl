@@ -1495,6 +1495,47 @@ html.js .site-header [data-header-reveal] [data-reveal] {
     grid-area: chevron;
   }
 }
+.work-page .project-card,
+.work-page .project-row {
+  transition: opacity 240ms cubic-bezier(0.22, 1, 0.36, 1), transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.work-page .work-is-filtering .project-card,
+.work-page .work-is-filtering .project-row {
+  pointer-events: none;
+}
+.work-page .is-filter-hidden {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.work-page .is-filter-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.work-page [hidden] {
+  display: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-page .project-card,
+  .work-page .project-row {
+    transition: none !important;
+  }
+}
+
+/* WORK: batch animation (grid + list) */
+.page-work [data-reveal-batch=work] .project-card,
+.page-work [data-reveal-batch=work] .project-row {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 280ms cubic-bezier(0.22, 1, 0.36, 1), transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.page-work [data-reveal-batch=work].is-revealed .project-card,
+.page-work [data-reveal-batch=work].is-revealed .project-row {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .contact-page {
   padding-bottom: 0;
@@ -3689,6 +3730,7 @@ html.is-menu-open .mobile-menu__item {
   color: #FFFFFF;
 }
 .work-controls .work-view {
+  position: relative;
   display: flex;
   align-items: center;
   background-color: #EBEBEB;
