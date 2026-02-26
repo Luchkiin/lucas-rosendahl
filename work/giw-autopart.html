@@ -43,7 +43,11 @@
 
     <!-- Header -->
     <header class="site-header" role="banner">
-      <div class="container header__inner" data-reveal="load" data-header-reveal>
+      <div
+        class="container header__inner"
+        data-reveal="load"
+        data-header-reveal
+      >
         <a class="header__logotype" href="./">
           <img
             src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
@@ -114,14 +118,12 @@
             <ul class="mobile-menu__list">
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">01</span>
-                <a class="mobile-menu__link" href="/about.html">About</a>
+                <a class="mobile-menu__link" href="about">About</a>
               </li>
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">02</span>
-                <a class="mobile-menu__link is-active" href="work.html"
-                  >Work</a
-                >
+                <a class="mobile-menu__link is-active" href="work">Work</a>
               </li>
 
               <li class="mobile-menu__item">
@@ -131,7 +133,7 @@
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">04</span>
-                <a class="mobile-menu__link" href="/contact.html">Contact</a>
+                <a class="mobile-menu__link" href="contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -142,504 +144,593 @@
     <!-- Main -->
     <div class="page-transition" data-page>
       <main id="main">
-      <section class="section work-detail" aria-labelledby="case-title">
-        <div class="container inner-wrapper work-detail__container">
-          <!-- Top / Title -->
-          <div class="work-detail__top">
-            <a class="work-detail__back" href="work">
-              <span class="work-detail__back-icon" aria-hidden="true">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.1539 6.34616L11.2077 7.43076L7.38845 11.25L19.5 11.25L19.5 12.75L7.38845 12.75L11.2077 16.5692L10.1539 17.6538L4.50005 12L10.1539 6.34616Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-
-              <span class="work-detail__back-text">Back</span>
-            </a>
-
-            <div class="work-detail__head">
-              <div class="work-detail__head-wrapper">
-                <div class="work-detail__head-left-top">
-                  <h1 id="case-title" class="page-title">GIW Autopart</h1>
-                </div>
-
-                <div class="work-detail__head-right-top">
-                  <p class="work-detail__intro section-lead">
-                    E-commerce experience for a Swedish car care brand.
-                  </p>
-                </div>
-              </div>
-
-              <div class="work-detail__head-wrapper">
-                <div class="work-detail__head-left-bottom">
-                  <ul class="work-detail__meta" aria-label="Project metadata">
-                    <li>
-                      <span class="work-detail__meta-type">Services:</span> UX
-                      Design, Visual Design &amp; Implementation
-                    </li>
-                    <li class="work-detail__meta-separator">/</li>
-                    <li>
-                      <span class="work-detail__meta-type">Type:</span> Web
-                      &amp; Mobile
-                    </li>
-                    <li class="work-detail__meta-separator">/</li>
-                    <li>
-                      <span class="work-detail__meta-type">Industry:</span>
-                      Automotive &amp; E-commerce
-                    </li>
-                    <li class="work-detail__meta-separator">/</li>
-                    <li>
-                      <span class="work-detail__meta-type">Year:</span> 2020
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="work-detail__head-right-bottom">
-                  <a
-                    class="button button--secondary__small work-detail__cta"
-                    href="https://giwautopart.se/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+        <section
+          class="section work-detail"
+          aria-labelledby="case-title"
+          data-reveal-scope
+        >
+          <div class="container inner-wrapper work-detail__container">
+            <!-- Top / Title -->
+            <div
+              class="work-detail__top"
+              data-stagger
+              data-stagger-base="160"
+              data-stagger-step="90"
+            >
+              <a class="work-detail__back" href="work" data-reveal="load">
+                <span class="work-detail__back-icon" aria-hidden="true">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Visit website
-                  </a>
+                    <path
+                      d="M10.1539 6.34616L11.2077 7.43076L7.38845 11.25L19.5 11.25L19.5 12.75L7.38845 12.75L11.2077 16.5692L10.1539 17.6538L4.50005 12L10.1539 6.34616Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+
+                <span class="work-detail__back-text">Back</span>
+              </a>
+
+              <div
+                class="work-detail__head"
+                data-stagger
+                data-stagger-base="200"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__head-wrapper">
+                  <div class="work-detail__head-left-top" data-reveal="load">
+                    <h1 id="case-title" class="page-title">GIW Autopart</h1>
+                  </div>
+
+                  <div class="work-detail__head-right-top" data-reveal="load">
+                    <p class="work-detail__intro section-lead">
+                      E-commerce experience for a Swedish car care brand.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Hero -->
-          <figure class="work-detail__hero" aria-label="Hero visual">
-            <img
-              src="assets/images/projects/giw/hero-giw.webp"
-              alt="GIW Autoport hero"
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
+                <div class="work-detail__head-wrapper">
+                  <div class="work-detail__head-left-bottom" data-reveal="load">
+                    <ul class="work-detail__meta" aria-label="Project metadata">
+                      <li>
+                        <span class="work-detail__meta-type">Services:</span> UX
+                        Design, Visual Design &amp; Implementation
+                      </li>
+                      <li class="work-detail__meta-separator">/</li>
+                      <li>
+                        <span class="work-detail__meta-type">Type:</span> Web
+                        &amp; Mobile
+                      </li>
+                      <li class="work-detail__meta-separator">/</li>
+                      <li>
+                        <span class="work-detail__meta-type">Industry:</span>
+                        Automotive &amp; E-commerce
+                      </li>
+                      <li class="work-detail__meta-separator">/</li>
+                      <li>
+                        <span class="work-detail__meta-type">Year:</span> 2020
+                      </li>
+                    </ul>
+                  </div>
 
-          <!-- Section: Overview -->
-          <section
-            class="work-detail__section"
-            aria-labelledby="overview-title"
-          >
-            <div class="work-detail__section-wrapper">
-              <div class="work-detail__section-head">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text"
-                    ><span class="section-label__text-index">01</span>
-                    Context</span
+                  <div
+                    class="work-detail__head-right-bottom"
+                    data-reveal="load"
                   >
-                </div>
-              </div>
-
-              <div class="work-detail__section-body work-detail__two-col">
-                <div class="work-detail__col-top">
-                  <h2 id="overview-title" class="section-title">Overview</h2>
-                  <p class="work-detail__text">
-                    GIW Autopart is a Swedish car care brand offering
-                    high-quality automotive products for both enthusiasts and
-                    everyday drivers. The project focused on creating a clear,
-                    confident digital presence that reflects product quality
-                    while making it easy for users to discover, understand, and
-                    purchase the right products.
-                  </p>
-                  <p class="work-detail__text">
-                    The website was designed to balance brand expression with a
-                    straightforward e-commerce experience, supporting both
-                    inspiration and conversion.
-                  </p>
-                </div>
-
-                <div class="work-detail__col-bottom">
-                  <h3 class="work-detail__sub-title">Role</h3>
-                  <p class="work-detail__text">
-                    I was responsible for the end-to-end design and
-                    implementation of the website — from UX structure and visual
-                    design to front-end development. My role included defining
-                    the information architecture, designing key e-commerce
-                    flows, and translating the design into a responsive,
-                    production-ready solution.
-                  </p>
+                    <a
+                      class="button button--secondary__small work-detail__cta"
+                      href="https://giwautopart.se/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit website
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <figure class="work-detail__media work-detail__media--wide">
+            <!-- Hero -->
+            <figure
+              class="work-detail__hero"
+              aria-label="Hero visual"
+              data-reveal
+              data-reveal-card
+            >
               <img
-                data-zoomable
-                src="assets/images/projects/giw/overview-device.webp"
-                alt="GIW Autoport website shown on desktop and mobile"
+                src="assets/images/projects/giw/hero-giw.webp"
+                alt="GIW Autopart hero"
                 loading="lazy"
                 decoding="async"
               />
-              <div class="captions-wrapper">
-                <figcaption
-                  class="work-detail__caption work-detail__caption-wide"
-                ></figcaption>
-                <figcaption
-                  class="work-detail__caption work-detail__caption-wide"
-                >
-                  Homepage design balancing product storytelling with clear
-                  entry points to categories.
-                </figcaption>
-              </div>
             </figure>
-          </section>
 
-          <!-- Section: The challenge -->
-          <section
-            class="work-detail__section"
-            aria-labelledby="challenge-title"
-          >
-            <div class="work-detail__section-wrapper">
-              <div class="work-detail__section-head">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text"
-                    ><span class="section-label__text-index">02</span> The
-                    challenge</span
+            <!-- Section: Overview -->
+            <section
+              class="work-detail__section"
+              aria-labelledby="overview-title"
+            >
+              <div
+                class="work-detail__section-wrapper"
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__section-head">
+                  <div class="section-label" data-reveal>
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text"
+                      ><span class="section-label__text-index">01</span>
+                      Context</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="work-detail__section-body work-detail__two-col"
+                  data-reveal
+                >
+                  <div class="work-detail__col-top">
+                    <h2 id="overview-title" class="section-title">Overview</h2>
+                    <p class="work-detail__text">
+                      GIW Autopart is a Swedish car care brand offering
+                      high-quality automotive products for both enthusiasts and
+                      everyday drivers. The project focused on creating a clear,
+                      confident digital presence that reflects product quality
+                      while making it easy for users to discover, understand,
+                      and purchase the right products.
+                    </p>
+                    <p class="work-detail__text">
+                      The website was designed to balance brand expression with
+                      a straightforward e-commerce experience, supporting both
+                      inspiration and conversion.
+                    </p>
+                  </div>
+
+                  <div class="work-detail__col-bottom">
+                    <h3 class="work-detail__sub-title">Role</h3>
+                    <p class="work-detail__text">
+                      I was responsible for the end-to-end design and
+                      implementation of the website — from UX structure and
+                      visual design to front-end development. My role included
+                      defining the information architecture, designing key
+                      e-commerce flows, and translating the design into a
+                      responsive, production-ready solution.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <figure
+                class="work-detail__media work-detail__media--wide"
+                data-reveal
+              >
+                <img
+                  data-zoomable
+                  src="assets/images/projects/giw/overview-device.webp"
+                  alt="GIW Autopart website shown on desktop and mobile"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="captions-wrapper">
+                  <figcaption
+                    class="work-detail__caption work-detail__caption-wide"
+                  ></figcaption>
+                  <figcaption
+                    class="work-detail__caption work-detail__caption-wide"
                   >
+                    Homepage design balancing product storytelling with clear
+                    entry points to categories.
+                  </figcaption>
+                </div>
+              </figure>
+            </section>
+
+            <!-- Section: The challenge -->
+            <section
+              class="work-detail__section"
+              aria-labelledby="challenge-title"
+            >
+              <div
+                class="work-detail__section-wrapper"
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__section-head">
+                  <div class="section-label" data-reveal>
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text"
+                      ><span class="section-label__text-index">02</span> The
+                      challenge</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="work-detail__section-body work-detail__two-col"
+                  data-reveal
+                >
+                  <div class="work-detail__col-top">
+                    <h2 id="challenge-title" class="section-title">
+                      Clarifying products in a competitive market
+                    </h2>
+                    <p class="work-detail__text">
+                      Car care products often involve technical details and
+                      require a certain level of trust from the user. A key
+                      challenge was presenting the product range in a way that
+                      felt accessible and credible, without overwhelming users
+                      with unnecessary complexity.
+                    </p>
+                    <p class="work-detail__text">
+                      Another challenge was ensuring the brand stood out
+                      visually while still supporting clear navigation, product
+                      comparison, and smooth purchasing flows.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="work-detail__section-body work-detail__two-col">
-                <div class="work-detail__col-top">
-                  <h2 id="challenge-title" class="section-title">
-                    Clarifying products in a competitive market
+              <div class="work-detail__media-grid" role="list" data-reveal>
+                <figure class="work-detail__media" role="listitem">
+                  <img
+                    data-zoomable
+                    src="assets/images/projects/giw/challenge-01.webp"
+                    alt="Product structure example"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="work-detail__caption">
+                    Structuring product information to support quick scanning
+                    and comparison.
+                  </figcaption>
+                </figure>
+
+                <figure class="work-detail__media" role="listitem">
+                  <img
+                    data-zoomable
+                    src="assets/images/projects/giw/challenge-02.webp"
+                    alt="Product overview example"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="work-detail__caption">
+                    Product overviews optimized for clarity across desktop and
+                    mobile.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+
+            <!-- Section: Approach -->
+            <section
+              class="work-detail__section"
+              aria-labelledby="approach-title"
+            >
+              <div
+                class="work-detail__section-wrapper"
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__section-head">
+                  <div class="section-label" data-reveal>
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text"
+                      ><span class="section-label__text-index">03</span>
+                      Approach</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="work-detail__section-body work-detail__two-col"
+                  data-reveal
+                >
+                  <div class="work-detail__col-top">
+                    <h2 id="approach-title" class="section-title">
+                      Designing for clarity, trust, and conversion
+                    </h2>
+                    <p class="work-detail__text">
+                      The approach focused on creating a clean structure with a
+                      strong visual identity. Clear hierarchy, consistent UI
+                      patterns, and focused product pages helped guide users
+                      from exploration to purchase.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-detail__media-grid" role="list" data-reveal>
+                <figure class="work-detail__media" role="listitem">
+                  <img
+                    data-zoomable
+                    src="assets/images/projects/giw/approach-01.webp"
+                    alt="Product page design example"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="work-detail__caption">
+                    Designing product pages with a clear hierarchy for details
+                    and purchase actions.
+                  </figcaption>
+                </figure>
+
+                <figure class="work-detail__media" role="listitem">
+                  <img
+                    data-zoomable
+                    src="assets/images/projects/giw/approach-02.webp"
+                    alt="Mobile checkout example"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="work-detail__caption">
+                    Simplified navigation and checkout flow to reduce friction
+                    and support conversion.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+
+            <!-- Section: Outcomes -->
+            <section
+              class="work-detail__section work-detail__section-outcomes"
+              aria-labelledby="outcomes-title"
+            >
+              <div
+                class="work-detail__section-wrapper"
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__section-head">
+                  <div class="section-label" data-reveal>
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text"
+                      ><span class="section-label__text-index">04</span>
+                      Outcomes &amp; learnings
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  class="work-detail__section-body work-detail__two-col"
+                  data-reveal
+                >
+                  <div class="work-detail__col-top">
+                    <h2 id="outcomes-title" class="section-title">
+                      A stronger brand presence and clearer buying experience
+                    </h2>
+                    <p class="work-detail__text">
+                      The final result was a cohesive e-commerce experience that
+                      aligned brand identity with usability. The project
+                      reinforced the importance of clarity and restraint when
+                      designing for product-driven websites, especially in
+                      industries where trust and quality perception are key.
+                    </p>
+                    <p class="work-detail__text">
+                      Working across both design and implementation highlighted
+                      the value of designing with technical feasibility and
+                      performance in mind from the start.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section: More to explore -->
+            <section
+              class="work-detail__section work-detail__section-more"
+              aria-labelledby="more-title"
+            >
+              <div
+                class="work-detail__section-body work-detail__more"
+                data-reveal
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__more-left">
+                  <div class="section-label" data-reveal>
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text">Related work</span>
+                  </div>
+
+                  <h2 id="more-title" class="section-title" data-reveal>
+                    More to explore
                   </h2>
-                  <p class="work-detail__text">
-                    Car care products often involve technical details and
-                    require a certain level of trust from the user. A key
-                    challenge was presenting the product range in a way that
-                    felt accessible and credible, without overwhelming users
-                    with unnecessary complexity.
-                  </p>
-                  <p class="work-detail__text">
-                    Another challenge was ensuring the brand stood out visually
-                    while still supporting clear navigation, product comparison,
-                    and smooth purchasing flows.
+                  <p class="work-detail__text" data-reveal>
+                    A selection of related projects focused on clarity,
+                    structure, and purposeful design across different
+                    industries.
                   </p>
                 </div>
+
+                <div class="work-detail__more-right" data-reveal>
+                  <a class="button button--secondary__small" href="work">
+                    View all work
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div class="work-detail__media-grid" role="list">
-              <figure class="work-detail__media" role="listitem">
-                <img
-                  data-zoomable
-                  src="assets/images/projects/giw/challenge-01.webp"
-                  alt="Product structure example"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="work-detail__caption">
-                  Structuring product information to support quick scanning and
-                  comparison.
-                </figcaption>
-              </figure>
+              <div
+                class="work-detail__related-grid project-grid"
+                role="list"
+                data-stagger
+                data-stagger-base="140"
+                data-stagger-step="90"
+              >
+                <!-- Related card 1 -->
+                <article
+                  class="project-card"
+                  role="listitem"
+                  data-reveal
+                  data-reveal-card
+                >
+                  <a class="project-card__link" href="work/12d">
+                    <div class="project-card__media" aria-hidden="true">
+                      <img
+                        class="project-card__img project-card__img--default"
+                        src="assets/images/projects/12id/thumbnail-12id.webp"
+                        alt="12iD cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        class="project-card__img project-card__img--hover"
+                        src="assets/images/projects/12id/thumbnail-hover-12id.webp"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-card__footer">
+                      <div class="project-card__left-info">
+                        <h3 class="project-card__title">12iD</h3>
+                        <p class="project-card__meta">Digital product</p>
+                      </div>
+                      <span class="project-card__year">2019</span>
+                    </div>
+                  </a>
+                </article>
 
-              <figure class="work-detail__media" role="listitem">
-                <img
-                  data-zoomable
-                  src="assets/images/projects/giw/challenge-02.webp"
-                  alt="Product overview example"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="work-detail__caption">
-                  Product overviews optimized for clarity across desktop and
-                  mobile.
-                </figcaption>
-              </figure>
-            </div>
-          </section>
+                <!-- Related card 2 -->
+                <article
+                  class="project-card"
+                  role="listitem"
+                  data-reveal
+                  data-reveal-card
+                >
+                  <a class="project-card__link" href="work/geosty">
+                    <div class="project-card__media" aria-hidden="true">
+                      <img
+                        class="project-card__img project-card__img--default"
+                        src="assets/images/projects/geosty/thumbnail-geosty.webp"
+                        alt="Geosty cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        class="project-card__img project-card__img--hover"
+                        src="assets/images/projects/geosty/thumbnail-hover-geosty.webp"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-card__footer">
+                      <div class="project-card__left-info">
+                        <h3 class="project-card__title">Geosty</h3>
+                        <p class="project-card__meta">Mobile weather app</p>
+                      </div>
+                      <span class="project-card__year">2020</span>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
 
-          <!-- Section: Approach -->
-          <section
-            class="work-detail__section"
-            aria-labelledby="approach-title"
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo">
+          <div
+            class="container footer__grid inner-wrapper"
+            data-stagger
+            data-stagger-base="140"
+            data-stagger-step="120"
           >
-            <div class="work-detail__section-wrapper">
-              <div class="work-detail__section-head">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text"
-                    ><span class="section-label__text-index">03</span>
-                    Approach</span
+            <div class="footer__brand__cols__wrapper" data-reveal>
+              <div class="footer__brand">
+                <a class="footer__logotype" href="./">
+                  <img
+                    src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    alt="lucas rosendahl"
+                  />
+                </a>
+                <p class="footer__text">
+                  Building a brand, designing a product, or exploring an idea —
+                  I’d love to hear from you.
+                </p>
+                <p class="footer__email">
+                  <a href="mailto:lr@lucasrosendahl.com"
+                    >lr@lucasrosendahl.com</a
                   >
-                </div>
-              </div>
-
-              <div class="work-detail__section-body work-detail__two-col">
-                <div class="work-detail__col-top">
-                  <h2 id="approach-title" class="section-title">
-                    Designing for clarity, trust, and conversion
-                  </h2>
-                  <p class="work-detail__text">
-                    The approach focused on creating a clean structure with a
-                    strong visual identity. Clear hierarchy, consistent UI
-                    patterns, and focused product pages helped guide users from
-                    exploration to purchase.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="work-detail__media-grid" role="list">
-              <figure class="work-detail__media" role="listitem">
-                <img
-                  data-zoomable
-                  src="assets/images/projects/giw/approach-01.webp"
-                  alt="Product page design example"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="work-detail__caption">
-                  Designing product pages with a clear hierarchy for details and
-                  purchase actions.
-                </figcaption>
-              </figure>
-
-              <figure class="work-detail__media" role="listitem">
-                <img
-                  data-zoomable
-                  src="assets/images/projects/giw/approach-02.webp"
-                  alt="Mobile checkout example"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="work-detail__caption">
-                  Simplified navigation and checkout flow to reduce friction and
-                  support conversion.
-                </figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <!-- Section: Outcomes -->
-          <section
-            class="work-detail__section work-detail__section-outcomes"
-            aria-labelledby="outcomes-title"
-          >
-            <div class="work-detail__section-wrapper">
-              <div class="work-detail__section-head">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text"
-                    ><span class="section-label__text-index">04</span> Outcomes
-                    &amp; learnings
-                  </span>
-                </div>
-              </div>
-
-              <div class="work-detail__section-body work-detail__two-col">
-                <div class="work-detail__col-top">
-                  <h2 id="outcomes-title" class="section-title">
-                    A stronger brand presence and clearer buying experience
-                  </h2>
-                  <p class="work-detail__text">
-                    The final result was a cohesive e-commerce experience that
-                    aligned brand identity with usability. The project
-                    reinforced the importance of clarity and restraint when
-                    designing for product-driven websites, especially in
-                    industries where trust and quality perception are key.
-                  </p>
-                  <p class="work-detail__text">
-                    Working across both design and implementation highlighted
-                    the value of designing with technical feasibility and
-                    performance in mind from the start.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Section: More to explore -->
-          <section
-            class="work-detail__section work-detail__section-more"
-            aria-labelledby="more-title"
-          >
-            <div class="work-detail__section-body work-detail__more">
-              <div class="work-detail__more-left">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text">Related work</span>
-                </div>
-
-                <h2 id="more-title" class="section-title">More to explore</h2>
-                <p class="work-detail__text">
-                  A selection of related projects focused on clarity, structure,
-                  and purposeful design across different industries.
                 </p>
               </div>
 
-              <div class="work-detail__more-right">
-                <a class="button button--secondary__small" href="work.html">
-                  View all work
-                </a>
+              <div class="footer__cols">
+                <div class="footer__col">
+                  <p class="footer__title">Sitemap</p>
+                  <ul class="footer__list">
+                    <li><a href="work">Work</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="./#services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="./#faq">FAQ</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer__col">
+                  <p class="footer__title">Social</p>
+                  <ul class="footer__list">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/lucas-rosendahl/"
+                        rel="me"
+                        target="_blank"
+                        >LinkedIn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Luchkiin"
+                        rel="me"
+                        target="_blank"
+                        >GitHub</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.figma.com/@lucasrosendahl"
+                        rel="me"
+                        target="_blank"
+                        >Figma</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <div class="work-detail__related-grid project-grid" role="list">
-              <!-- Related card 1 -->
-              <article class="project-card" role="listitem">
-                <a class="project-card__link" href="work/12d.html">
-                  <div class="project-card__media" aria-hidden="true">
-                    <img
-                      class="project-card__img project-card__img--default"
-                      src="assets/images/projects/12id/thumbnail-12id.webp"
-                      alt="12iD cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <img
-                      class="project-card__img project-card__img--hover"
-                      src="assets/images/projects/12id/thumbnail-hover-12id.webp"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="project-card__footer">
-                    <div class="project-card__left-info">
-                      <h3 class="project-card__title">12iD</h3>
-                      <p class="project-card__meta">Digital product</p>
-                    </div>
-                    <span class="project-card__year">2019</span>
-                  </div>
-                </a>
-              </article>
-
-              <!-- Related card 2 -->
-              <article class="project-card" role="listitem">
-                <a class="project-card__link" href="work/geosty.html">
-                  <div class="project-card__media" aria-hidden="true">
-                    <img
-                      class="project-card__img project-card__img--default"
-                      src="assets/images/projects/geosty/thumbnail-geosty.webp"
-                      alt="Geosty cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <img
-                      class="project-card__img project-card__img--hover"
-                      src="assets/images/projects/geosty/thumbnail-hover-geosty.webp"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="project-card__footer">
-                    <div class="project-card__left-info">
-                      <h3 class="project-card__title">Geosty</h3>
-                      <p class="project-card__meta">Mobile weather app</p>
-                    </div>
-                    <span class="project-card__year">2020</span>
-                  </div>
-                </a>
-              </article>
-            </div>
-          </section>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="site-footer" role="contentinfo">
-        <div
-          class="container footer__grid inner-wrapper"
-          data-stagger
-          data-stagger-base="140"
-          data-stagger-step="120"
-        >
-          <div class="footer__brand__cols__wrapper" data-reveal>
-            <div class="footer__brand">
-              <a class="footer__logotype" href="./">
-                <img
-                  src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
-                  alt="lucas rosendahl"
-                />
-              </a>
-              <p class="footer__text">
-                Building a brand, designing a product, or exploring an idea —
-                I’d love to hear from you.
+            <div
+              class="footer__meta"
+              data-stagger
+              data-stagger-base="260"
+              data-stagger-step="120"
+            >
+              <p class="footer___copyright" data-reveal>
+                © Lucas Rosendahl <span id="year"></span>
               </p>
-              <p class="footer__email">
-                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
-              </p>
-            </div>
-
-            <div class="footer__cols">
-              <div class="footer__col">
-                <p class="footer__title">Sitemap</p>
-                <ul class="footer__list">
-                  <li><a href="work">Work</a></li>
-                  <li><a href="about">About</a></li>
-                  <li><a href="./#services">Services</a></li>
-                  <li><a href="contact">Contact</a></li>
-                  <li><a href="./#faq">FAQ</a></li>
-                </ul>
-              </div>
-
-              <div class="footer__col">
-                <p class="footer__title">Social</p>
-                <ul class="footer__list">
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/lucas-rosendahl/"
-                      rel="me"
-                      target="_blank"
-                      >LinkedIn</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Luchkiin"
-                      rel="me"
-                      target="_blank"
-                      >GitHub</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.figma.com/@lucasrosendahl"
-                      rel="me"
-                      target="_blank"
-                      >Figma</a
-                    >
-                  </li>
-                </ul>
+              <div class="footer__policies" data-reveal>
+                <a href="privacy-policy">Privacy Policy</a>
+                <a href="cookie-policy">Cookie Policy</a>
               </div>
             </div>
           </div>
-
-          <div
-            class="footer__meta"
-            data-stagger
-            data-stagger-base="260"
-            data-stagger-step="120"
-          >
-            <p class="footer___copyright" data-reveal>
-              © Lucas Rosendahl <span id="year"></span>
-            </p>
-            <div class="footer__policies" data-reveal>
-              <a href="privacy-policy">Privacy Policy</a>
-              <a href="cookie-policy">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
       </main>
     </div>
 
