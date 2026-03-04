@@ -43,7 +43,11 @@
 
     <!-- Header -->
     <header class="site-header" role="banner">
-      <div class="container header__inner" data-reveal="load" data-header-reveal>
+      <div
+        class="container header__inner"
+        data-reveal="load"
+        data-header-reveal
+      >
         <a class="header__logotype" href="./">
           <img
             src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
@@ -119,9 +123,7 @@
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">02</span>
-                <a class="mobile-menu__link is-active" href="work"
-                  >Work</a
-                >
+                <a class="mobile-menu__link is-active" href="work">Work</a>
               </li>
 
               <li class="mobile-menu__item">
@@ -142,508 +144,580 @@
     <!-- Main -->
     <div class="page-transition" data-page>
       <main id="main">
-      <section class="section work-detail" aria-labelledby="case-title">
-        <div class="container inner-wrapper work-detail__container">
-          <!-- Top / Title -->
-          <div class="work-detail__top">
-            <a class="work-detail__back" href="work">
-              <span class="work-detail__back-icon" aria-hidden="true">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.1539 6.34616L11.2077 7.43076L7.38845 11.25L19.5 11.25L19.5 12.75L7.38845 12.75L11.2077 16.5692L10.1539 17.6538L4.50005 12L10.1539 6.34616Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
+        <section
+          class="section work-detail"
+          aria-labelledby="case-title"
+          data-reveal-scope
+        >
+          <div class="container inner-wrapper work-detail__container">
+            <!-- Top / Title -->
+            <div
+              class="work-detail__top"
+              data-stagger
+              data-stagger-base="160"
+              data-stagger-step="90"
+            >
+              <a class="work-detail__back" href="work" data-reveal="load">
+                <span class="work-detail__back-icon" aria-hidden="true">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.1539 6.34616L11.2077 7.43076L7.38845 11.25L19.5 11.25L19.5 12.75L7.38845 12.75L11.2077 16.5692L10.1539 17.6538L4.50005 12L10.1539 6.34616Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
 
-              <span class="work-detail__back-text">Back</span>
-            </a>
+                <span class="work-detail__back-text">Back</span>
+              </a>
 
-            <div class="work-detail__head">
-              <div class="work-detail__head-wrapper">
-                <div class="work-detail__head-left-top">
-                  <h1 id="case-title" class="page-title">Geosty</h1>
+              <div
+                class="work-detail__head"
+                data-stagger
+                data-stagger-base="200"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__head-wrapper">
+                  <div class="work-detail__head-left-top" data-reveal="load">
+                    <h1 id="case-title" class="page-title">Geosty</h1>
+                  </div>
+
+                  <div class="work-detail__head-right-top" data-reveal="load">
+                    <p class="work-detail__intro section-lead">
+                      A location-based weather app focused on clarity and
+                      simplicity.
+                    </p>
+                  </div>
                 </div>
 
-                <div class="work-detail__head-right-top">
-                  <p class="work-detail__intro section-lead">
-                    A location-based weather app focused on clarity and
-                    simplicity.
-                  </p>
+                <div class="work-detail__head-wrapper">
+                  <div class="work-detail__head-left-bottom" data-reveal="load">
+                    <ul class="work-detail__meta" aria-label="Project metadata">
+                      <li>
+                        <span class="work-detail__meta-type">Services:</span> UX
+                        Design &amp; Visual Design
+                      </li>
+                      <li class="work-detail__meta-separator">/</li>
+                      <li>
+                        <span class="work-detail__meta-type">Type:</span> Mobile
+                        app
+                      </li>
+                      <li class="work-detail__meta-separator">/</li>
+                      <li>
+                        <span class="work-detail__meta-type">Industry:</span>
+                        Weather &amp; Utilities
+                      </li>
+                      <li class="work-detail__meta-separator">/</li>
+                      <li>
+                        <span class="work-detail__meta-type">Platform:</span>
+                        iOS
+                      </li>
+                      <li class="work-detail__meta-separator">/</li>
+                      <li>
+                        <span class="work-detail__meta-type">Year:</span> 2020
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero -->
+            <figure
+              class="work-detail__hero"
+              aria-label="Hero visual"
+              data-reveal
+              data-reveal-card
+            >
+              <img
+                src="assets/images/projects/geosty/hero-geosty.webp"
+                alt="Geosty hero"
+                decoding="async"
+              />
+            </figure>
+
+            <!-- Section: Overview -->
+            <section
+              class="work-detail__section"
+              aria-labelledby="overview-title"
+            >
+              <div
+                class="work-detail__section-wrapper"
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__section-head">
+                  <div class="section-label">
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text"
+                      ><span class="section-label__text-index">01</span>
+                      Context</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="work-detail__section-body work-detail__two-col"
+                  data-reveal
+                >
+                  <div class="work-detail__col-top">
+                    <h2 id="overview-title" class="section-title">Overview</h2>
+                    <p class="work-detail__text">
+                      Geosty is a mobile weather application designed to deliver
+                      clear and reliable weather information based on the user’s
+                      current location. The app provides current conditions
+                      alongside hourly and daily forecasts, including key
+                      details such as humidity and wind.
+                    </p>
+                    <p class="work-detail__text">
+                      The project was created as a personal initiative, with a
+                      focus on exploring visual clarity, information hierarchy,
+                      and intuitive interaction patterns within a familiar
+                      product category.
+                    </p>
+                  </div>
+
+                  <div class="work-detail__col-bottom">
+                    <h3 class="work-detail__sub-title">Role</h3>
+                    <p class="work-detail__text">
+                      I designed Geosty end-to-end, covering UX design, visual
+                      design, and interaction patterns. The work included
+                      defining the information structure, designing core weather
+                      views, and establishing a clean visual language to support
+                      quick comprehension for iOS.
+                    </p>
+                    <p class="work-detail__text">
+                      As a self-initiated project, Geosty allowed for full
+                      creative ownership and experimentation with layout, color,
+                      and interaction decisions.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="work-detail__head-wrapper">
-                <div class="work-detail__head-left-bottom">
-                  <ul class="work-detail__meta" aria-label="Project metadata">
+              <figure class="work-detail__media work-detail__media--wide">
+                <img
+                  data-zoomable
+                  src="assets/images/projects/geosty/overview-device.webp"
+                  alt="Geosty app screens"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="captions-wrapper">
+                  <figcaption
+                    class="work-detail__caption work-detail__caption-wide"
+                  ></figcaption>
+                  <figcaption
+                    class="work-detail__caption work-detail__caption-wide"
+                  >
+                    Initial app launch and primary weather overview.
+                  </figcaption>
+                </div>
+              </figure>
+            </section>
+
+            <!-- Section: The challenge -->
+            <section
+              class="work-detail__section"
+              aria-labelledby="challenge-title"
+            >
+              <div
+                class="work-detail__section-wrapper"
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__section-head">
+                  <div class="section-label">
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text"
+                      ><span class="section-label__text-index">02</span> The
+                      challenge</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="work-detail__section-body work-detail__two-col"
+                  data-reveal
+                >
+                  <div class="work-detail__col-top">
+                    <h2 id="challenge-title" class="section-title">
+                      Presenting dense information in a lightweight experience
+                    </h2>
+                    <p class="work-detail__text">
+                      Weather apps often present large amounts of data that can
+                      feel overwhelming on mobile. The key challenge was
+                      simplifying information without removing what users need —
+                      ensuring the experience remains fast to scan and easy to
+                      understand.
+                    </p>
+                    <p class="work-detail__text">
+                      Another challenge was designing a visual system that feels
+                      calm and consistent across varying weather conditions and
+                      UI states.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-detail__media-grid" role="list" data-reveal>
+                <figure class="work-detail__media" role="listitem">
+                  <img
+                    data-zoomable
+                    src="assets/images/projects/geosty/challenge-01.webp"
+                    alt="Information density and hierarchy example"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="work-detail__caption">
+                    Organizing multiple weather datapoints into a clear,
+                    scannable layout.
+                  </figcaption>
+                </figure>
+
+                <figure class="work-detail__media" role="listitem">
+                  <img
+                    data-zoomable
+                    src="assets/images/projects/geosty/challenge-02.webp"
+                    alt="Hierarchy and readability example"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="work-detail__caption">
+                    Reducing visual noise while maintaining essential forecast
+                    details.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+
+            <!-- Section: Approach -->
+            <section
+              class="work-detail__section"
+              aria-labelledby="approach-title"
+            >
+              <div
+                class="work-detail__section-wrapper"
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__section-head">
+                  <div class="section-label">
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text"
+                      ><span class="section-label__text-index">03</span>
+                      Approach</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="work-detail__section-body work-detail__two-col"
+                  data-reveal
+                >
+                  <div class="work-detail__col-top">
+                    <h2 id="approach-title" class="section-title">
+                      Designing for glanceability and clarity
+                    </h2>
+                    <p class="work-detail__text">
+                      The design approach focused on hierarchy and contrast.
+                      Information was grouped and prioritized to support fast
+                      scanning, while subtle visual cues helped guide attention
+                      to the most important data points.
+                    </p>
+                    <p class="work-detail__text">
+                      A fresh blue gradient palette was used to reinforce the
+                      weather context, complemented by neutral tones to maintain
+                      balance and avoid visual noise. Interaction patterns were
+                      kept minimal to ensure the content remained the primary
+                      focus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-detail__media-grid" role="list" data-reveal>
+                <figure class="work-detail__media" role="listitem">
+                  <img
+                    data-zoomable
+                    src="assets/images/projects/geosty/approach-01.webp"
+                    alt="Mobile UI patterns example"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="work-detail__caption">
+                    Refined visual hierarchy improving readability across
+                    weather states.
+                  </figcaption>
+                </figure>
+
+                <figure class="work-detail__media" role="listitem">
+                  <img
+                    data-zoomable
+                    src="assets/images/projects/geosty/approach-02.webp"
+                    alt="Content exploration example"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption class="work-detail__caption">
+                    Clear grouping and content spacing to support interpretation
+                    of forecasts.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+
+            <!-- Section: Outcomes -->
+            <section
+              class="work-detail__section work-detail__section-outcomes"
+              aria-labelledby="outcomes-title"
+            >
+              <div
+                class="work-detail__section-wrapper"
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__section-head">
+                  <div class="section-label">
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text"
+                      ><span class="section-label__text-index">04</span>
+                      Outcomes &amp; learnings
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  class="work-detail__section-body work-detail__two-col"
+                  data-reveal
+                >
+                  <div class="work-detail__col-top">
+                    <h2 id="outcomes-title" class="section-title">
+                      Refining clarity through visual hierarchy
+                    </h2>
+                    <p class="work-detail__text">
+                      Geosty resulted in a lightweight and focused weather
+                      experience that emphasizes clarity over complexity. The
+                      project reinforced the importance of strong hierarchy,
+                      restrained use of color, and designing for real-world
+                      usage scenarios where users often interact briefly and
+                      repeatedly.
+                    </p>
+                    <p class="work-detail__text">
+                      Working without external constraints also provided
+                      valuable insight into balancing visual exploration with
+                      usability fundamentals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section: More to explore -->
+            <section
+              class="work-detail__section work-detail__section-more"
+              aria-labelledby="more-title"
+            >
+              <div
+                class="work-detail__section-body work-detail__more"
+                data-reveal
+                data-reveal-card
+                data-stagger
+                data-stagger-base="160"
+                data-stagger-step="90"
+              >
+                <div class="work-detail__more-left">
+                  <div class="section-label">
+                    <span class="section-label__dot" aria-hidden="true"></span>
+                    <span class="section-label__text">Related work</span>
+                  </div>
+
+                  <h2 id="more-title" class="section-title">More to explore</h2>
+                  <p class="work-detail__text">
+                    A selection of related projects focused on clarity,
+                    structure, and purposeful design across different
+                    industries.
+                  </p>
+                </div>
+
+                <div class="work-detail__more-right">
+                  <a class="button button--secondary__small" href="work">
+                    View all work
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="work-detail__related-grid project-grid"
+                role="list"
+                data-stagger
+                data-stagger-base="140"
+                data-stagger-step="90"
+              >
+                <!-- Related card 1 -->
+                <article class="project-card" role="listitem" data-reveal data-reveal-card>
+                  <a class="project-card__link" href="work/listd">
+                    <div class="project-card__media" aria-hidden="true">
+                      <img
+                        class="project-card__img project-card__img--default"
+                        src="assets/images/projects/listd/thumbnail-listd.webp"
+                        alt="Listd cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        class="project-card__img project-card__img--hover"
+                        src="assets/images/projects/listd/thumbnail-hover-listd.webp"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-card__footer">
+                      <div class="project-card__left-info">
+                        <h3 class="project-card__title">Listd</h3>
+                        <p class="project-card__meta">Minimal to-do app</p>
+                      </div>
+                      <span class="project-card__year">2019</span>
+                    </div>
+                  </a>
+                </article>
+
+                <!-- Related card 2 -->
+                <article class="project-card" role="listitem" data-reveal data-reveal-card>
+                  <a class="project-card__link" href="work/marginalen-bank">
+                    <div class="project-card__media" aria-hidden="true">
+                      <img
+                        class="project-card__img project-card__img--default"
+                        src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                        alt="Marginalen Bank cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <img
+                        class="project-card__img project-card__img--hover"
+                        src="assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="project-card__footer">
+                      <div class="project-card__left-info">
+                        <h3 class="project-card__title">Marginalen Bank</h3>
+                        <p class="project-card__meta">Digital banking</p>
+                      </div>
+                      <span class="project-card__year">2023 — Present</span>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo">
+          <div
+            class="container footer__grid inner-wrapper"
+            data-stagger
+            data-stagger-base="140"
+            data-stagger-step="120"
+          >
+            <div class="footer__brand__cols__wrapper" data-reveal>
+              <div class="footer__brand">
+                <a class="footer__logotype" href="./">
+                  <img
+                    src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    alt="lucas rosendahl"
+                  />
+                </a>
+                <p class="footer__text">
+                  Building a brand, designing a product, or exploring an idea —
+                  I’d love to hear from you.
+                </p>
+                <p class="footer__email">
+                  <a href="mailto:lr@lucasrosendahl.com"
+                    >lr@lucasrosendahl.com</a
+                  >
+                </p>
+              </div>
+
+              <div class="footer__cols">
+                <div class="footer__col">
+                  <p class="footer__title">Sitemap</p>
+                  <ul class="footer__list">
+                    <li><a href="work">Work</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="./#services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="./#faq">FAQ</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer__col">
+                  <p class="footer__title">Social</p>
+                  <ul class="footer__list">
                     <li>
-                      <span class="work-detail__meta-type">Services:</span> UX
-                      Design &amp; Visual Design
+                      <a
+                        href="https://www.linkedin.com/in/lucas-rosendahl/"
+                        rel="me"
+                        target="_blank"
+                        >LinkedIn</a
+                      >
                     </li>
-                    <li class="work-detail__meta-separator">/</li>
                     <li>
-                      <span class="work-detail__meta-type">Type:</span> Mobile
-                      app
+                      <a
+                        href="https://github.com/Luchkiin"
+                        rel="me"
+                        target="_blank"
+                        >GitHub</a
+                      >
                     </li>
-                    <li class="work-detail__meta-separator">/</li>
                     <li>
-                      <span class="work-detail__meta-type">Industry:</span>
-                      Weather &amp; Utilities
-                    </li>
-                    <li class="work-detail__meta-separator">/</li>
-                    <li>
-                      <span class="work-detail__meta-type">Platform:</span> iOS
-                    </li>
-                    <li class="work-detail__meta-separator">/</li>
-                    <li>
-                      <span class="work-detail__meta-type">Year:</span> 2020
+                      <a
+                        href="https://www.figma.com/@lucasrosendahl"
+                        rel="me"
+                        target="_blank"
+                        >Figma</a
+                      >
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Hero -->
-          <figure class="work-detail__hero" aria-label="Hero visual">
-            <img
-              src="assets/images/projects/geosty/hero-geosty.webp"
-              alt="Geosty hero"
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-
-          <!-- Section: Overview -->
-          <section
-            class="work-detail__section"
-            aria-labelledby="overview-title"
-          >
-            <div class="work-detail__section-wrapper">
-              <div class="work-detail__section-head">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text"
-                    ><span class="section-label__text-index">01</span>
-                    Context</span
-                  >
-                </div>
-              </div>
-
-              <div class="work-detail__section-body work-detail__two-col">
-                <div class="work-detail__col-top">
-                  <h2 id="overview-title" class="section-title">Overview</h2>
-                  <p class="work-detail__text">
-                    Geosty is a mobile weather application designed to deliver
-                    clear and reliable weather information based on the user’s
-                    current location. The app provides current conditions
-                    alongside hourly and daily forecasts, including key details
-                    such as humidity and wind.
-                  </p>
-                  <p class="work-detail__text">
-                    The project was created as a personal initiative, with a
-                    focus on exploring visual clarity, information hierarchy,
-                    and intuitive interaction patterns within a familiar product
-                    category.
-                  </p>
-                </div>
-
-                <div class="work-detail__col-bottom">
-                  <h3 class="work-detail__sub-title">Role</h3>
-                  <p class="work-detail__text">
-                    I designed Geosty end-to-end, covering UX design, visual
-                    design, and interaction patterns. The work included defining
-                    the information structure, designing core weather views, and
-                    establishing a clean visual language to support quick
-                    comprehension for iOS.
-                  </p>
-                  <p class="work-detail__text">
-                    As a self-initiated project, Geosty allowed for full
-                    creative ownership and experimentation with layout, color,
-                    and interaction decisions.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <figure class="work-detail__media work-detail__media--wide">
-              <img
-                data-zoomable
-                src="assets/images/projects/geosty/overview-device.webp"
-                alt="Geosty app screens"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="captions-wrapper">
-                <figcaption
-                  class="work-detail__caption work-detail__caption-wide"
-                ></figcaption>
-                <figcaption
-                  class="work-detail__caption work-detail__caption-wide"
-                >
-                  Initial app launch and primary weather overview.
-                </figcaption>
-              </div>
-            </figure>
-          </section>
-
-          <!-- Section: The challenge -->
-          <section
-            class="work-detail__section"
-            aria-labelledby="challenge-title"
-          >
-            <div class="work-detail__section-wrapper">
-              <div class="work-detail__section-head">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text"
-                    ><span class="section-label__text-index">02</span> The
-                    challenge</span
-                  >
-                </div>
-              </div>
-
-              <div class="work-detail__section-body work-detail__two-col">
-                <div class="work-detail__col-top">
-                  <h2 id="challenge-title" class="section-title">
-                    Presenting dense information in a lightweight experience
-                  </h2>
-                  <p class="work-detail__text">
-                    Weather apps often present large amounts of data that can
-                    feel overwhelming on mobile. The key challenge was
-                    simplifying information without removing what users need —
-                    ensuring the experience remains fast to scan and easy to
-                    understand.
-                  </p>
-                  <p class="work-detail__text">
-                    Another challenge was designing a visual system that feels
-                    calm and consistent across varying weather conditions and UI
-                    states.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="work-detail__media-grid" role="list">
-              <figure class="work-detail__media" role="listitem">
-                <img
-                  data-zoomable
-                  src="assets/images/projects/geosty/challenge-01.webp"
-                  alt="Information density and hierarchy example"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="work-detail__caption">
-                  Organizing multiple weather datapoints into a clear, scannable
-                  layout.
-                </figcaption>
-              </figure>
-
-              <figure class="work-detail__media" role="listitem">
-                <img
-                  data-zoomable
-                  src="assets/images/projects/geosty/challenge-02.webp"
-                  alt="Hierarchy and readability example"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="work-detail__caption">
-                  Reducing visual noise while maintaining essential forecast
-                  details.
-                </figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <!-- Section: Approach -->
-          <section
-            class="work-detail__section"
-            aria-labelledby="approach-title"
-          >
-            <div class="work-detail__section-wrapper">
-              <div class="work-detail__section-head">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text"
-                    ><span class="section-label__text-index">03</span>
-                    Approach</span
-                  >
-                </div>
-              </div>
-
-              <div class="work-detail__section-body work-detail__two-col">
-                <div class="work-detail__col-top">
-                  <h2 id="approach-title" class="section-title">
-                    Designing for glanceability and clarity
-                  </h2>
-                  <p class="work-detail__text">
-                    The design approach focused on hierarchy and contrast.
-                    Information was grouped and prioritized to support fast
-                    scanning, while subtle visual cues helped guide attention to
-                    the most important data points.
-                  </p>
-                  <p class="work-detail__text">
-                    A fresh blue gradient palette was used to reinforce the
-                    weather context, complemented by neutral tones to maintain
-                    balance and avoid visual noise. Interaction patterns were
-                    kept minimal to ensure the content remained the primary
-                    focus.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="work-detail__media-grid" role="list">
-              <figure class="work-detail__media" role="listitem">
-                <img
-                  data-zoomable
-                  src="assets/images/projects/geosty/approach-01.webp"
-                  alt="Mobile UI patterns example"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="work-detail__caption">
-                  Refined visual hierarchy improving readability across weather
-                  states.
-                </figcaption>
-              </figure>
-
-              <figure class="work-detail__media" role="listitem">
-                <img
-                  data-zoomable
-                  src="assets/images/projects/geosty/approach-02.webp"
-                  alt="Content exploration example"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="work-detail__caption">
-                  Clear grouping and content spacing to support interpretation
-                  of forecasts.
-                </figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <!-- Section: Outcomes -->
-          <section
-            class="work-detail__section work-detail__section-outcomes"
-            aria-labelledby="outcomes-title"
-          >
-            <div class="work-detail__section-wrapper">
-              <div class="work-detail__section-head">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text"
-                    ><span class="section-label__text-index">04</span> Outcomes
-                    &amp; learnings
-                  </span>
-                </div>
-              </div>
-
-              <div class="work-detail__section-body work-detail__two-col">
-                <div class="work-detail__col-top">
-                  <h2 id="outcomes-title" class="section-title">
-                    Refining clarity through visual hierarchy
-                  </h2>
-                  <p class="work-detail__text">
-                    Geosty resulted in a lightweight and focused weather
-                    experience that emphasizes clarity over complexity. The
-                    project reinforced the importance of strong hierarchy,
-                    restrained use of color, and designing for real-world usage
-                    scenarios where users often interact briefly and repeatedly.
-                  </p>
-                  <p class="work-detail__text">
-                    Working without external constraints also provided valuable
-                    insight into balancing visual exploration with usability
-                    fundamentals.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Section: More to explore -->
-          <section
-            class="work-detail__section work-detail__section-more"
-            aria-labelledby="more-title"
-          >
-            <div class="work-detail__section-body work-detail__more">
-              <div class="work-detail__more-left">
-                <div class="section-label">
-                  <span class="section-label__dot" aria-hidden="true"></span>
-                  <span class="section-label__text">Related work</span>
-                </div>
-
-                <h2 id="more-title" class="section-title">More to explore</h2>
-                <p class="work-detail__text">
-                  A selection of related projects focused on clarity, structure,
-                  and purposeful design across different industries.
-                </p>
-              </div>
-
-              <div class="work-detail__more-right">
-                <a class="button button--secondary__small" href="work">
-                  View all work
-                </a>
-              </div>
-            </div>
-
-            <div class="work-detail__related-grid project-grid" role="list">
-              <!-- Related card 1 -->
-              <article class="project-card" role="listitem">
-                <a class="project-card__link" href="work/listd">
-                  <div class="project-card__media" aria-hidden="true">
-                    <img
-                      class="project-card__img project-card__img--default"
-                      src="assets/images/projects/listd/thumbnail-listd.webp"
-                      alt="Listd cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <img
-                      class="project-card__img project-card__img--hover"
-                      src="assets/images/projects/listd/thumbnail-hover-listd.webp"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="project-card__footer">
-                    <div class="project-card__left-info">
-                      <h3 class="project-card__title">Listd</h3>
-                      <p class="project-card__meta">Minimal to-do app</p>
-                    </div>
-                    <span class="project-card__year">2019</span>
-                  </div>
-                </a>
-              </article>
-
-              <!-- Related card 2 -->
-              <article class="project-card" role="listitem">
-                <a class="project-card__link" href="work/marginalen">
-                  <div class="project-card__media" aria-hidden="true">
-                    <img
-                      class="project-card__img project-card__img--default"
-                      src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
-                      alt="Marginalen Bank cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <img
-                      class="project-card__img project-card__img--hover"
-                      src="assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="project-card__footer">
-                    <div class="project-card__left-info">
-                      <h3 class="project-card__title">Marginalen Bank</h3>
-                      <p class="project-card__meta">Digital banking</p>
-                    </div>
-                    <span class="project-card__year">2023 — Present</span>
-                  </div>
-                </a>
-              </article>
-            </div>
-          </section>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="site-footer" role="contentinfo">
-        <div
-          class="container footer__grid inner-wrapper"
-          data-stagger
-          data-stagger-base="140"
-          data-stagger-step="120"
-        >
-          <div class="footer__brand__cols__wrapper" data-reveal>
-            <div class="footer__brand">
-              <a class="footer__logotype" href="./">
-                <img
-                  src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
-                  alt="lucas rosendahl"
-                />
-              </a>
-              <p class="footer__text">
-                Building a brand, designing a product, or exploring an idea —
-                I’d love to hear from you.
+            <div
+              class="footer__meta"
+              data-stagger
+              data-stagger-base="260"
+              data-stagger-step="120"
+            >
+              <p class="footer___copyright" data-reveal>
+                © Lucas Rosendahl <span id="year"></span>
               </p>
-              <p class="footer__email">
-                <a href="mailto:lr@lucasrosendahl.com">lr@lucasrosendahl.com</a>
-              </p>
-            </div>
-
-            <div class="footer__cols">
-              <div class="footer__col">
-                <p class="footer__title">Sitemap</p>
-                <ul class="footer__list">
-                  <li><a href="work">Work</a></li>
-                  <li><a href="about">About</a></li>
-                  <li><a href="./#services">Services</a></li>
-                  <li><a href="contact">Contact</a></li>
-                  <li><a href="./#faq">FAQ</a></li>
-                </ul>
-              </div>
-
-              <div class="footer__col">
-                <p class="footer__title">Social</p>
-                <ul class="footer__list">
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/lucas-rosendahl/"
-                      rel="me"
-                      target="_blank"
-                      >LinkedIn</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Luchkiin"
-                      rel="me"
-                      target="_blank"
-                      >GitHub</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.figma.com/@lucasrosendahl"
-                      rel="me"
-                      target="_blank"
-                      >Figma</a
-                    >
-                  </li>
-                </ul>
+              <div class="footer__policies" data-reveal>
+                <a href="privacy-policy">Privacy Policy</a>
+                <a href="cookie-policy">Cookie Policy</a>
               </div>
             </div>
           </div>
-
-          <div
-            class="footer__meta"
-            data-stagger
-            data-stagger-base="260"
-            data-stagger-step="120"
-          >
-            <p class="footer___copyright" data-reveal>
-              © Lucas Rosendahl <span id="year"></span>
-            </p>
-            <div class="footer__policies" data-reveal>
-              <a href="privacy-policy">Privacy Policy</a>
-              <a href="cookie-policy">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
       </main>
     </div>
 
