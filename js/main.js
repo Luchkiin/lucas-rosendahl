@@ -3,6 +3,7 @@
   const COOKIE_STORAGE_KEY = "cookieConsent"; // "accepted" | "declined"
 
   let analyticsLoaded = false;
+  let analyticsTrackingInitialized = false;
   let scrollTracked = false;
 
   // ===== Helpers =====
@@ -13,11 +14,23 @@
     "(prefers-reduced-motion: reduce)",
   )?.matches;
 
+  const getCookie = (name) => {
+    const match = document.cookie.match(
+      new RegExp(
+        `(?:^|; )${name.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&")}=([^;]*)`,
+      ),
+    );
+    return match ? decodeURIComponent(match[1]) : null;
+  };
+
   const getConsent = () => {
     try {
-      return localStorage.getItem(COOKIE_STORAGE_KEY);
+      return (
+        localStorage.getItem(COOKIE_STORAGE_KEY) ||
+        getCookie(COOKIE_STORAGE_KEY)
+      );
     } catch {
-      return null;
+      return getCookie(COOKIE_STORAGE_KEY);
     }
   };
 
@@ -25,11 +38,15 @@
     try {
       localStorage.setItem(COOKIE_STORAGE_KEY, value);
     } catch {
-      document.cookie = `${COOKIE_STORAGE_KEY}=${value}; Path=/; Max-Age=15552000; SameSite=Lax`;
+      // ignore localStorage errors
     }
+
+    document.cookie = `${COOKIE_STORAGE_KEY}=${encodeURIComponent(
+      value,
+    )}; Path=/; Max-Age=15552000; SameSite=Lax`;
   };
 
-  const loadScript = (src, attrs = {}) =>
+  const loadScript = (src) =>
     new Promise((resolve, reject) => {
       const existing = document.querySelector(`script[src="${src}"]`);
       if (existing) {
@@ -40,13 +57,8 @@
       const script = document.createElement("script");
       script.src = src;
       script.async = true;
-
-      Object.entries(attrs).forEach(([key, value]) => {
-        script.setAttribute(key, value);
-      });
-
       script.onload = () => resolve(script);
-      script.onerror = reject;
+      script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
       document.head.appendChild(script);
     });
 
@@ -76,6 +88,9 @@
 
   // ===== Analytics =====
   const initAnalyticsTracking = () => {
+    if (analyticsTrackingInitialized) return;
+    analyticsTrackingInitialized = true;
+
     const body = document.body;
     const isWorkPage = body.classList.contains("page-work");
     const isWorkDetailPage = body.classList.contains("page-work-detail");
@@ -167,14 +182,16 @@
       () => {
         if (scrollTracked) return;
 
-        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
         if (docHeight <= 0) return;
 
         const scrollPercent = (window.scrollY / docHeight) * 100;
 
-        if (scrollPercent > 75) {
+        if (scrollPercent >= 75) {
           track("scroll_depth", {
             percent: 75,
+            page_path: window.location.pathname,
           });
           scrollTracked = true;
         }
@@ -212,6 +229,7 @@
 
   const disableOptionalCookies = () => {
     analyticsLoaded = false;
+    analyticsTrackingInitialized = false;
     scrollTracked = false;
   };
 
@@ -271,6 +289,7 @@
     });
 
     const consent = getConsent();
+
     if (!consent) {
       showBanner();
     } else if (consent === "accepted") {
@@ -330,17 +349,17 @@
     });
 
     if (prefersReducedMotion) {
-      getItems().forEach((item) =>
-        item.style.setProperty("--stagger-delay", "0ms"),
-      );
+      getItems().forEach((item) => {
+        item.style.setProperty("--stagger-delay", "0ms");
+      });
     }
   })();
+
 
   // ===== Footer year =====
   (() => {
     const yearEl = document.getElementById("year");
     if (!yearEl) return;
-
     yearEl.textContent = new Date().getFullYear();
   })();
 })();
