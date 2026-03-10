@@ -9,6 +9,7 @@
 /* Toggle button */
 .menu-toggle {
   display: none;
+  color: $black;
 
   @include for-mobile() {
     display: inline-flex;
@@ -20,13 +21,7 @@
     background: transparent;
     padding: 0;
     cursor: pointer;
-    color: $white;
-  }
-}
-
-body:not(.page-home) {
-  .menu-toggle {
-    color: $black;
+    color: inherit;
   }
 }
 

@@ -2438,20 +2438,26 @@ html.js .site-header [data-header-reveal] [data-reveal] {
 }
 
 .site-header {
-  position: relative;
-  z-index: 50;
-}
-@media only screen and (max-width: 768px) {
-  .site-header {
-    position: relative;
-    z-index: 50;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  pointer-events: none;
 }
 .site-header .header__inner {
-  padding: 16px 48px;
+  pointer-events: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 80px;
+  padding: 16px 48px;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 0.5px solid transparent;
+  box-shadow: none;
+  transition: background-color 280ms cubic-bezier(0.22, 1, 0.36, 1), backdrop-filter 280ms cubic-bezier(0.22, 1, 0.36, 1), -webkit-backdrop-filter 280ms cubic-bezier(0.22, 1, 0.36, 1), border-color 280ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1), padding 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 @media only screen and (max-width: 1024px) {
   .site-header .header__inner {
@@ -2461,6 +2467,7 @@ html.js .site-header [data-header-reveal] [data-reveal] {
 @media only screen and (max-width: 768px) {
   .site-header .header__inner {
     padding: 4px 6px 4px 16px;
+    gap: 24px;
   }
 }
 .site-header .header__inner .header__logotype {
@@ -2478,6 +2485,10 @@ html.js .site-header [data-header-reveal] [data-reveal] {
   .site-header .header__inner .header__logotype__mobile {
     display: flex;
   }
+}
+.site-header .header__inner .header__logotype__mobile img {
+  display: block;
+  transition: filter 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .site-header .header__inner .site-nav a.is-active {
   color: #2F5BFF;
@@ -2526,29 +2537,99 @@ html.js .site-header [data-header-reveal] [data-reveal] {
     display: none;
   }
 }
+.site-header .header__inner .menu-toggle {
+  color: #000000;
+  transition: color 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
 
+.page-home {
+  padding-top: 80.5px;
+}
+@media only screen and (max-width: 1024px) {
+  .page-home {
+    padding-top: 74.5px;
+  }
+}
 @media only screen and (max-width: 768px) {
-  .page-home .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: transparent;
+  .page-home {
+    padding-top: 0;
   }
 }
 
-body:not(.page-home) .site-header {
-  border-bottom: 0.5px solid #D8D8D8;
+body:not(.page-home) {
+  padding-top: 80.5px;
+}
+@media only screen and (max-width: 1024px) {
+  body:not(.page-home) {
+    padding-top: 74.5px;
+  }
 }
 @media only screen and (max-width: 768px) {
-  body:not(.page-home) .site-header {
-    position: static;
-    background: #FFFFFF;
+  body:not(.page-home) {
+    padding-top: 52.5px;
   }
 }
 
-.site-header .header__inner .header__logotype img,
-.site-header .header__inner .header__logotype__mobile img {
+.page-home .site-header:not(.is-scrolled) .header__inner {
+  background-color: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+@media only screen and (max-width: 768px) {
+  .page-home .site-header:not(.is-scrolled) .header__logotype__mobile img {
+    filter: none;
+  }
+  .page-home .site-header:not(.is-scrolled) .menu-toggle {
+    color: #FFFFFF;
+  }
+}
+
+body:not(.page-home) .site-header:not(.is-scrolled) .header__inner {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom-color: #D8D8D8;
+  box-shadow: none;
+}
+@media only screen and (max-width: 768px) {
+  body:not(.page-home) .site-header:not(.is-scrolled) .header__logotype__mobile img {
+    filter: brightness(0);
+  }
+  body:not(.page-home) .site-header:not(.is-scrolled) .menu-toggle {
+    color: #000000;
+  }
+}
+
+.site-header.is-scrolled .header__inner {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 8px 48px;
+}
+@media only screen and (max-width: 1024px) {
+  .site-header.is-scrolled .header__inner {
+    padding: 8px 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .site-header.is-scrolled .header__inner {
+    padding: 4px 6px 4px 16px;
+  }
+}
+.site-header.is-scrolled .header__inner .site-nav__list li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.site-header.is-scrolled .header__inner .menu-toggle {
+  color: #000000;
+}
+@media only screen and (max-width: 768px) {
+  .site-header.is-scrolled .header__inner .header__logotype__mobile img {
+    filter: brightness(0);
+  }
+}
+
+/* Desktop logo intro animation */
+.site-header .header__inner .header__logotype img {
   display: block;
   opacity: 0;
   transform: translateY(-6px);
@@ -2556,21 +2637,29 @@ body:not(.page-home) .site-header {
   transition: opacity 530ms cubic-bezier(0.22, 1, 0.36, 1), transform 720ms cubic-bezier(0.22, 1, 0.36, 1), filter 720ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform, filter;
 }
+.site-header .header__inner .header__logotype__mobile img {
+  opacity: 1;
+  transform: none;
+}
 
-html.is-loaded .site-header .header__logotype img,
-html.is-loaded .site-header .header__logotype__mobile img {
+html.is-loaded .site-header .header__logotype img {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .site-header .header__inner,
+  .site-header .header__logotype img,
+  .site-header .header__logotype__mobile img,
+  .site-header .menu-toggle {
+    transition: none !important;
+  }
   .site-header .header__logotype img,
   .site-header .header__logotype__mobile img {
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
-    transition: none !important;
   }
 }
 /* =========================================================
@@ -2581,6 +2670,7 @@ html.is-loaded .site-header .header__logotype__mobile img {
 /* Toggle button */
 .menu-toggle {
   display: none;
+  color: #000000;
 }
 @media only screen and (max-width: 768px) {
   .menu-toggle {
@@ -2593,12 +2683,8 @@ html.is-loaded .site-header .header__logotype__mobile img {
     background: transparent;
     padding: 0;
     cursor: pointer;
-    color: #FFFFFF;
+    color: inherit;
   }
-}
-
-body:not(.page-home) .menu-toggle {
-  color: #000000;
 }
 
 /* Hamburger icon */

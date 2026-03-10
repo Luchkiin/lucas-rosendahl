@@ -355,6 +355,28 @@
     }
   })();
 
+  // ===== Sticky header =====
+  (() => {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+
+    let ticking = false;
+
+    const updateHeaderState = () => {
+      const isScrolled = window.scrollY > 12;
+      header.classList.toggle("is-scrolled", isScrolled);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateHeaderState);
+    };
+
+    updateHeaderState();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  })();
 
   // ===== Footer year =====
   (() => {
