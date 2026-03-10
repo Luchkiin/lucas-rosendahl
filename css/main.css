@@ -2585,7 +2585,7 @@ body:not(.page-home) {
 }
 
 body:not(.page-home) .site-header:not(.is-scrolled) .header__inner {
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.8);
   border-bottom-color: #D8D8D8;
   box-shadow: none;
 }
@@ -2599,7 +2599,7 @@ body:not(.page-home) .site-header:not(.is-scrolled) .header__inner {
 }
 
 .site-header.is-scrolled .header__inner {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
@@ -4162,13 +4162,17 @@ html.is-menu-open .mobile-menu__item {
   display: none;
 }
 
-/* Lås scroll när viewer är öppen (JS använder body: fixed) */
-html.is-viewer-open,
-html.is-viewer-open body {
+html.is-viewer-open {
   overflow: hidden;
 }
 
-/* Förhindrar layout-shift när scrollbar försvinner (desktop) */
+body.is-viewer-locked {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 @supports (scrollbar-gutter: stable) {
   html {
     scrollbar-gutter: stable;
@@ -4206,11 +4210,10 @@ html.is-viewer-open body {
   padding: 48px;
 }
 
-/*
-  Viktigt:
-  - JS sätter width/height inline när bilden är "contain"-beräknad
-  - Därför: INTE låsa width/height här, utan låt inline vinna.
-*/
+.image-viewer__figure {
+  margin: 0;
+}
+
 .image-viewer__img {
   display: block;
   max-width: min(1440px, 100%);
@@ -4218,19 +4221,18 @@ html.is-viewer-open body {
   width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 16px;
+  border-radius: 16px !important;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(8px) scale(0.99);
   transition: opacity 180ms cubic-bezier(0.22, 1, 0.36, 1), transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* När open-animationen är klar (clone bortstädad) */
 .image-viewer.is-ready .image-viewer__img {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-/* Under FLIP-animationen vill vi inte se "riktiga" viewer-bilden under */
 .image-viewer.is-animating .image-viewer__img {
   opacity: 0 !important;
   transform: translateY(8px) scale(0.99) !important;
@@ -4265,25 +4267,28 @@ html.is-viewer-open body {
   transform: translateY(0) scale(0.98);
 }
 
-/* Döljer originalbilden under FLIP (så man inte ser dubbel) */
 img.is-zoom-hidden {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
-/* Clone-elementet som flyger (FLIP) */
 .image-viewer__clone {
   position: fixed;
   z-index: 1000;
-  border-radius: 16px;
-  will-change: transform;
+  display: block;
   object-fit: cover;
+  border-radius: 16px !important;
+  overflow: hidden;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-origin: top left;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .image-viewer,
   .image-viewer__overlay,
   .image-viewer__img,
-  .image-viewer__close {
+  .image-viewer__close,
+  .image-viewer__clone {
     transition: none !important;
     transform: none !important;
   }

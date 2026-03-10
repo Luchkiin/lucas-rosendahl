@@ -160,7 +160,7 @@ body:not(.page-home) {
 
     @include for-mobile() {
       .header__logotype__mobile img {
-        filter: none; // vit logga kvar
+        filter: none;
       }
 
       .menu-toggle {
@@ -173,7 +173,7 @@ body:not(.page-home) {
 body:not(.page-home) {
   .site-header:not(.is-scrolled) {
     .header__inner {
-      background-color: rgba(255, 255, 255, 0.92);
+      background-color: rgba(255, 255, 255, 0.8);
       border-bottom-color: $grey;
       box-shadow: none;
     }
@@ -192,7 +192,7 @@ body:not(.page-home) {
 
 .site-header.is-scrolled {
   .header__inner {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);

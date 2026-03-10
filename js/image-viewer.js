@@ -6,313 +6,313 @@
   const closeBtn = viewer.querySelector("[data-image-viewer-close]");
   const overlay = viewer.querySelector(".image-viewer__overlay");
 
+  if (!imgEl || !closeBtn || !overlay) return;
+
   const prefersReducedMotion = window.matchMedia?.(
-    "(prefers-reduced-motion: reduce)"
+    "(prefers-reduced-motion: reduce)",
   )?.matches;
 
   let activeThumb = null;
   let cloneEl = null;
   let lastFocused = null;
   let isOpen = false;
+  let isClosing = false;
+  let lockedScrollY = 0;
 
-  // ---- Scroll lock (no jump, no "locked page" after) ----
-  let scrollY = 0;
+  const EASE = "cubic-bezier(0.22, 1, 0.36, 1)";
+  const OPEN_MS = 520;
+  const CLOSE_MS = 480;
+  const VIEWER_PADDING = 32;
+  const VIEWER_MAX_W = 1440;
+
+  const waitFrame = () =>
+    new Promise((resolve) => requestAnimationFrame(resolve));
+
+  const waitFrames = async (count = 1) => {
+    for (let i = 0; i < count; i += 1) {
+      await waitFrame();
+    }
+  };
+
+  const getZoomFrame = (thumb) =>
+    thumb.closest(".work-detail__media, .project-card__media, figure") || thumb;
+
+  const getRadius = (thumb) => {
+    const frame = getZoomFrame(thumb);
+    const styles = window.getComputedStyle(frame);
+    return styles.borderRadius || "0px";
+  };
 
   const lockScroll = () => {
-    scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    lockedScrollY = window.scrollY || window.pageYOffset || 0;
 
     document.documentElement.classList.add("is-viewer-open");
-
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.width = "100%";
+    document.body.classList.add("is-viewer-locked");
+    document.body.style.top = `-${lockedScrollY}px`;
   };
 
   const unlockScroll = () => {
     document.documentElement.classList.remove("is-viewer-open");
-
-    document.body.style.position = "";
+    document.body.classList.remove("is-viewer-locked");
     document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
 
-    window.scrollTo(0, scrollY);
+    window.scrollTo(0, lockedScrollY);
   };
-
-  // ---- Utilities ----
-  const waitFrame = () => new Promise((r) => requestAnimationFrame(r));
 
   const cleanupClone = () => {
     if (cloneEl) {
       cloneEl.remove();
       cloneEl = null;
     }
-    activeThumb?.classList.remove("is-zoom-hidden");
+
+    if (activeThumb) {
+      activeThumb.classList.remove("is-zoom-hidden");
+    }
   };
 
-  // "Contain" rect in viewport so 16:9 / 4:3 / etc animate correctly.
-  const getContainRect = (naturalW, naturalH, padding = 32, maxW = 1440) => {
+  const resetViewer = () => {
+    viewer.hidden = true;
+    viewer.setAttribute("aria-hidden", "true");
+    viewer.classList.remove("is-open", "is-ready", "is-animating");
+    imgEl.removeAttribute("src");
+    imgEl.removeAttribute("style");
+  };
+
+  const getContainRect = (
+    naturalW,
+    naturalH,
+    padding = VIEWER_PADDING,
+    maxW = VIEWER_MAX_W,
+  ) => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
 
-    const availW = Math.min(maxW, vw - padding * 2);
-    const availH = vh - padding * 2;
-
+    const availableW = Math.min(maxW, vw - padding * 2);
+    const availableH = vh - padding * 2;
     const ratio = naturalW / naturalH;
 
-    let w = availW;
-    let h = w / ratio;
+    let width = availableW;
+    let height = width / ratio;
 
-    if (h > availH) {
-      h = availH;
-      w = h * ratio;
+    if (height > availableH) {
+      height = availableH;
+      width = height * ratio;
     }
 
-    const left = (vw - w) / 2;
-    const top = (vh - h) / 2;
-
-    return { left, top, width: w, height: h };
+    return {
+      left: (vw - width) / 2,
+      top: (vh - height) / 2,
+      width,
+      height,
+    };
   };
 
-  const setImgToContainRect = () => {
-    if (!imgEl.src || !imgEl.naturalWidth) return;
+  const applyViewerRect = () => {
+    if (!imgEl.naturalWidth || !imgEl.naturalHeight) return;
 
-    const target = getContainRect(imgEl.naturalWidth, imgEl.naturalHeight, 32, 1440);
-
-    // Låt dialogen centrera men vi styr själva storleken för stabil FLIP
-    imgEl.style.width = `${target.width}px`;
-    imgEl.style.height = `${target.height}px`;
+    const rect = getContainRect(imgEl.naturalWidth, imgEl.naturalHeight);
+    imgEl.style.width = `${rect.width}px`;
+    imgEl.style.height = `${rect.height}px`;
   };
 
-  // ---- Open ----
+  const createClone = (thumb, rect) => {
+    const clone = thumb.cloneNode(true);
+    clone.removeAttribute("data-zoomable");
+    clone.className = "image-viewer__clone";
+    clone.style.left = `${rect.left}px`;
+    clone.style.top = `${rect.top}px`;
+    clone.style.width = `${rect.width}px`;
+    clone.style.height = `${rect.height}px`;
+    clone.style.transform = "translate3d(0,0,0) scale(1)";
+    clone.style.opacity = "1";
+    clone.style.borderRadius = getRadius(thumb);
+
+    document.body.appendChild(clone);
+    return clone;
+  };
+
   const open = async (thumb) => {
-    if (!thumb || isOpen) return;
-    isOpen = true;
+    if (!thumb || isOpen || isClosing) return;
 
-    cleanupClone();
+    isOpen = true;
     activeThumb = thumb;
     lastFocused = document.activeElement;
 
-    // Decode thumb before measuring
     if (!thumb.complete) {
-      try { await thumb.decode(); } catch {}
+      try {
+        await thumb.decode();
+      } catch {}
     }
 
     const startRect = thumb.getBoundingClientRect();
     const src = thumb.currentSrc || thumb.src;
+    const radius = getRadius(thumb);
 
-    // Prepare viewer (show overlay immediately, hide full image while animating)
+    viewer.hidden = false;
+    viewer.setAttribute("aria-hidden", "false");
+    viewer.classList.add("is-open", "is-animating");
+    viewer.classList.remove("is-ready");
+
     imgEl.src = src;
     imgEl.alt = thumb.alt || "";
     imgEl.style.width = "";
     imgEl.style.height = "";
-
-    viewer.hidden = false;
-    viewer.setAttribute("aria-hidden", "false");
-
-    viewer.classList.add("is-open", "is-animating");
-    viewer.classList.remove("is-ready");
+    imgEl.style.borderRadius = radius;
 
     lockScroll();
-    await waitFrame();
 
-    // Decode large image so natural sizes are available
-    try { await imgEl.decode(); } catch {}
+    try {
+      await imgEl.decode();
+    } catch {}
 
-    // Compute contain target
-    const target = getContainRect(imgEl.naturalWidth, imgEl.naturalHeight, 32, 1440);
+    const targetRect = getContainRect(imgEl.naturalWidth, imgEl.naturalHeight);
 
-    // Reduced motion: show directly
     if (prefersReducedMotion) {
-      imgEl.style.width = `${target.width}px`;
-      imgEl.style.height = `${target.height}px`;
+      applyViewerRect();
       viewer.classList.remove("is-animating");
       viewer.classList.add("is-ready");
-      closeBtn?.focus?.({ preventScroll: true });
+      closeBtn.focus({ preventScroll: true });
       return;
     }
 
-    // Hide original thumb during FLIP
     thumb.classList.add("is-zoom-hidden");
+    cloneEl = createClone(thumb, startRect);
 
-    // Clone the thumb and animate it to the contain rect
-    cloneEl = thumb.cloneNode(true);
-    cloneEl.removeAttribute("data-zoomable");
-    cloneEl.className = "image-viewer__clone";
+    await waitFrames(2);
 
-    // Ensure the clone looks identical
-    cloneEl.style.position = "fixed";
-    cloneEl.style.left = `${startRect.left}px`;
-    cloneEl.style.top = `${startRect.top}px`;
-    cloneEl.style.width = `${startRect.width}px`;
-    cloneEl.style.height = `${startRect.height}px`;
-    cloneEl.style.transformOrigin = "top left";
-    cloneEl.style.zIndex = "1000";
-    cloneEl.style.willChange = "transform";
+    const dx = targetRect.left - startRect.left;
+    const dy = targetRect.top - startRect.top;
+    const sx = targetRect.width / startRect.width;
+    const sy = targetRect.height / startRect.height;
 
-    document.body.appendChild(cloneEl);
+    cloneEl.style.transition = `transform ${OPEN_MS}ms ${EASE}`;
+    cloneEl.style.transform = `translate3d(${dx}px, ${dy}px, 0) scale(${sx}, ${sy})`;
 
-    // Force reflow
-    cloneEl.getBoundingClientRect();
-
-    const dx = target.left - startRect.left;
-    const dy = target.top - startRect.top;
-    const sx = target.width / startRect.width;
-    const sy = target.height / startRect.height;
-
-    cloneEl.style.transition = "transform 520ms cubic-bezier(0.22, 1, 0.36, 1)";
-    cloneEl.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`;
-
-    // Failsafe: never get stuck if transitionend doesn't fire
-    const fail = setTimeout(() => {
+    const fallback = window.setTimeout(() => {
       cleanupClone();
-      imgEl.style.width = `${target.width}px`;
-      imgEl.style.height = `${target.height}px`;
+      applyViewerRect();
       viewer.classList.remove("is-animating");
       viewer.classList.add("is-ready");
-      closeBtn?.focus?.({ preventScroll: true });
-    }, 700);
+      closeBtn.focus({ preventScroll: true });
+    }, OPEN_MS + 100);
 
     cloneEl.addEventListener(
       "transitionend",
-      (e) => {
-        if (e.propertyName !== "transform") return;
+      (event) => {
+        if (event.propertyName !== "transform") return;
 
-        clearTimeout(fail);
+        window.clearTimeout(fallback);
         cleanupClone();
-
-        imgEl.style.width = `${target.width}px`;
-        imgEl.style.height = `${target.height}px`;
-
+        applyViewerRect();
         viewer.classList.remove("is-animating");
         viewer.classList.add("is-ready");
-        closeBtn?.focus?.({ preventScroll: true });
+        closeBtn.focus({ preventScroll: true });
       },
-      { once: true }
+      { once: true },
     );
   };
 
-  // ---- Close ----
   const finishClose = () => {
     cleanupClone();
-
-    viewer.hidden = true;
-    viewer.setAttribute("aria-hidden", "true");
-
-    viewer.classList.remove("is-open", "is-animating", "is-ready");
-
-    imgEl.src = "";
-    imgEl.style.width = "";
-    imgEl.style.height = "";
-
+    resetViewer();
     unlockScroll();
 
     isOpen = false;
+    isClosing = false;
 
-    // Prevent browser from scrolling to the focused element
-    lastFocused?.focus?.({ preventScroll: true });
+    if (lastFocused && typeof lastFocused.focus === "function") {
+      lastFocused.focus({ preventScroll: true });
+    }
 
-    lastFocused = null;
     activeThumb = null;
+    lastFocused = null;
   };
 
   const close = async () => {
-    if (viewer.hidden) return;
+    if (!isOpen || isClosing) return;
 
-    // guard: don't run close twice
-    if (viewer.dataset.closing === "1") return;
-    viewer.dataset.closing = "1";
-
+    isClosing = true;
     viewer.classList.remove("is-ready");
 
-    const thumb = activeThumb;
-
-    // timeout fallback to always unlock page
-    const fail = setTimeout(() => {
-      viewer.dataset.closing = "0";
-      finishClose();
-    }, 800);
-
-    if (prefersReducedMotion || !thumb) {
-      clearTimeout(fail);
-      viewer.dataset.closing = "0";
+    if (prefersReducedMotion || !activeThumb || !imgEl.naturalWidth) {
       finishClose();
       return;
     }
 
-    // Reverse FLIP: from contain rect -> thumb rect
+    const thumb = activeThumb;
     const endRect = thumb.getBoundingClientRect();
+    const startRect = getContainRect(imgEl.naturalWidth, imgEl.naturalHeight);
+    const radius = getRadius(thumb);
 
-    // Compute current contain rect (stable even if viewport resized)
-    const target = getContainRect(imgEl.naturalWidth, imgEl.naturalHeight, 32, 1440);
+    const reverseClone = imgEl.cloneNode(true);
+    reverseClone.className = "image-viewer__clone";
+    reverseClone.style.left = `${startRect.left}px`;
+    reverseClone.style.top = `${startRect.top}px`;
+    reverseClone.style.width = `${startRect.width}px`;
+    reverseClone.style.height = `${startRect.height}px`;
+    reverseClone.style.transform = "translate3d(0,0,0) scale(1)";
+    reverseClone.style.opacity = "1";
+    reverseClone.style.borderRadius = radius;
 
-    // Create reverse clone from the large image at contain rect position
+    document.body.appendChild(reverseClone);
     thumb.classList.add("is-zoom-hidden");
 
-    const reverse = imgEl.cloneNode(true);
-    reverse.className = "image-viewer__clone";
-    reverse.style.position = "fixed";
-    reverse.style.left = `${target.left}px`;
-    reverse.style.top = `${target.top}px`;
-    reverse.style.width = `${target.width}px`;
-    reverse.style.height = `${target.height}px`;
-    reverse.style.transformOrigin = "top left";
-    reverse.style.zIndex = "1000";
-    reverse.style.willChange = "transform";
-    document.body.appendChild(reverse);
-
-    // Hide viewer content while clone animates out
     viewer.classList.add("is-animating");
     viewer.classList.remove("is-open");
 
-    await waitFrame();
+    await waitFrames(2);
 
-    const dx = endRect.left - target.left;
-    const dy = endRect.top - target.top;
-    const sx = endRect.width / target.width;
-    const sy = endRect.height / target.height;
+    const dx = endRect.left - startRect.left;
+    const dy = endRect.top - startRect.top;
+    const sx = endRect.width / startRect.width;
+    const sy = endRect.height / startRect.height;
 
-    reverse.style.transition = "transform 480ms cubic-bezier(0.22, 1, 0.36, 1)";
-    reverse.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`;
+    reverseClone.style.transition = `transform ${CLOSE_MS}ms ${EASE}`;
+    reverseClone.style.transform = `translate3d(${dx}px, ${dy}px, 0) scale(${sx}, ${sy})`;
 
-    reverse.addEventListener(
+    const fallback = window.setTimeout(() => {
+      reverseClone.remove();
+      finishClose();
+    }, CLOSE_MS + 100);
+
+    reverseClone.addEventListener(
       "transitionend",
-      (e) => {
-        if (e.propertyName !== "transform") return;
+      (event) => {
+        if (event.propertyName !== "transform") return;
 
-        clearTimeout(fail);
-        viewer.dataset.closing = "0";
-
-        reverse.remove();
-        thumb.classList.remove("is-zoom-hidden");
+        window.clearTimeout(fallback);
+        reverseClone.remove();
         finishClose();
       },
-      { once: true }
+      { once: true },
     );
   };
 
-  // ---- Events ----
-  document.addEventListener("click", (e) => {
-    const img = e.target.closest("img[data-zoomable]");
-    if (!img) return;
+  document.addEventListener("click", (event) => {
+    const thumb = event.target.closest("img[data-zoomable]");
+    if (!thumb) return;
 
-    e.preventDefault();
-    open(img);
+    event.preventDefault();
+    open(thumb);
   });
 
-  closeBtn?.addEventListener("click", close);
-  overlay?.addEventListener("click", close);
+  closeBtn.addEventListener("click", close);
+  overlay.addEventListener("click", close);
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !viewer.hidden) close();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && isOpen) {
+      close();
+    }
   });
 
-  // Keep contain size correct when resizing
-  window.addEventListener("resize", () => {
-    if (viewer.hidden) return;
-    setImgToContainRect();
-  });
+  window.addEventListener(
+    "resize",
+    () => {
+      if (!isOpen || viewer.hidden || isClosing) return;
+      applyViewerRect();
+    },
+    { passive: true },
+  );
+
+  resetViewer();
 })();
