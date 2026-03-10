@@ -6,8 +6,8 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/manrope-v19-latin-regular.woff2")
-      format("woff2"),
+  src:
+    url("../assets/fonts/manrope-v19-latin-regular.woff2") format("woff2"),
     url("../assets/fonts/manrope-v19-latin-regular.woff") format("woff");
 }
 @font-face {
@@ -15,7 +15,8 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
-  src: url("../assets/fonts/manrope-v19-latin-500.woff2") format("woff2"),
+  src:
+    url("../assets/fonts/manrope-v19-latin-500.woff2") format("woff2"),
     url("../assets/fonts/manrope-v19-latin-500.woff") format("woff");
 }
 @font-face {
@@ -23,7 +24,8 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 600;
-  src: url("../assets/fonts/manrope-v19-latin-600.woff2") format("woff2"),
+  src:
+    url("../assets/fonts/manrope-v19-latin-600.woff2") format("woff2"),
     url("../assets/fonts/manrope-v19-latin-600.woff") format("woff");
 }
 
@@ -74,27 +76,15 @@ a {
 
 a,
 input,
-textarea {
-  &:focus-visible {
-    outline: 2px solid $blue; // Inner border
-    outline-offset: 3px;
-    border-radius: $border-radius-s;
-    box-shadow: 0 0 0 2px $white; // Outer border
-  }
-  &:focus {
-    outline: none;
-  }
-}
-
+textarea,
 button {
-  &:focus-visible {
-    outline: 54px solid $blue; // Inner border
-    outline-offset: 3px;
-    border-radius: $border-radius-s;
-    box-shadow: 0 0 0 2px $white; // Outer border
-  }
   &:focus {
     outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid $blue;
+    outline-offset: 2px;
+    border-radius: $border-radius-s;
   }
 }
 

@@ -61,10 +61,6 @@
       }
     }
 
-    .site-nav a.is-active {
-      color: $blue;
-    }
-
     .site-nav__list {
       display: flex;
       list-style-type: none;
@@ -99,11 +95,18 @@
           background-position: 100% 0;
           background-clip: text;
           -webkit-background-clip: text;
-          color: transparent;
+          -webkit-text-fill-color: transparent;
           transition: background-position 500ms cubic-bezier(0.22, 1, 0.36, 1);
 
           &:hover {
             background-position: 0 0;
+          }
+
+          &.is-active {
+            background-image: none;
+            background-position: 0 0;
+            color: $blue;
+            -webkit-text-fill-color: $blue;
           }
 
           @include for-tablet() {

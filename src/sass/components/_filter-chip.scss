@@ -124,7 +124,7 @@
   top: auto !important;
   bottom: calc(#{$spacing-s} + env(safe-area-inset-bottom)) !important;
   transform: translateX(-50%) !important;
-  z-index: 9999 !important;
+  z-index: 99;
   width: max-content;
   max-width: calc(100% - (#{$spacing-xs} * 2));
   box-shadow:

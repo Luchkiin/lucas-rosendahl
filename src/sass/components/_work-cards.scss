@@ -16,7 +16,8 @@
     background-color: $light-grey;
     border-radius: $border-radius-xl;
     overflow: hidden;
-    transition: background-color $hover-slow $hover-ease,
+    transition:
+      background-color $hover-slow $hover-ease,
       transform $hover-slow $hover-ease;
     @include for-tablet() {
       padding: 4px;
@@ -30,6 +31,9 @@
       height: 100%;
       color: inherit;
       text-decoration: none;
+      &:focus-visible {
+        border-radius: 11px;
+      }
     }
     .project-card__media {
       position: relative;
@@ -47,7 +51,8 @@
         height: 100%;
         object-fit: cover;
         will-change: opacity, transform;
-        transition: opacity $hover-slow $hover-ease,
+        transition:
+          opacity $hover-slow $hover-ease,
           transform $hover-slow $hover-ease;
       }
 
@@ -95,7 +100,8 @@
           line-height: $lineHeight-21;
           letter-spacing: $letterSpacing--005;
           color: $darkest-grey;
-          transition: color $hover-slow $hover-ease,
+          transition:
+            color $hover-slow $hover-ease,
             opacity $hover-slow $hover-ease;
           @include for-tablet() {
             font-size: $fontSize-14;
