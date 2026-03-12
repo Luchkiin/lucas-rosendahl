@@ -238,6 +238,7 @@
     .work-detail__media {
       img {
         border-radius: $border-radius-xl;
+        cursor: pointer;
         @include for-mobile() {
           border-radius: $border-radius-l;
         }

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lucas-rosendahl.com/sitemap.xml
+Sitemap: https://lucasrosendahl.com/sitemap.xml

@@ -120,23 +120,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-
   transition: background-position 500ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.skip-link {
-  padding: 7.75px $spacing-xs;
-  font-size: $fontSize-14;
-  font-weight: $semiBold-weight;
-  letter-spacing: $letterSpacing-025;
-  margin: 0;
-  background-color: $light-grey;
-  border-radius: $border-radius-button-l; 
-  cursor: pointer;
-  &:hover {
-    background-color: $black;
-    color: $white;
-  }
 }
 
 

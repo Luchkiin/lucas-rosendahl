@@ -91,11 +91,7 @@
 
     &:not(.is-active):hover {
       background-color: rgba($white, 0.75);
-    }
-
-    &:not(.is-active):focus-visible {
-      outline: none;
-    }
+    } 
   }
 
   .icon-button.is-active {

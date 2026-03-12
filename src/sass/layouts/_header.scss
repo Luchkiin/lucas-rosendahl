@@ -42,6 +42,9 @@
 
     .header__logotype {
       display: flex;
+      &:focus-visible {
+        border-radius: 2px;
+      }
 
       @include for-mobile() {
         display: none;

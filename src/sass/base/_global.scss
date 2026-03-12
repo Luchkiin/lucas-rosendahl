@@ -60,15 +60,6 @@ body {
   }
 }
 
-.content-container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.line-break {
-  display: block;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -115,51 +106,6 @@ sup {
   font-weight: $regular-weight;
   line-height: initial;
   padding-left: 1px;
-}
-
-.first-sup {
-  padding-right: 3px;
-  padding-left: 0;
-}
-
-.p-margin-bottom {
-  margin-bottom: $spacing-s;
-}
-
-.left-aligned {
-  text-align: left;
-}
-
-.right-aligned {
-  text-align: right;
-}
-
-.lock-scroll {
-  overflow: hidden;
-  -ms-overflow-style: none; // IE 11
-  scrollbar-width: none; // Firefox
-  ::-webkit-scrollbar {
-    display: none; // Chrome, Safari & Opera
-    width: 0;
-    background: $transparent;
-  }
-}
-
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 .section-label {

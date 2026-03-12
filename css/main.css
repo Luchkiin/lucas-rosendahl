@@ -146,15 +146,6 @@ body {
   }
 }
 
-.content-container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.line-break {
-  display: block;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -206,51 +197,6 @@ sup {
   font-weight: 400;
   line-height: initial;
   padding-left: 1px;
-}
-
-.first-sup {
-  padding-right: 3px;
-  padding-left: 0;
-}
-
-.p-margin-bottom {
-  margin-bottom: 24px;
-}
-
-.left-aligned {
-  text-align: left;
-}
-
-.right-aligned {
-  text-align: right;
-}
-
-.lock-scroll {
-  overflow: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.lock-scroll ::-webkit-scrollbar {
-  display: none;
-  width: 0;
-  background: transparent;
-}
-
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 .section-label {
@@ -1401,6 +1347,10 @@ html.js .site-header [data-header-reveal] [data-reveal] {
   color: inherit;
   transition: background-color 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
+.work-page .project-list .project-row__link:focus-visible {
+  outline-offset: -2px;
+  border-radius: 0;
+}
 @media only screen and (max-width: 1024px) {
   .work-page .project-list .project-row__link {
     grid-template-columns: 0.5fr 1fr 1fr 24px;
@@ -2256,6 +2206,7 @@ html.js .site-header [data-header-reveal] [data-reveal] {
 }
 .work-detail .work-detail__section .work-detail__media img {
   border-radius: 16px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 768px) {
   .work-detail .work-detail__section .work-detail__media img {
@@ -2463,6 +2414,9 @@ html.js .site-header [data-header-reveal] [data-reveal] {
 }
 .site-header .header__inner .header__logotype {
   display: flex;
+}
+.site-header .header__inner .header__logotype:focus-visible {
+  border-radius: 2px;
 }
 @media only screen and (max-width: 768px) {
   .site-header .header__inner .header__logotype {
@@ -3278,21 +3232,6 @@ html.is-menu-open .mobile-menu__item {
   transition: background-position 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.skip-link {
-  padding: 7.75px 16px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.25px;
-  margin: 0;
-  background-color: #EBEBEB;
-  border-radius: 54px;
-  cursor: pointer;
-}
-.skip-link:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3879,9 +3818,6 @@ html.is-menu-open .mobile-menu__item {
 .work-view .icon-button:not(.is-active):hover {
   background-color: rgba(255, 255, 255, 0.75);
 }
-.work-view .icon-button:not(.is-active):focus-visible {
-  outline: none;
-}
 .work-view .icon-button.is-active {
   background: transparent;
   box-shadow: none;
@@ -4010,11 +3946,12 @@ html.is-menu-open .mobile-menu__item {
 .contact-page__form .contact-form .field .field__input:focus,
 .contact-page__form .contact-form .field .field__textarea:focus {
   outline: none;
-  border-color: #2F5BFF;
 }
-.contact-page__form .contact-form .field .field.is-invalid .field__input:focus,
-.contact-page__form .contact-form .field .field.is-invalid .field__textarea:focus {
-  border-color: #e77e23;
+.contact-page__form .contact-form .field .field__input:focus:focus-visible,
+.contact-page__form .contact-form .field .field__textarea:focus:focus-visible {
+  outline: 2px solid #2F5BFF;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 .contact-page__form .contact-form .field.is-invalid .field__input,
 .contact-page__form .contact-form .field.is-invalid .field__textarea {
@@ -4042,6 +3979,7 @@ html.is-menu-open .mobile-menu__item {
   margin-top: 16px;
   display: flex;
   width: fit-content;
+  transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 @media only screen and (max-width: 1024px) {
   .contact-page__form .contact-form button {
@@ -4183,7 +4121,20 @@ html.is-menu-open .mobile-menu__item {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
   transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1), opacity 300ms cubic-bezier(0.22, 1, 0.36, 1);
   opacity: 0;
-  pointer-events: none;
+  padding: 7.75px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  margin: 0;
+  background-color: #EBEBEB;
+  color: #000000;
+  border-radius: 43px;
+  transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+}
+.skip-link:hover {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 .skip-link:focus, .skip-link:focus-visible {
   transform: translateX(-50%) translateY(0);
@@ -4191,6 +4142,7 @@ html.is-menu-open .mobile-menu__item {
   pointer-events: auto;
   outline: 2px solid #2F5BFF;
   outline-offset: 3px;
+  border-radius: 43px;
 }
 
 @media (prefers-reduced-motion: reduce) {
