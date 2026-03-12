@@ -31,34 +31,26 @@
     <meta name="twitter:description" content="Projects by Lucas Rosendahl — selected work and case studies." />
     <meta name="twitter:image" content="https://lucasrosendahl.com/assets/og/og-cover.jpg" />
     <!-- Favicon -->
-    <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link
       rel="icon"
       type="image/png"
-      href="assets/favicons/favicon-96x96.png"
+      href="/assets/favicons/favicon-96x96.png"
       sizes="96x96"
     />
 
     <!-- Apple -->
-    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
 
     <!-- Web App -->
-    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
-    <!-- Dynamisk base (GitHub Pages + lokalt + prod) -->
     <script>
-      (function () {
-        var isGithub = location.hostname === "luchkiin.github.io";
-        var baseHref = isGithub ? "/lucas-rosendahl/" : "/";
-        var base = document.createElement("base");
-        base.href = baseHref;
-        document.head.prepend(base);
-        document.documentElement.classList.add("js");
-      })();
+      document.documentElement.classList.add("js");
     </script>
 
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
 
   <body class="page-work">
@@ -71,24 +63,24 @@
         data-reveal="load"
         data-header-reveal
       >
-        <a class="header__logotype" href="./"
+        <a class="header__logotype" href="/"
           ><img
-            src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
             alt="lucas rosendahl"
         /></a>
-        <a class="header__logotype__mobile" href="./"
+        <a class="header__logotype__mobile" href="/"
           ><img
-            src="assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
             alt="lucas rosendahl"
         /></a>
 
         <!-- Desktop / tablet nav -->
         <nav class="site-nav site-nav--desktop" aria-label="Primary">
           <ul class="site-nav__list">
-            <li><a href="about">About</a></li>
-            <li><a class="is-active" href="work" aria-current="page">Work</a></li>
-            <li><a href="./#services">Services</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a class="is-active" href="/work" aria-current="page">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -113,9 +105,9 @@
       >
         <div class="container mobile-menu__inner">
           <div class="mobile-menu__header">
-            <a class="header__logotype__white" href="./"
+            <a class="header__logotype__white" href="/"
               ><img
-                src="assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+                src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
                 alt="lucas rosendahl"
             /></a>
 
@@ -139,22 +131,22 @@
             <ul class="mobile-menu__list">
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">01</span>
-                <a class="mobile-menu__link" href="about">About</a>
+                <a class="mobile-menu__link" href="/about">About</a>
               </li>
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">02</span>
-                <a class="mobile-menu__link is-active" href="work">Work</a>
+                <a class="mobile-menu__link is-active" href="/work">Work</a>
               </li>
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">03</span>
-                <a class="mobile-menu__link" href="./#services">Services</a>
+                <a class="mobile-menu__link" href="/#services">Services</a>
               </li>
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">04</span>
-                <a class="mobile-menu__link" href="contact">Contact</a>
+                <a class="mobile-menu__link" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -308,18 +300,18 @@
                       role="listitem"
                       data-tags="mobile web"
                     >
-                      <a class="project-card__link" href="work/marginalen-bank">
+                      <a class="project-card__link" href="/work/marginalen-bank">
                         <div class="project-card__media" aria-hidden="true">
                           <img
                             class="project-card__img project-card__img--default"
-                            src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                            src="/assets/images/projects/marginalen/thumbnail-marginalen.webp"
                             alt="Marginalen Bank cover"
                             loading="lazy"
                             decoding="async"
                           />
                           <img
                             class="project-card__img project-card__img--hover"
-                            src="assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
+                            src="/assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -343,18 +335,18 @@
                       role="listitem"
                       data-tags="web"
                     >
-                      <a class="project-card__link" href="work/jtt">
+                      <a class="project-card__link" href="/work/jtt">
                         <div class="project-card__media" aria-hidden="true">
                           <img
                             class="project-card__img project-card__img--default"
-                            src="assets/images/projects/jtt/thumbnail-jtt.webp"
+                            src="/assets/images/projects/jtt/thumbnail-jtt.webp"
                             alt="JTT Fastighet & Konsult cover"
                             loading="lazy"
                             decoding="async"
                           />
                           <img
                             class="project-card__img project-card__img--hover"
-                            src="assets/images/projects/jtt/thumbnail-hover-jtt.webp"
+                            src="/assets/images/projects/jtt/thumbnail-hover-jtt.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -382,18 +374,18 @@
                       role="listitem"
                       data-tags="web"
                     >
-                      <a class="project-card__link" href="work/stegborgs">
+                      <a class="project-card__link" href="/work/stegborgs">
                         <div class="project-card__media" aria-hidden="true">
                           <img
                             class="project-card__img project-card__img--default"
-                            src="assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
+                            src="/assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
                             alt="Stegborgs EL-evator cover"
                             loading="lazy"
                             decoding="async"
                           />
                           <img
                             class="project-card__img project-card__img--hover"
-                            src="assets/images/projects/stegborgs/thumbnail-hover-stegborgs.webp"
+                            src="/assets/images/projects/stegborgs/thumbnail-hover-stegborgs.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -421,18 +413,18 @@
                       role="listitem"
                       data-tags="web"
                     >
-                      <a class="project-card__link" href="work/youty">
+                      <a class="project-card__link" href="/work/youty">
                         <div class="project-card__media" aria-hidden="true">
                           <img
                             class="project-card__img project-card__img--default"
-                            src="assets/images/projects/youty/thumbnail-youty.webp"
+                            src="/assets/images/projects/youty/thumbnail-youty.webp"
                             alt="Youty cover"
                             loading="lazy"
                             decoding="async"
                           />
                           <img
                             class="project-card__img project-card__img--hover"
-                            src="assets/images/projects/youty/thumbnail-hover-youty.webp"
+                            src="/assets/images/projects/youty/thumbnail-hover-youty.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -456,18 +448,18 @@
                       role="listitem"
                       data-tags="web"
                     >
-                      <a class="project-card__link" href="work/giw-autopart">
+                      <a class="project-card__link" href="/work/giw-autopart">
                         <div class="project-card__media" aria-hidden="true">
                           <img
                             class="project-card__img project-card__img--default"
-                            src="assets/images/projects/giw/thumbnail-giw.webp"
+                            src="/assets/images/projects/giw/thumbnail-giw.webp"
                             alt="GIW Autopart cover"
                             loading="lazy"
                             decoding="async"
                           />
                           <img
                             class="project-card__img project-card__img--hover"
-                            src="assets/images/projects/giw/thumbnail-hover-giw.webp"
+                            src="/assets/images/projects/giw/thumbnail-hover-giw.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -493,18 +485,18 @@
                       role="listitem"
                       data-tags="mobile web"
                     >
-                      <a class="project-card__link" href="work/12id">
+                      <a class="project-card__link" href="/work/12id">
                         <div class="project-card__media" aria-hidden="true">
                           <img
                             class="project-card__img project-card__img--default"
-                            src="assets/images/projects/12id/thumbnail-12id.webp"
+                            src="/assets/images/projects/12id/thumbnail-12id.webp"
                             alt="12iD cover"
                             loading="lazy"
                             decoding="async"
                           />
                           <img
                             class="project-card__img project-card__img--hover"
-                            src="assets/images/projects/12id/thumbnail-hover-12id.webp"
+                            src="/assets/images/projects/12id/thumbnail-hover-12id.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -530,18 +522,18 @@
                       role="listitem"
                       data-tags="mobile"
                     >
-                      <a class="project-card__link" href="work/geosty">
+                      <a class="project-card__link" href="/work/geosty">
                         <div class="project-card__media" aria-hidden="true">
                           <img
                             class="project-card__img project-card__img--default"
-                            src="assets/images/projects/geosty/thumbnail-geosty.webp"
+                            src="/assets/images/projects/geosty/thumbnail-geosty.webp"
                             alt="Geosty cover"
                             loading="lazy"
                             decoding="async"
                           />
                           <img
                             class="project-card__img project-card__img--hover"
-                            src="assets/images/projects/geosty/thumbnail-hover-geosty.webp"
+                            src="/assets/images/projects/geosty/thumbnail-hover-geosty.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -565,18 +557,18 @@
                       role="listitem"
                       data-tags="mobile"
                     >
-                      <a class="project-card__link" href="work/listd">
+                      <a class="project-card__link" href="/work/listd">
                         <div class="project-card__media" aria-hidden="true">
                           <img
                             class="project-card__img project-card__img--default"
-                            src="assets/images/projects/listd/thumbnail-listd.webp"
+                            src="/assets/images/projects/listd/thumbnail-listd.webp"
                             alt="Listd cover"
                             loading="lazy"
                             decoding="async"
                           />
                           <img
                             class="project-card__img project-card__img--hover"
-                            src="assets/images/projects/listd/thumbnail-hover-listd.webp"
+                            src="/assets/images/projects/listd/thumbnail-hover-listd.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -610,7 +602,7 @@
                       role="listitem"
                       data-tags="mobile web"
                     >
-                      <a class="project-row__link" href="work/marginalen-bank">
+                      <a class="project-row__link" href="/work/marginalen-bank">
                         <span class="project-row__index">01</span>
                         <span class="project-row__title">Marginalen Bank</span>
                         <span class="project-row__meta">Digital banking</span>
@@ -619,7 +611,7 @@
                           aria-hidden="true"
                         >
                           <img
-                            src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                            src="/assets/images/projects/marginalen/thumbnail-marginalen.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -649,7 +641,7 @@
                       role="listitem"
                       data-tags="web"
                     >
-                      <a class="project-row__link" href="work/jtt">
+                      <a class="project-row__link" href="/work/jtt">
                         <span class="project-row__index">02</span>
                         <span class="project-row__title"
                           >JTT Fastighet &amp; Konsult</span
@@ -659,7 +651,7 @@
                         >
                         <span class="project-row__thumb" aria-hidden="true">
                           <img
-                            src="assets/images/projects/jtt/thumbnail-jtt.webp"
+                            src="/assets/images/projects/jtt/thumbnail-jtt.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -689,7 +681,7 @@
                       role="listitem"
                       data-tags="web"
                     >
-                      <a class="project-row__link" href="work/stegborgs">
+                      <a class="project-row__link" href="/work/stegborgs">
                         <span class="project-row__index">03</span>
                         <span class="project-row__title"
                           >Stegborgs EL-evator</span
@@ -699,7 +691,7 @@
                         >
                         <span class="project-row__thumb" aria-hidden="true">
                           <img
-                            src="assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
+                            src="/assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -729,13 +721,13 @@
                       role="listitem"
                       data-tags="web"
                     >
-                      <a class="project-row__link" href="work/youty">
+                      <a class="project-row__link" href="/work/youty">
                         <span class="project-row__index">04</span>
                         <span class="project-row__title">Youty</span>
                         <span class="project-row__meta">Beauty e-commerce</span>
                         <span class="project-row__thumb" aria-hidden="true">
                           <img
-                            src="assets/images/projects/youty/thumbnail-youty.webp"
+                            src="/assets/images/projects/youty/thumbnail-youty.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -765,7 +757,7 @@
                       role="listitem"
                       data-tags="web"
                     >
-                      <a class="project-row__link" href="work/giw-autopart">
+                      <a class="project-row__link" href="/work/giw-autopart">
                         <span class="project-row__index">05</span>
                         <span class="project-row__title">GIW Autopart</span>
                         <span class="project-row__meta"
@@ -776,7 +768,7 @@
                           aria-hidden="true"
                         >
                           <img
-                            src="assets/images/projects/giw/thumbnail-giw.webp"
+                            src="/assets/images/projects/giw/thumbnail-giw.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -806,7 +798,7 @@
                       role="listitem"
                       data-tags="mobile web"
                     >
-                      <a class="project-row__link" href="work/12id">
+                      <a class="project-row__link" href="/work/12id">
                         <span class="project-row__index">06</span>
                         <span class="project-row__title">12iD</span>
                         <span class="project-row__meta"
@@ -814,7 +806,7 @@
                         >
                         <span class="project-row__thumb" aria-hidden="true">
                           <img
-                            src="assets/images/projects/12id/thumbnail-12id.webp"
+                            src="/assets/images/projects/12id/thumbnail-12id.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -844,7 +836,7 @@
                       role="listitem"
                       data-tags="mobile"
                     >
-                      <a class="project-row__link" href="work/geosty">
+                      <a class="project-row__link" href="/work/geosty">
                         <span class="project-row__index">07</span>
                         <span class="project-row__title">Geosty</span>
                         <span class="project-row__meta"
@@ -852,7 +844,7 @@
                         >
                         <span class="project-row__thumb" aria-hidden="true">
                           <img
-                            src="assets/images/projects/geosty/thumbnail-geosty.webp"
+                            src="/assets/images/projects/geosty/thumbnail-geosty.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -882,13 +874,13 @@
                       role="listitem"
                       data-tags="mobile"
                     >
-                      <a class="project-row__link" href="work/listd">
+                      <a class="project-row__link" href="/work/listd">
                         <span class="project-row__index">08</span>
                         <span class="project-row__title">Listd</span>
                         <span class="project-row__meta">Minimal to-do app</span>
                         <span class="project-row__thumb" aria-hidden="true">
                           <img
-                            src="assets/images/projects/listd/thumbnail-listd.webp"
+                            src="/assets/images/projects/listd/thumbnail-listd.webp"
                             alt=""
                             aria-hidden="true"
                             loading="lazy"
@@ -929,9 +921,9 @@
           >
             <div class="footer__brand__cols__wrapper" data-reveal>
               <div class="footer__brand">
-                <a class="footer__logotype" href="./"
+                <a class="footer__logotype" href="/"
                   ><img
-                    src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
                     alt="lucas rosendahl"
                 /></a>
                 <p class="footer__text">
@@ -949,11 +941,11 @@
                 <div class="footer__col">
                   <p class="footer__title">Sitemap</p>
                   <ul class="footer__list">
-                    <li><a href="work">Work</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="./#services">Services</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="./#faq">FAQ</a></li>
+                    <li><a href="/work">Work</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
                   </ul>
                 </div>
 
@@ -999,8 +991,8 @@
                 © Lucas Rosendahl <span id="year"></span>
               </p>
               <div class="footer__policies" data-reveal>
-                <a href="privacy-policy">Privacy Policy</a>
-                <a href="cookie-policy">Cookie Policy</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/cookie-policy">Cookie Policy</a>
               </div>
             </div>
           </div>
@@ -1022,7 +1014,7 @@
       <div class="cookie-consent__content">
         <p class="cookie-consent__text">
           This site uses cookies to enhance your experience. Read our
-          <a href="cookie-policy">Cookie Policy</a>.
+          <a href="/cookie-policy">Cookie Policy</a>.
         </p>
 
         <div class="cookie-consent__actions">
@@ -1044,8 +1036,8 @@
       </div>
     </div>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/work.js" defer></script>
-    <script src="js/reveal.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/work.js" defer></script>
+    <script src="/js/reveal.js" defer></script>
   </body>
 </html>

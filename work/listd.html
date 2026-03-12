@@ -31,34 +31,26 @@
     <meta name="twitter:description" content="Listd — UX case study by Lucas Rosendahl." />
     <meta name="twitter:image" content="https://lucasrosendahl.com/assets/og/og-cover.jpg" />
     <!-- Favicon -->
-    <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link
       rel="icon"
       type="image/png"
-      href="assets/favicons/favicon-96x96.png"
+      href="/assets/favicons/favicon-96x96.png"
       sizes="96x96"
     />
 
     <!-- Apple -->
-    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
 
     <!-- Web App -->
-    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
-    <!-- Dynamisk base (GitHub Pages + lokalt + prod) -->
     <script>
-      (function () {
-        var isGithub = location.hostname === "luchkiin.github.io";
-        var baseHref = isGithub ? "/lucas-rosendahl/" : "/";
-        var base = document.createElement("base");
-        base.href = baseHref;
-        document.head.prepend(base);
-        document.documentElement.classList.add("js");
-      })();
+      document.documentElement.classList.add("js");
     </script>
 
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
 
   <body class="page-work-detail">
@@ -71,25 +63,25 @@
         data-reveal="load"
         data-header-reveal
       >
-        <a class="header__logotype" href="./">
+        <a class="header__logotype" href="/">
           <img
-            src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
             alt="lucas rosendahl"
           />
         </a>
-        <a class="header__logotype__mobile" href="./">
+        <a class="header__logotype__mobile" href="/">
           <img
-            src="assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
             alt="lucas rosendahl"
           />
         </a>
 
         <nav class="site-nav site-nav--desktop" aria-label="Primary">
           <ul class="site-nav__list">
-            <li><a href="about">About</a></li>
-            <li><a class="is-active" href="work" aria-current="page">Work</a></li>
-            <li><a href="./#services">Services</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a class="is-active" href="/work" aria-current="page">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -114,9 +106,9 @@
       >
         <div class="container mobile-menu__inner">
           <div class="mobile-menu__header">
-            <a class="header__logotype__white" href="./">
+            <a class="header__logotype__white" href="/">
               <img
-                src="assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+                src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
                 alt="lucas rosendahl"
               />
             </a>
@@ -141,22 +133,22 @@
             <ul class="mobile-menu__list">
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">01</span>
-                <a class="mobile-menu__link" href="about">About</a>
+                <a class="mobile-menu__link" href="/about">About</a>
               </li>
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">02</span>
-                <a class="mobile-menu__link is-active" href="work">Work</a>
+                <a class="mobile-menu__link is-active" href="/work">Work</a>
               </li>
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">03</span>
-                <a class="mobile-menu__link" href="./#services">Services</a>
+                <a class="mobile-menu__link" href="/#services">Services</a>
               </li>
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">04</span>
-                <a class="mobile-menu__link" href="contact">Contact</a>
+                <a class="mobile-menu__link" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -180,7 +172,7 @@
               data-stagger-base="160"
               data-stagger-step="90"
             >
-              <a class="work-detail__back" href="work" data-reveal="load">
+              <a class="work-detail__back" href="/work" data-reveal="load">
                 <span class="work-detail__back-icon" aria-hidden="true">
                   <svg
                     width="24"
@@ -253,7 +245,7 @@
               data-reveal-card
             >
               <img
-                src="assets/images/projects/listd/hero-listd.webp"
+                src="/assets/images/projects/listd/hero-listd.webp"
                 alt="Listd hero"
                 decoding="async"
               />
@@ -325,7 +317,7 @@
               >
                 <img
                   data-zoomable
-                  src="assets/images/projects/listd/overview-device.webp"
+                  src="/assets/images/projects/listd/overview-device.webp"
                   alt="Listd app screens"
                   decoding="async"
                 />
@@ -392,7 +384,7 @@
                 <figure class="work-detail__media" role="listitem">
                   <img
                     data-zoomable
-                    src="assets/images/projects/listd/challenge-01.webp"
+                    src="/assets/images/projects/listd/challenge-01.webp"
                     alt="Task creation and hierarchy example"
                     loading="lazy"
                     decoding="async"
@@ -405,7 +397,7 @@
                 <figure class="work-detail__media" role="listitem">
                   <img
                     data-zoomable
-                    src="assets/images/projects/listd/challenge-02.webp"
+                    src="/assets/images/projects/listd/challenge-02.webp"
                     alt="Interaction clarity example"
                     loading="lazy"
                     decoding="async"
@@ -467,7 +459,7 @@
                 <figure class="work-detail__media" role="listitem">
                   <img
                     data-zoomable
-                    src="assets/images/projects/listd/approach-01.webp"
+                    src="/assets/images/projects/listd/approach-01.webp"
                     alt="Core actions example"
                     loading="lazy"
                     decoding="async"
@@ -481,7 +473,7 @@
                 <figure class="work-detail__media" role="listitem">
                   <img
                     data-zoomable
-                    src="assets/images/projects/listd/approach-02.webp"
+                    src="/assets/images/projects/listd/approach-02.webp"
                     alt="Feedback and polish example"
                     loading="lazy"
                     decoding="async"
@@ -568,7 +560,7 @@
                 </div>
 
                 <div class="work-detail__more-right">
-                  <a class="button button--secondary__small" href="work">
+                  <a class="button button--secondary__small" href="/work">
                     View all work
                   </a>
                 </div>
@@ -588,18 +580,18 @@
                   data-reveal
                   data-reveal-card
                 >
-                  <a class="project-card__link" href="work/marginalen-bank" ('event','case_open',{case_name:'Marginalen Bank'});">
+                  <a class="project-card__link" href="/work/marginalen-bank" ('event','case_open',{case_name:'Marginalen Bank'});">
                     <div class="project-card__media" aria-hidden="true">
                       <img
                         class="project-card__img project-card__img--default"
-                        src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                        src="/assets/images/projects/marginalen/thumbnail-marginalen.webp"
                         alt="Marginalen Bank cover"
                         loading="lazy"
                         decoding="async"
                       />
                       <img
                         class="project-card__img project-card__img--hover"
-                        src="assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
+                        src="/assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
                         alt=""
                         aria-hidden="true"
                         loading="lazy"
@@ -623,18 +615,18 @@
                   data-reveal
                   data-reveal-card
                 >
-                  <a class="project-card__link" href="work/jtt" ('event','case_open',{case_name:'JTT Fastighet & Konsult'});">
+                  <a class="project-card__link" href="/work/jtt" ('event','case_open',{case_name:'JTT Fastighet & Konsult'});">
                     <div class="project-card__media" aria-hidden="true">
                       <img
                         class="project-card__img project-card__img--default"
-                        src="assets/images/projects/jtt/thumbnail-jtt.webp"
+                        src="/assets/images/projects/jtt/thumbnail-jtt.webp"
                         alt="JTT Fastighet &amp; Konsult cover"
                         loading="lazy"
                         decoding="async"
                       />
                       <img
                         class="project-card__img project-card__img--hover"
-                        src="assets/images/projects/jtt/thumbnail-hover-jtt.webp"
+                        src="/assets/images/projects/jtt/thumbnail-hover-jtt.webp"
                         alt=""
                         aria-hidden="true"
                         loading="lazy"
@@ -669,9 +661,9 @@
           >
             <div class="footer__brand__cols__wrapper" data-reveal>
               <div class="footer__brand">
-                <a class="footer__logotype" href="./">
+                <a class="footer__logotype" href="/">
                   <img
-                    src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
                     alt="lucas rosendahl"
                   />
                 </a>
@@ -690,11 +682,11 @@
                 <div class="footer__col">
                   <p class="footer__title">Sitemap</p>
                   <ul class="footer__list">
-                    <li><a href="work">Work</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="./#services">Services</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="./#faq">FAQ</a></li>
+                    <li><a href="/work">Work</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
                   </ul>
                 </div>
 
@@ -740,8 +732,8 @@
                 © Lucas Rosendahl <span id="year"></span>
               </p>
               <div class="footer__policies" data-reveal>
-                <a href="privacy-policy">Privacy Policy</a>
-                <a href="cookie-policy">Cookie Policy</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/cookie-policy">Cookie Policy</a>
               </div>
             </div>
           </div>
@@ -763,7 +755,7 @@
       <div class="cookie-consent__content">
         <p class="cookie-consent__text">
           This site uses cookies to enhance your experience. Read our
-          <a href="cookie-policy">Cookie Policy</a>.
+          <a href="/cookie-policy">Cookie Policy</a>.
         </p>
 
         <div class="cookie-consent__actions">
@@ -803,8 +795,8 @@
       </button>
     </div>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/image-viewer.js" defer></script>
-    <script src="js/reveal.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/image-viewer.js" defer></script>
+    <script src="/js/reveal.js" defer></script>
   </body>
 </html>

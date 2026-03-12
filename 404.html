@@ -31,34 +31,26 @@
     <meta name="twitter:description" content="404 — Page not found. The page you are looking for does not exist." />
     <meta name="twitter:image" content="https://lucasrosendahl.com/assets/og/og-cover.jpg" />
     <!-- Favicon -->
-    <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link
       rel="icon"
       type="image/png"
-      href="assets/favicons/favicon-96x96.png"
+      href="/assets/favicons/favicon-96x96.png"
       sizes="96x96"
     />
 
     <!-- Apple -->
-    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
 
     <!-- Web App -->
-    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
-    <!-- Dynamisk base (GitHub Pages + lokalt + prod) -->
     <script>
-      (function () {
-        var isGithub = location.hostname === "luchkiin.github.io";
-        var baseHref = isGithub ? "/lucas-rosendahl/" : "/";
-        var base = document.createElement("base");
-        base.href = baseHref;
-        document.head.prepend(base);
-        document.documentElement.classList.add("js");
-      })();
+      document.documentElement.classList.add("js");
     </script>
 
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
 
   <body class="page-404">
@@ -71,26 +63,26 @@
         data-reveal="load"
         data-header-reveal
       >
-        <a class="header__logotype" href="./">
+        <a class="header__logotype" href="/">
           <img
-            src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
             alt="lucas rosendahl"
           />
         </a>
 
-        <a class="header__logotype__mobile" href="./">
+        <a class="header__logotype__mobile" href="/">
           <img
-            src="assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-black.svg"
             alt="lucas rosendahl"
           />
         </a>
 
         <nav class="site-nav site-nav--desktop" aria-label="Primary">
           <ul class="site-nav__list">
-            <li><a href="about">About</a></li>
-            <li><a href="work">Work</a></li>
-            <li><a href="./#services">Services</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -115,9 +107,9 @@
       >
         <div class="container mobile-menu__inner">
           <div class="mobile-menu__header">
-            <a class="header__logotype__white" href="./">
+            <a class="header__logotype__white" href="/">
               <img
-                src="assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+                src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
                 alt="lucas rosendahl"
               />
             </a>
@@ -142,19 +134,19 @@
             <ul class="mobile-menu__list">
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">01</span>
-                <a class="mobile-menu__link" href="about">About</a>
+                <a class="mobile-menu__link" href="/about">About</a>
               </li>
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">02</span>
-                <a class="mobile-menu__link" href="work">Work</a>
+                <a class="mobile-menu__link" href="/work">Work</a>
               </li>
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">03</span>
-                <a class="mobile-menu__link" href="./#services">Services</a>
+                <a class="mobile-menu__link" href="/#services">Services</a>
               </li>
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">04</span>
-                <a class="mobile-menu__link" href="contact">Contact</a>
+                <a class="mobile-menu__link" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -188,7 +180,7 @@
             </div>
 
             <div class="not-found__right" data-reveal="load">
-              <a class="button button--secondary__small" href="./"
+              <a class="button button--secondary__small" href="/"
                 >Back to home</a
               >
             </div>
@@ -205,9 +197,9 @@
           >
             <div class="footer__brand__cols__wrapper" data-reveal>
               <div class="footer__brand">
-                <a class="footer__logotype" href="./"
+                <a class="footer__logotype" href="/"
                   ><img
-                    src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
                     alt="lucas rosendahl"
                 /></a>
                 <p class="footer__text">
@@ -225,11 +217,11 @@
                 <div class="footer__col">
                   <p class="footer__title">Sitemap</p>
                   <ul class="footer__list">
-                    <li><a href="about">About</a></li>
-                    <li><a href="work">Work</a></li>
-                    <li><a href="./#services">Services</a></li>
-                    <li><a href="./#faq">FAQ</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/work">Work</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
+                    <li><a href="/contact">Contact</a></li>
                   </ul>
                 </div>
 
@@ -275,8 +267,8 @@
                 © Lucas Rosendahl <span id="year"></span>
               </p>
               <div class="footer__policies" data-reveal>
-                <a href="privacy-policy">Privacy Policy</a>
-                <a href="cookie-policy">Cookie Policy</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/cookie-policy">Cookie Policy</a>
               </div>
             </div>
           </div>
@@ -298,7 +290,7 @@
       <div class="cookie-consent__content">
         <p class="cookie-consent__text">
           This site uses cookies to enhance your experience. Read our
-          <a href="cookie-policy">Cookie Policy</a>.
+          <a href="/cookie-policy">Cookie Policy</a>.
         </p>
 
         <div class="cookie-consent__actions">
@@ -320,7 +312,7 @@
       </div>
     </div>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/reveal.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/reveal.js" defer></script>
   </body>
 </html>

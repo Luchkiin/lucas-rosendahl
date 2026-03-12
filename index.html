@@ -47,20 +47,20 @@
     />
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link
       rel="icon"
       type="image/png"
-      href="assets/favicons/favicon-96x96.png"
+      href="/assets/favicons/favicon-96x96.png"
       sizes="96x96"
     />
 
     <!-- Apple -->
-    <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
 
     <!-- Web App -->
-    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -86,19 +86,11 @@
       }
     </script>
 
-    <!-- Dynamisk base (GitHub Pages + lokalt + prod) -->
     <script>
-      (function () {
-        var isGithub = location.hostname === "luchkiin.github.io";
-        var baseHref = isGithub ? "/lucas-rosendahl/" : "/";
-        var base = document.createElement("base");
-        base.href = baseHref;
-        document.head.prepend(base);
-        document.documentElement.classList.add("js");
-      })();
+      document.documentElement.classList.add("js");
     </script>
 
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
 
   <body class="page-home">
@@ -111,24 +103,24 @@
         data-reveal="load"
         data-header-reveal
       >
-        <a class="header__logotype" href="./"
+        <a class="header__logotype" href="/"
           ><img
-            src="assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-medium-black.svg"
             alt="lucas rosendahl"
         /></a>
-        <a class="header__logotype__mobile" href="./"
+        <a class="header__logotype__mobile" href="/"
           ><img
-            src="assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+            src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
             alt="lucas rosendahl"
         /></a>
 
         <!-- Desktop / tablet nav -->
         <nav class="site-nav site-nav--desktop" aria-label="Primary">
           <ul class="site-nav__list">
-            <li><a href="about">About</a></li>
-            <li><a href="work">Work</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/work">Work</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -153,9 +145,9 @@
       >
         <div class="container mobile-menu__inner">
           <div class="mobile-menu__header">
-            <a class="header__logotype__white" href="./"
+            <a class="header__logotype__white" href="/"
               ><img
-                src="assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
+                src="/assets/images/ui/logos/logotype-lucas-rosendahl-small-white.svg"
                 alt="lucas rosendahl"
             /></a>
 
@@ -178,12 +170,12 @@
             <ul class="mobile-menu__list">
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">01</span>
-                <a class="mobile-menu__link" href="about">About</a>
+                <a class="mobile-menu__link" href="/about">About</a>
               </li>
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">02</span>
-                <a class="mobile-menu__link" href="work">Work</a>
+                <a class="mobile-menu__link" href="/work">Work</a>
               </li>
 
               <li class="mobile-menu__item">
@@ -193,7 +185,7 @@
 
               <li class="mobile-menu__item">
                 <span class="mobile-menu__index">04</span>
-                <a class="mobile-menu__link" href="contact">Contact</a>
+                <a class="mobile-menu__link" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -215,14 +207,14 @@
                   loop
                   playsinline
                   preload="metadata"
-                  poster="assets/videos/abstract-blue-waves-fallback.webp"
+                  poster="/assets/videos/abstract-blue-waves-fallback.webp"
                 >
                   <source
-                    src="assets/videos/abstract-blue-waves-720.webm"
+                    src="/assets/videos/abstract-blue-waves-720.webm"
                     type="video/webm"
                   />
                   <source
-                    src="assets/videos/abstract-blue-waves-720.mp4"
+                    src="/assets/videos/abstract-blue-waves-720.mp4"
                     type="video/mp4"
                   />
                 </video>
@@ -261,7 +253,7 @@
                   data-reveal="load"
                   data-reveal-hero
                 >
-                  <a class="button button--primary" href="work">View work</a>
+                  <a class="button button--primary" href="/work">View work</a>
                 </div>
               </div>
             </div>
@@ -298,7 +290,7 @@
                 </h2>
 
                 <div class="about-teaser__actions" data-reveal>
-                  <a class="button button--secondary" href="about">About me</a>
+                  <a class="button button--secondary" href="/about">About me</a>
                 </div>
               </div>
             </div>
@@ -323,7 +315,7 @@
               </div>
 
               <div class="section-head__actions" data-reveal>
-                <a class="button button--secondary__small" href="work"
+                <a class="button button--secondary__small" href="/work"
                   >View all work</a
                 >
               </div>
@@ -336,18 +328,18 @@
                 data-reveal
                 data-reveal-card
               >
-                <a class="project-card__link" href="work/marginalen-bank">
+                <a class="project-card__link" href="/work/marginalen-bank">
                   <div class="project-card__media" aria-hidden="true">
                     <img
                       class="project-card__img project-card__img--default"
-                      src="assets/images/projects/marginalen/thumbnail-marginalen.webp"
+                      src="/assets/images/projects/marginalen/thumbnail-marginalen.webp"
                       alt="Marginalen Bank cover"
                       loading="lazy"
                       decoding="async"
                     />
                     <img
                       class="project-card__img project-card__img--hover"
-                      src="assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
+                      src="/assets/images/projects/marginalen/thumbnail-hover-marginalen.webp"
                       alt=""
                       aria-hidden="true"
                       loading="lazy"
@@ -370,18 +362,18 @@
                 data-reveal
                 data-reveal-card
               >
-                <a class="project-card__link" href="work/jtt">
+                <a class="project-card__link" href="/work/jtt">
                   <div class="project-card__media" aria-hidden="true">
                     <img
                       class="project-card__img project-card__img--default"
-                      src="assets/images/projects/jtt/thumbnail-jtt.webp"
+                      src="/assets/images/projects/jtt/thumbnail-jtt.webp"
                       alt="JTT Fastighet &amp; Konsult cover"
                       loading="lazy"
                       decoding="async"
                     />
                     <img
                       class="project-card__img project-card__img--hover"
-                      src="assets/images/projects/jtt/thumbnail-hover-jtt.webp"
+                      src="/assets/images/projects/jtt/thumbnail-hover-jtt.webp"
                       alt=""
                       aria-hidden="true"
                       loading="lazy"
@@ -408,18 +400,18 @@
                 data-reveal
                 data-reveal-card
               >
-                <a class="project-card__link" href="work/stegborgs">
+                <a class="project-card__link" href="/work/stegborgs">
                   <div class="project-card__media" aria-hidden="true">
                     <img
                       class="project-card__img project-card__img--default"
-                      src="assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
+                      src="/assets/images/projects/stegborgs/thumbnail-stegborgs.webp"
                       alt="Stegborgs EL-evator cover"
                       loading="lazy"
                       decoding="async"
                     />
                     <img
                       class="project-card__img project-card__img--hover"
-                      src="assets/images/projects/stegborgs/thumbnail-hover-stegborgs.webp"
+                      src="/assets/images/projects/stegborgs/thumbnail-hover-stegborgs.webp"
                       alt=""
                       aria-hidden="true"
                       loading="lazy"
@@ -444,18 +436,18 @@
                 data-reveal
                 data-reveal-card
               >
-                <a class="project-card__link" href="work/youty">
+                <a class="project-card__link" href="/work/youty">
                   <div class="project-card__media" aria-hidden="true">
                     <img
                       class="project-card__img project-card__img--default"
-                      src="assets/images/projects/youty/thumbnail-youty.webp"
+                      src="/assets/images/projects/youty/thumbnail-youty.webp"
                       alt="Youty cover"
                       loading="lazy"
                       decoding="async"
                     />
                     <img
                       class="project-card__img project-card__img--hover"
-                      src="assets/images/projects/youty/thumbnail-hover-youty.webp"
+                      src="/assets/images/projects/youty/thumbnail-hover-youty.webp"
                       alt=""
                       aria-hidden="true"
                       loading="lazy"
@@ -610,7 +602,7 @@
                   how I collaborate with clients.
                 </p>
                 <div class="faq__actions" data-reveal>
-                  <a class="button button--secondary" href="contact"
+                  <a class="button button--secondary" href="/contact"
                     >Get in touch</a
                   >
                 </div>
@@ -747,9 +739,9 @@
           >
             <div class="footer__brand__cols__wrapper" data-reveal>
               <div class="footer__brand">
-                <a class="footer__logotype" href="./">
+                <a class="footer__logotype" href="/">
                   <img
-                    src="assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
+                    src="/assets/images/ui/logos/logotype-lucas-rosendahl-xlarge-white.svg"
                     alt="lucas rosendahl"
                   />
                 </a>
@@ -770,10 +762,10 @@
                 <div class="footer__col">
                   <p class="footer__title">Sitemap</p>
                   <ul class="footer__list">
-                    <li><a href="work">Work</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="/work">Work</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="/contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
                   </ul>
                 </div>
@@ -818,8 +810,8 @@
               </p>
 
               <div class="footer__policies" data-reveal>
-                <a href="privacy-policy">Privacy Policy</a>
-                <a href="cookie-policy">Cookie Policy</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/cookie-policy">Cookie Policy</a>
               </div>
             </div>
           </div>
@@ -841,7 +833,7 @@
       <div class="cookie-consent__content">
         <p class="cookie-consent__text">
           This site uses cookies to enhance your experience. Read our
-          <a href="cookie-policy">Cookie Policy</a>.
+          <a href="/cookie-policy">Cookie Policy</a>.
         </p>
 
         <div class="cookie-consent__actions">
@@ -863,8 +855,8 @@
       </div>
     </div>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/accordions.js" defer></script>
-    <script src="js/reveal.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/accordions.js" defer></script>
+    <script src="/js/reveal.js" defer></script>
   </body>
 </html>
