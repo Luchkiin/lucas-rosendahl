@@ -456,7 +456,6 @@ html.js [data-page] {
 html.js.is-loaded [data-reveal] {
   transition: opacity var(--reveal-duration-fade) var(--reveal-ease-standard), transform var(--reveal-duration-move) var(--reveal-ease-standard);
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
   backface-visibility: hidden;
 }
 
@@ -465,7 +464,6 @@ html.is-loaded [data-page] {
   transform: translate3d(0, var(--page-enter-y), 0);
   transition: opacity var(--page-fade-duration) var(--page-ease), transform var(--page-move-duration) var(--page-ease);
   transition-delay: var(--page-enter-delay, 0ms);
-  will-change: opacity, transform;
 }
 
 /* Revealed state */
