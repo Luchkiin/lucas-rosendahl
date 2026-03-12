@@ -297,7 +297,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: $spacing-xxs;
-      row-gap:  $spacing-xl;
+      row-gap: $spacing-xl;
       @include for-tablet() {
         grid-template-columns: 1fr;
         gap: $spacing-m;
@@ -335,11 +335,17 @@
     }
     @include for-mobile() {
       padding-top: $spacing-xl;
+      gap: $spacing-s;
     }
     .work-detail__section-body.work-detail__more {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      @include for-mobile() {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-xs;
+      }
       .section-label {
         margin-bottom: $spacing-xs;
         @include for-tablet() {
@@ -372,6 +378,9 @@
         line-height: $lineHeight-21;
         letter-spacing: $letterSpacing--005;
         color: $dark-grey;
+        @include for-mobile() {
+          font-size: $fontSize-14;
+        }
       }
       .work-detail__more-right {
         display: flex;

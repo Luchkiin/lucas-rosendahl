@@ -2325,12 +2325,20 @@ html.js .site-header [data-header-reveal] [data-reveal] {
 @media only screen and (max-width: 768px) {
   .work-detail .work-detail__section-more {
     padding-top: 48px;
+    gap: 24px;
   }
 }
 .work-detail .work-detail__section-more .work-detail__section-body.work-detail__more {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+@media only screen and (max-width: 768px) {
+  .work-detail .work-detail__section-more .work-detail__section-body.work-detail__more {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 .work-detail .work-detail__section-more .work-detail__section-body.work-detail__more .section-label {
   margin-bottom: 16px;
@@ -2372,6 +2380,11 @@ html.js .site-header [data-header-reveal] [data-reveal] {
   line-height: 21px;
   letter-spacing: -0.005px;
   color: #757575;
+}
+@media only screen and (max-width: 768px) {
+  .work-detail .work-detail__section-more .work-detail__section-body.work-detail__more .work-detail__text {
+    font-size: 0.875rem;
+  }
 }
 .work-detail .work-detail__section-more .work-detail__section-body.work-detail__more .work-detail__more-right {
   display: flex;
