@@ -3059,7 +3059,7 @@ html.is-menu-open .mobile-menu__item {
   justify-content: flex-end;
   flex: 1;
   padding: 48px;
-  max-width: 650px;
+  max-width: 700px;
   color: #FFFFFF;
 }
 @media only screen and (max-width: 1024px) {
